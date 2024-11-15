@@ -1,0 +1,10 @@
+__pycache__
+*.pytest_cache
+*.venv/
+# .env
+*.db
+*.idea
+*.ruff_cache
+*.mp4
+*.cover
+plann.txt
