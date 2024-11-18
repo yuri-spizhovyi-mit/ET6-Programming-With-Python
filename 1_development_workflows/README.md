@@ -6,7 +6,7 @@
 
 Learn the skills required to work a software project using only Markdown.
 Limiting your projects to Markdown lets you focus on the big picture without
-getting distracted by more challenging code.
+getting distracted by more challenging code.  
 
 - [Learning Objectives](#learning-objectives)
 - [Prep Work](./prep_work.md)
@@ -59,18 +59,6 @@ Command Line Interface (CLI), and NPM scripts to automate your code's quality
   - [ ] View the contents of a file using `cat`
   - [ ] Create new files using `touch`
   - [ ] Create new folders using `mkdir`
-- [ ] 🥚 **Markdown**: You can write a document in Markdown with no syntax
-      mistakes that renders into a well-formatted document.
-- 🥚 **VSCode**: You can complete these workflows in VScode, and can use
-  keyboard shortcuts to complete them all:
-  - [ ] Opening a repository in a new window
-  - [ ] Opening the VSCode terminal
-  - [ ] Adding a new file
-  - [ ] Adding a new folder
-  - [ ] Deleting a file
-  - [ ] Deleting a folder
-  - [ ] Previewing a Markdown File
-  - [ ] Formatting a Markdown document
 - [ ] 🥚 **READMEs**: You can write a README file that describes the project you
       are working on, why it's helpful, and how someone can use it.
 - 🥚 **Formatting Markdown**: You can use Prettier to make sure all the code in
