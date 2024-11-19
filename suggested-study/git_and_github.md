@@ -50,6 +50,7 @@ easier it will be to focus on the fun stuff.
 - [git-it](https://github.com/jlord/git-it-electron/)
 - [Understand how to use Atomic Commits](https://curiousprogrammer.io/blog/how-to-craft-your-changes-into-small-atomic-commits-using-git)
 - [rebasic](https://github.com/lpmi-13/rebasic)
+- [Pro Git](https://open.umn.edu/opentextbooks/textbooks/1360): great open textbook
 
 ## SSH Connection to GitHub
 
@@ -77,6 +78,7 @@ easier it will be to focus on the fun stuff.
 
 ## Collaborating on GitHub
 
+- [A guide and diagrams for ET](https://github.com/DeNepo/planning-and-collaborating/blob/main/11-development.md)
 - [Adding collaborators to a repository](https://www.youtube.com/watch?v=p49LRx3hYI8)
 - [about code reviews](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews)
 - [requesting a code review](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/requesting-a-pull-request-review)

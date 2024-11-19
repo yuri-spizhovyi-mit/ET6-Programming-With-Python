@@ -88,6 +88,15 @@ your study time and to measure your progress:
 
 ## Deliverables
 
+### Background Study
+
+Take a first look through the [Suggested Study](../suggested-study/) resources
+focusing on these resources:
+
+- [ ] **README**: Learning in Public, Being a Developer, Markdown and READMEs
+- [ ] **Tech Foundations**: The Internet
+- [ ] **Git and GitHub**: Git (_especially the games_)
+
 ### Create Your GitHub Account
 
 - [ ] Create a GitHub account if you don't have one already (_no matter what
