@@ -1,14 +1,14 @@
 # Deliverables
 
 Your deliverable is to create a Profile README for your GitHub account using
-[this template repository](). This isn't busy work! Creating this README will
+[the template `username` repository](https://github.com/MIT-Emerging-Talent/username). This isn't busy work! Creating this README will
 turn your GitHub account into a mini CV with a list of your experience,
 interests, and anything else you'd like to share.
 
 ## Checklist
 
 - [ ] You created your Profile README repository using
-      [this template repository]()
+      [the template `username` repository](https://github.com/MIT-Emerging-Talent/username)
 - [ ] All of the CI checks pass under the Actions tab
 
 ## Helpful Links

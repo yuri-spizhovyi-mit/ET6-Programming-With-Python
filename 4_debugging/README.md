@@ -6,7 +6,7 @@
 >
 > - [Brian Kernighan](https://github.com/dwmkerr/hacker-laws#kernighans-law)
 
-[![debugging tactics](./assets/debugging-tactics.jpeg)](https://addyosmani.com/blog/debugging-tactics/)
+[![debugging tactics](./assets/debugging_tactics.jpeg)](https://addyosmani.com/blog/debugging-tactics/)
 
 Debugging is a complicated skill. It's a mix of experience (_"I've seen this
 before ..."_), strategies ("I'll try back-tracing this time"), specific

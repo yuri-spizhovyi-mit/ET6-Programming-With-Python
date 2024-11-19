@@ -46,7 +46,7 @@ your study time and to measure your progress:
 
 Practice the foundational workflows of software development by learning to write
 Markdown locally on your own computer using Visual Studio Code (VSCode), the
-Command Line Interface (CLI), and NPM scripts to automate your code's quality
+Command Line Interface (CLI) to automate your code's quality
 (formatting, linting and spell checking).
 
 - [ ] 🥚 **Folder Structures**: You can explain how files and folders are stored
@@ -64,8 +64,8 @@ Command Line Interface (CLI), and NPM scripts to automate your code's quality
 - 🥚 **Formatting Markdown**: You can use Prettier to make sure all the code in
   your project is well-formatted:
 - 🥚 **Linting Folder and File Names**: You can ...
-  - [ ] Use `npm run lint:ls` to check all folder and file names in your project
-  - [ ] You can fix all linting mistakes reported by `npm run lint:ls`
+  - [ ] Use `ls-lint` to check all folder and file names in your project
+  - [ ] You can fix all linting mistakes reported by `ls-lint`
 - 🥚 **Linting Markdown**: You can use the MarkdownLint VSCode extension to find
   and fix linting errors in markdown documents.
   - [ ] 🥚 **Spell Check**: You can use the Code Spell Checker VSCode extension
