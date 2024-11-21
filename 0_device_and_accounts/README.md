@@ -112,7 +112,7 @@ focusing on these resources:
       required if you are using a laptop/desktop where you have a private
       account._)
   - This can be tricky! we're here to help each other on Slack, and there are
-    resources in [Suggested Study](../suggested-study/)
+    resources in [Suggested Study](../suggested_study/)
 
 ### Install Software
 
