@@ -90,7 +90,7 @@ your study time and to measure your progress:
 
 ### Background Study
 
-Take a first look through the [Suggested Study](../suggested-study/) resources
+Take a first look through the [Suggested Study](../suggested_study/) resources
 focusing on these resources:
 
 - [ ] **README**: Learning in Public, Being a Developer, Markdown and READMEs
