@@ -13,7 +13,7 @@ Predictive Stepping!
 - [ ] **Parameters**: default values, `*args`, `**kwargs`, keyword-only
       parameters, positional-only parameters
 - [ ] **Arguments**: positional, keyword
-- [ ] **Inline Control Flow**: `_ if _ else _`, `_ for _ in _`
+- [ ] **Control Flow**: `_ if _ else _`, `_ for _ in _`, `break`, `continue`
 - [ ] **Scope Modifiers**: `nonlocal var_name`, `global var_name`
 - [ ] **Modules**
 

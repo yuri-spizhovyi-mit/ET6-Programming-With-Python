@@ -4,7 +4,7 @@ Test Driven Development is a programming methodology that says you should write
 your code one unit test at a time, working in short cycles to write your code
 one small step at a time:
 
-[![TDD Cycle](./assets/tdd_cycle.png)](https://stackoverflow.com/questions/31438065/how-to-do-test-driven-development-right-way)
+[![TDD Cycle](./.assets/tdd_cycle.png)](https://stackoverflow.com/questions/31438065/how-to-do-test-driven-development-right-way)
 
 ## Red, Green, Refactor
 

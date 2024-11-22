@@ -7,13 +7,15 @@
 - [Microsoft](https://code.visualstudio.com/docs/introvideos/basics)
 - [Academind](https://www.youtube.com/watch?v=VqCgcpAypFQ)
 
-## GitHub CodeSpaces
+## VSCode Online
 
 [GitHub CodeSpaces](https://github.com/features/codespaces) allows you open any
 GitHub repository in an online VSCode instance. This is useful if you don't have
 VSCode installed, or need to code quickly on another computer. But it has some
 limitations: the free tier has time limits, it requires a good internet
 connection, you cannot customize it the way you can if you download VSCode.
+
+[VSCode.dev](https://vscode.dev) provides a free, zero-install Microsoft Visual Studio Code experience running entirely in your browser, allowing you to quickly and safely browse source code repositories and make lightweight code changes -> [the docs](https://code.visualstudio.com/docs/editor/vscode-web).
 
 ## Writing Markdown in VSCode
 

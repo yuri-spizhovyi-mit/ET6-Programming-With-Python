@@ -37,7 +37,7 @@ group's tasks and to double-check your project's code quality.
 - [ ] 🥚 **Issue Templates**: Your group can use issue templates to make sure
       all issues are complete and relevant to the project. in your repository
       and merge changes without causing any conflicts.
-- [ ] 🥚 **Continuous Integraation**: You can check your code's correctness
+- [ ] 🥚 **Continuous Integration**: You can check your code's correctness
       before pushing, and fix any mistakes that are caught by Continuous
       Integration actions.
 - [ ] 🥚 **Code Review**: You can use the PR Template and CI checks to review
