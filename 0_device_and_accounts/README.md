@@ -91,7 +91,7 @@ your study time and to measure your progress:
 ### Background Study
 
 Take a first look through the [Suggested Study](../suggested_study/) resources
-focusing on these resources:
+focusing on these topics.  Suggested Study is just a suggestion!  You can study these topics using any resources in any language you prefer:
 
 - [ ] **README**: Learning in Public, Being a Developer, Markdown and READMEs
 - [ ] **Tech Foundations**: The Internet
