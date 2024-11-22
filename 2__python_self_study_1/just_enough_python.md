@@ -156,7 +156,7 @@ assert 4 > 3, 'four is greater than 3'
 assert 4 == 3 # AssertionError
 
 # a failing assertion with a description
-assert 4 == 3, 'four is greater than three' # AssertionError: four is greater than three
+assert 4 == 3, 'four is equal to three' # AssertionError: four is equal to three
 ```
 
 [TOP](#just-enough-python-cheat-sheet)
