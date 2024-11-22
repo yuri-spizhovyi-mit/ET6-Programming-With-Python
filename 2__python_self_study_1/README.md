@@ -17,6 +17,7 @@ Python for mastery in the workshop:
 - [ ] **Data Types**: `str`, `bool`, `int`, `float`, `isinstance()`
 - [ ] **Basic Operators**: `==`, `!==`, `>=`, `<=`, `<`, `>`, `and`, `or`,
       `not`, `+`, `-`
+- [ ] **Asserting**: `assert`
 - [ ] **String Manipulation**: indexed access, slicing, `.length`, `.replace()`,
       `.upper()`, `.lower()`, `.strip()`, `len()`, `in`
 - [ ] **Iteration**: `range()`
