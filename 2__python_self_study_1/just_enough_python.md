@@ -423,7 +423,7 @@ print(eight) # 8
 
 # --- test the function with assertions ---
 
-assert add(3, 4) == 7, '3 + 4  = 7'
+assert add(3, 4) == 7, '3 + 4 = 7'
 assert add(2, 6) == 7, '2 + 6 = 8'
 
 zero = add(-1, 1)
