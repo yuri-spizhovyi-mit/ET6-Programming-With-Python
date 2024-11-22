@@ -166,7 +166,7 @@ assert 4 == 3, 'four is equal to three' # AssertionError: four is equal to three
 ## String Manipulation
 
 The data type used for storing and manipulating text data. Strings will be the
-main type of data used in Welcome to Python.
+main type of data used in the first Python workshops.
 
 ```py
 # string length
