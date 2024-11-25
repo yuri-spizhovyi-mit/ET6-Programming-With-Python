@@ -46,6 +46,7 @@
 - [Programiz](https://www.programiz.com/python-programming): Interactive online
   Python tutorial.
 - [LearnPython](https://www.learnpython.org/): An interactive online tutorial.
+- [coddy.tech](https://coddy.tech): An interactive online tutorial, mobile-friendly.
 
 ## References
 
