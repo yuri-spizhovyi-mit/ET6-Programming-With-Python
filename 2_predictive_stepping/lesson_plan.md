@@ -135,6 +135,28 @@ class: center, middle
 
 class: center, middle
 
+### Visualizing Programs: _[The `pdb` Module](https://docs.python.org/3/library/pdb.html)_
+
+ _(live demo)_
+
+- `$ python -m pdb path/to/file.py`
+
+- `(Pdb) step` steps to the next line
+
+- `(Pdb) pp <expression>` pretty prints the variable's value to the console
+
+- `(Pdb) ll` prints the current code level
+
+- `(Pdb) quit`
+
+???
+
+`python -m pdb 2_predictive_stepping/examples/08_while_loops.py`
+
+---
+
+class: center, middle
+
 ### Visualizing Programs: _[VSCode Debugger](https://code.visualstudio.com/docs/python/debugging)_
 
 _(live demo)_

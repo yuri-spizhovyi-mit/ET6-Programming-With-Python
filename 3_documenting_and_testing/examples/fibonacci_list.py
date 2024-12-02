@@ -9,28 +9,28 @@ Created on XX XX XX
 # --- before documenting and testing ---
 
 
-def mystery_0(a):
-    if a == 0:
-        return []
-    if a == 1:
-        return [0]
-    if a == 2:
-        return [0, 1]
+# def mystery_0(a):
+#     if a == 0:
+#         return []
+#     if a == 1:
+#         return [0]
+#     if a == 2:
+#         return [0, 1]
 
-    b = [0, 1]
-    for c in range(2, a):
-        b.append(b[-1] + b[-2])
-    return b
+#     b = [0, 1]
+#     for c in range(2, a):
+#         b.append(b[-1] + b[-2])
+#     return b
 
 
 # --- after documenting and testing ---
 
 
 def fibonacci_list(sequence_length: int) -> list[int]:
-    """generates a list containing the first n numbers of the Fibonacci sequence
+    """Generates a list containing the first n numbers of the Fibonacci sequence.
 
     Parameters:
-      sequence_length: int, greater than or equal to zero
+        sequence_length: int, greater than or equal to zero
 
     Returns -> list[int] with the first n numbers of the Fibonacci sequence
 

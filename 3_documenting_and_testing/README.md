@@ -39,25 +39,17 @@ master all of the skills introduced in this workshop.
 ### Function Documentation
 
 - 🥚 You can read docstrings to understand a function's _behavior_.
-- 🥚 You can import a module from the Python REPL and use `help(file_name)` to
-  read it's generated documentation:
-  1. `cd` into the folder containing the file you want to study
-  1. `$ python`
-  1. `$ import file_name` _use the file name without `.py`!_
-  1. `$ help(file_name)`
+- 🥚 You can print a file's _docstring_ to the console using:
+  - `$ python -m pydoc path/to/file.py`
+  - then type `q` to quit
 - 🥚 You can distinguish between a function's **_behavior_**, **_strategy_** and
   **_implementation_**.
 - 🥚 You can write a clear and complete _docstring_ to describe a function's
   _behavior_.
 - 🥚 You can write 2-3 _doctests_ to informally demonstrate a function's
   _behavior_. (white space matters in a docstring test case!)
-- 🥚 You can import a module from the Python REPL and use
-  `doctest.testmod(file_name, verbose=True)` to run a module's doctests:
-  1. `cd` into the folder containing the file you want to study
-  1. `$ python`
-  1. `$ import doctest`
-  1. `$ import file_name` _use the file name without `.py`!_
-  1. `$ doctest.testmod(file_name, verbose=True)`
+- 🥚 You can run a file's _doctests_ from the console:
+  - `$ python -m doctest -v path/to/file.py`
 
 ### Function Implementation
 
