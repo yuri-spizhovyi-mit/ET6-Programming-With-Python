@@ -8,4 +8,4 @@ best for you:
 - [Boris Paskhaver](https://www.youtube.com/playlist?list=PLQzZ4krxwT9Yay3kz8ly4wXiYJHzMtsWi)
 - [Ghost Together](https://www.youtube.com/watch?v=oCcTiRGPogQ)
 - [Tech with Tim](https://www.youtube.com/watch?v=7qZBwhSlfOo)
-- [The examples in this repo](https://denepo.js.org/watch/?url=https://raw.githubusercontent.com/MIT-Emerging-Talent/debugging/main/0_stepping_through/guide.mp4)
+- [The examples in this repo](https://mit-emerging-talent.github.io/ET6-Programming-With-Python/2_predictive_stepping/python_debugger_in_vscode.mp4)
