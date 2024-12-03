@@ -61,6 +61,7 @@ def fibonacci_list(sequence_length: int) -> list[int]:
 
     # sum the previous two values and append them to the list
     sequence = [0, 1]
-    for _ in range(2, sequence_length):
+    while len(sequence) < sequence_length:
         sequence.append(sequence[-1] + sequence[-2])
+
     return sequence

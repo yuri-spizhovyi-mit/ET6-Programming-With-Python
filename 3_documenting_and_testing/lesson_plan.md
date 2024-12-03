@@ -57,7 +57,7 @@ class: middle
 
 class: middle
 
-## Behavior, Strategy, Implementation
+## [Behavior, Strategy, Implementation](./behavior_strategy_implementation.md)
 
 - Naming things!
 
@@ -207,18 +207,28 @@ class: middle
 
 ## Code Review: _demo_
 
-- Open the [code review checklist](./code_review_checklist.md) and work from top to bottom
+- **Open the [code review checklist](./code_review_checklist.md) and work from top to bottom**
 
-- Run tests: `$ python -m unittest path/to/tests/test_file.py`
+_Rely on code quality automations_
 
-- Print the docstring: `$ python -m pydoc path/to/file.py`
+**Print the docstring**: `$ python -m pydoc path/to/file.py`
 
-- Run the doctests: `$ python -m doctest -v path/to/file.py`
-  
-- Check linting:
-  - with VSCode extensions
-  - `$ ruff check ./path/to/file.py`
-  - `$ pylint ./path/to/file.py`
+**Run the doctests**: `$ python -m doctest -v path/to/file.py`
+
+**Run the unit tests**: `$ python -m unittest path/to/tests/test_file.py`
+
+**Step through the tests in the debugger**:  
+
+- open the function and tests side-by-side
+- place a breakpoint in the first line of the function
+- open the VSCode debugger pane
+- start `ET: Debug Python (unittest)`
+
+**Lint the code**:
+
+- _with VSCode extensions_
+- `$ ruff check ./path/to/file.py`
+- `$ pylint ./path/to/file.py`
 
 ---
 
@@ -248,13 +258,7 @@ class: middle, center
 
 class: middle, center
 
-## Learnings + Discussion
-
----
-
-class: middle, center
-
-## Q & A
+## Discussion, Q & A
 
 ---
 
