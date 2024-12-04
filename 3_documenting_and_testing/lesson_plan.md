@@ -30,7 +30,7 @@ class: middle
 
 - **Breakout Groups 2: _./exercises_**
 
-- **Study Suggestion**
+- **Study Suggestion: _Analyze -> Remix -> Write_**
 
 - **Share Learnings + Discussion**
 
@@ -250,9 +250,23 @@ class: middle, center
 
 class: middle, center
 
-## Study Suggestion
+## Study Suggestion: _Analyze -> Remix -> Write_
 
-### _Learn by forfeiting!_
+- Choose any exercise platform, or try them all.
+
+- Forfeit!  Learn from others, not from a blank page
+
+- Easy is good!  Struggle in the _right_ way
+  - choose _behaviors_ you can easily understand
+
+- Study a mix of similar and different solutions
+  - compare different _strategies_ and _implementations_
+
+- Step through -> document -> test -> review
+
+- Remix your own solutions based on others you studied
+
+- Finally, go find a similar challenge and write your own solutions!
 
 ---
 
