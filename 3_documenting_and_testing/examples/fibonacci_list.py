@@ -48,8 +48,8 @@ def fibonacci_list(sequence_length: int) -> list[int]:
     assert isinstance(sequence_length, int), "sequence length is not an integer"
     assert sequence_length >= 0, "sequence length is less than 0"
 
-    # 3 base cases if the array is too short
-    # because this strategy reads back 2 indices in the array
+    # 3 base cases if the list is too short
+    # because this strategy reads back 2 indices in the list
     if sequence_length == 0:
         return []
 
@@ -60,6 +60,7 @@ def fibonacci_list(sequence_length: int) -> list[int]:
         return [0, 1]
 
     # sum the previous two values and append them to the list
+    #   until the list is long enough, then we have the solution
     sequence = [0, 1]
     while len(sequence) < sequence_length:
         sequence.append(sequence[-1] + sequence[-2])

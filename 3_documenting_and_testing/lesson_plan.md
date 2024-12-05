@@ -128,6 +128,19 @@ class: middle, center
 <a href="https://en.wikipedia.org/wiki/Algorithm" target="_blanks"><img alt="Flowchart" src="./.assets/flowchart.png" height="50%"  width="50%"></a>
 
 ---
+class: middle, center
+
+## Strategy: _plain language_
+
+If the string is empty or has 1 character, it's a palindrome.
+
+If it's longer than 2 characters, I will compare the first and last characters.
+If they are different, it's not a palindrome.
+If they are the same it might be a palindrome so ...
+
+I will remove the first and last characters and repeat this process.
+
+---
 
 class: middle, center
 
@@ -262,7 +275,7 @@ class: middle, center
 - Study a mix of similar and different solutions
   - compare different _strategies_ and _implementations_
 
-- Step through -> document -> test -> review
+- Review: test -> step through -> document
 
 - Remix your own solutions based on others you studied
 

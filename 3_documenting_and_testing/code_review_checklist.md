@@ -23,10 +23,10 @@ the details become a habit.
   - [ ] A helpful name
   - [ ] A clear docstring
   - [ ] Only one assertion
+  - [ ] There is no logic in the unit test
 - [ ] All tests pass
 - [ ] (challenge) Tests for defensive assertions
 - [ ] (challenge) Tests for many boundary cases
-- [ ] (challenge) Includes black-box and glass-box tests
 
 ## Function Docstring
 
