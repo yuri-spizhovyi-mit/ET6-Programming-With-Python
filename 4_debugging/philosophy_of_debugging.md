@@ -1,4 +1,4 @@
-# Debugging
+# Philosophy of Debugging
 
 > Adapted from Nick Parlante:
 > [Debugging](https://web.stanford.edu/class/archive/cs/cs106a/cs106a.1184//handouts/9%20-%20Debugging.pdf)
@@ -140,14 +140,14 @@ being systematic, you always know which part of the field you've checked.
 
 Identify the line which corresponds to the symptom. This is typically is very
 simple. For the above example the symptom corresponds to the line where the
-variable went out of bounds or to the printfs which produced the garbage output.
+variable went out of bounds or to the `print`s which produced the garbage output.
 The incorrect behavior will correspond to a variable with a bad value. Identify
 the variable(s) with bad values. For this example, suppose that the program
 crashes on line 112 because i is -1 and tries to index an array.
 
 The critical question is: where did i get its value? There are basically three
 ways a variable can get a value: the variable appears on the left hand side of a
-=, a reference to the variable is passed to somebody who changes it, or there is
+`=`, a reference to the variable is passed to somebody who changes it, or there is
 a bad pointer reference somewhere which is accidentally scribbling on the
 variable. Arguably a fourth way is if the variable is never initialized and so
 gets a random value. Writing your code with good style: sensibly used
