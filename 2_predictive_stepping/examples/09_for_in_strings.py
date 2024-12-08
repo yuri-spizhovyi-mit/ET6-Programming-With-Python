@@ -11,6 +11,6 @@ to_reverse = input("Enter anything, this program will reverse it: ")
 
 backwards = ""
 for char in to_reverse:
-    backwards = char + backwards
+    backwards =  char + backwards
 
 print("end of program")

@@ -28,9 +28,9 @@ _2_arg = [True, False]
 _2_returned = reverse_list(_2_arg)
 assert _2_returned == [False, True], "Test 2"
 
-_3_arg = [1729]
+_3_arg = [1729, 9271]
 _3_returned = reverse_list(_3_arg)
-assert _3_returned == [1729], "Test 3"
+assert _3_returned == [9271, 1729], "Test 3"
 
 _4_arg = []
 _4_returned = reverse_list(_4_arg)

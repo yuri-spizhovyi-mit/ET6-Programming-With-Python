@@ -47,7 +47,7 @@ assert isinstance(difference, bool)
 # failing assertions
 #   uncomment any of the following lines to throw an assertion error
 #   a failed assertion will stop the program, no further lines will execute
-
+# assert False
 # assert 1 != 1
 # assert 1 != 1.0
 # assert False

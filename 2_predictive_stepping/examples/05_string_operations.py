@@ -37,3 +37,6 @@ lower = text.lower()
 stripped = "  Python  ".strip()
 
 print("end of script")
+text = "!Hello"
+cleaned = text.rstrip("!")
+print(cleaned)
