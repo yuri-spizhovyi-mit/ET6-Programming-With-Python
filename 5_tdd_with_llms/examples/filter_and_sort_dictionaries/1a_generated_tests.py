@@ -13,6 +13,12 @@ def f(lst, key):
     Returns: a list of dicts where each dict contains the given key,
       and the dicts are sorted alphabetically by the value stored in the given key
 
+    Raises: AssertionError
+        if the argument is not a list
+        if each item is not a dict
+        if any key in any dict is not a string
+        if any value in any dict is not a string
+
     >>> f([{'a':'z'},{'b':'y'},{'a':'x'}], 'a')
     [{'a':'x'},{'a','z'}]
 

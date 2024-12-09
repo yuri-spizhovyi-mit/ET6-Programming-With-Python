@@ -2,5 +2,5 @@
 # -*- coding: utf-8 -*-
 
 
-def fibonacci_sequence():
+def fibonacci_number():
     pass

@@ -13,6 +13,12 @@ def f(lst, key):
     Returns: a list of dicts where each dict contains the given key,
       and the dicts are sorted alphabetically by the value stored in the given key
 
+    Raises: AssertionError
+        if the argument is not a list
+        if each item is not a dict
+        if any key in any dict is not a string
+        if any value in any dict is not a string
+
     >>> f([{'a':'z'},{'b':'y'},{'a':'x'}], 'a')
     [{'a':'x'},{'a','z'}]
 
@@ -23,13 +29,18 @@ def f(lst, key):
     """
     assert isinstance(lst, list), "Input must be a list"
     assert all(isinstance(d, dict) for d in lst), "List elements must be dictionaries"
-    # removed unnecessary assertion
-    assert all(
-        isinstance(d[key], str) for d in lst
-    ), f"Values for key '{key}' must be strings"
+    # removed extra assertion
+    # fixed error in assertion, asked AI to check if all keys and values are strings
+    #   manually refactored the loop to assert
+    for dictionary in lst:
+        for key, value in dictionary.items():
+            assert isinstance(key, str), "some keys are not strings"
+            assert isinstance(value, str), "some values are not strings"
 
-    # implementation of the function goes here
-    pass
+    filtered_list = [d for d in lst if isinstance(d, dict) and key in d]
+    sorted_list = sorted(filtered_list, key=lambda x: x[key])
+
+    return sorted_list
 
 
 class TestFilterAndSort(unittest.TestCase):

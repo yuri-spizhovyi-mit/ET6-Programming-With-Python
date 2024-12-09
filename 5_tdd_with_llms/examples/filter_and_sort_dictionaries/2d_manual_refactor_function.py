@@ -1,8 +1,7 @@
 import unittest
 
 
-# I asked the AI for a more explicit, imperative strategy
-def f(lst, key):
+def f(lst, sort_key):
     """Filters a list of dicts by key, and alphabetizes the entries by value.
 
     This function does not modify the argument list.
@@ -14,9 +13,14 @@ def f(lst, key):
     Returns: a list of dicts where each dict contains the given key,
       and the dicts are sorted alphabetically by the value stored in the given key
 
+    Raises: AssertionError
+        if the argument is not a list
+        if each item is not a dict
+        if any key in any dict is not a string
+        if any value in any dict is not a string
+
     >>> f([{'a':'z'},{'b':'y'},{'a':'x'}], 'a')
     [{'a':'x'},{'a','z'}]
-
 
     >>> f([{'a':'z','b':'j'},{'b':'y'},{'b':'i',a':'x'}], 'b')
     [{'b':'i',a':'x'},{'a':'z','b':'j'},{'b':'y'}]
@@ -26,17 +30,17 @@ def f(lst, key):
     assert all(isinstance(d, dict) for d in lst), "List elements must be dictionaries"
     for dictionary in lst:
         for key, value in dictionary.items():
-            assert isinstance(key, str), "some keys are not strings"
+            assert isinstance(sort_key, str), "some keys are not strings"
             assert isinstance(value, str), "some values are not strings"
 
     filtered_list = []
     for d in lst:
-        if key in d:
+        if sort_key in d:
             filtered_list.append(d)
 
-    sorted_list = []
-    for d in sorted(filtered_list, key=lambda x: x[key]):
-        sorted_list.append(d)
+    # remove redundant for loop
+    # fix variable clash in lambda
+    sorted_list = sorted(filtered_list, key=lambda x: x[sort_key])
 
     return sorted_list
 
