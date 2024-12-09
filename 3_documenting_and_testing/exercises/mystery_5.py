@@ -15,17 +15,17 @@ def mystery_5(a: int, b=None) -> list[int]:
 
     Returns:
         list[int]: a sorted list a appended to the list b
-        
-        
+
+
     >>> mystery_5([])
     []
-    
+
     >>> mystery_5([3, 2, 1])
     [1, 2, 3]
-    
+
     >>> mystery_5([3, 2, -1])
     [-1, 2, 3]
-    
+
     >>> mystery_5([5, 4], [3, 2, 1])
     [3, 2, 1, 4, 5]
     >>>
@@ -38,4 +38,5 @@ def mystery_5(a: int, b=None) -> list[int]:
         b.append(c)
     return b
 
-mystery_5([3,4])
+
+mystery_5([3, 4])

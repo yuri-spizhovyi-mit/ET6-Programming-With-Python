@@ -2,15 +2,16 @@ import unittest
 
 from ..mystery_9 import mystery_9
 
+
 class TestMystery9(unittest.TestCase):
-    """Test mystery_9 function """
-    
+    """Test mystery_9 function"""
+
     def test_0(self):
         """It should evaluate sorting of empty list"""
         actual = mystery_9([])
         expected = []
         self.assertEqual(actual, expected)
-        
+
     def test_1(self):
         """It should evaluate sorting of a list with positive
         negative numbers and zero"""

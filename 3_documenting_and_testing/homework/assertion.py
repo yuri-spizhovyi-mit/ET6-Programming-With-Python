@@ -4,6 +4,7 @@ def get_list_of_items(lst: list, index: int) -> int:
     assert 0 <= index < len(lst), "Index out of range"
     return lst[index]
 
+
 lst = [1, 2, 3]
 i = 4
 print(get_list_of_items(lst, i))  # Output: 2
