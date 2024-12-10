@@ -40,6 +40,7 @@ def find_longest(items: list) -> str:
         
     longest = items[0]
     for item in items:
+        assert isinstance(item, str), "input must be an str"
         if len(item) > len(longest):
             longest = item
     return longest
