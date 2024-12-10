@@ -39,5 +39,7 @@ def join_words(words: list, separator: str) -> str:
     
     result = ""
     for word in words:
-        result = result + separator + word
-    return result
+        result += word + separator
+    return result.rstrip(separator)
+
+join_words(['a', 'b', 'c'], ',')
