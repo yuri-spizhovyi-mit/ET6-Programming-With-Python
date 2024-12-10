@@ -34,7 +34,9 @@ class: middle
 
 - **The Workflow**
 
-- **Breakout Groups: _./exercises_**
+- ~~**Breakout Groups: _./exercises_**~~
+
+- **Live Demo: _TDD without LLMs_**
 
 - **Discussion + Q&A**
 
