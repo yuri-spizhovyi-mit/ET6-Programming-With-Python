@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on 2024-12-12
-
-@author: Yurii Spizhovyi + Chat GPT
-"""
-
 """ Exclusive Or
 
 Write a function that takes in a string and two lists of strings. 
@@ -65,17 +57,5 @@ False
 """
 
 
-def exclusive_or(item, first, second):
-    if not isinstance(item, str):
-        raise TypeError("item must be a string")
-    if not isinstance(first, list) or not isinstance(second, list):
-        raise TypeError("first and second must be lists")
-    if not all(isinstance(element, str) for element in first):
-        raise TypeError("All elements in first must be strings")
-    if not all(isinstance(element, str) for element in second):
-        raise TypeError("All elements in second must be strings")
-
-    in_first = item in first
-    in_second = item in second
-
-    return (in_first or in_second) and not (in_first and in_second)
+def exclusive_or():
+    pass

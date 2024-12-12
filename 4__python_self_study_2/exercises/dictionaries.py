@@ -27,40 +27,36 @@ print(person)
 
 # Using pop (returns the value)
 age = person.pop("age")
-print(age) # Output 31
-print(person) # City removed
+print(age)  # Output 31
+print(person)  # City removed
 
 # Looping through a dictionary
 # Keys only:
 for key in person:
-  print(key)
-  
+    print(key)
+
 # Values only:
 for value in person:
-  print(value)
+    print(value)
 
 # Keys and values:
 for key, value in person.items():
-  print(f"{key}:{value}")
-  
+    print(f"{key}:{value}")
+
 # Checking existence of a key
 if "name" in person:
-  print("Name exists in the dictionary")
-  
-  
+    print("Name exists in the dictionary")
+
+
 # A Simple use case
 
 # Storing student grades
 
-grades = {
-  "Alice": 85, 
-  "Bob": 92, 
-  "Charlie": 82
-}
+grades = {"Alice": 85, "Bob": 92, "Charlie": 82}
 
 # Accessing grades
 
-print(grades["Alice"]) # Output: 85
+print(grades["Alice"])  # Output: 85
 
 # Adding a new students
 grades["Diana"] = 88
@@ -68,9 +64,9 @@ grades["Diana"] = 88
 # Updating a grade
 grades["Alice"] = 90
 
-# Removing a student 
+# Removing a student
 del grades["Charlie"]
 
 # Looping through the grades
 for student, grade in grades.items():
-  print(f"{student}: {grade}")
+    print(f"{student}: {grade}")
