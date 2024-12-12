@@ -1,6 +1,7 @@
-""" Inclusive Or
+""" Sort Numbers
 
-Write a function that takes in a string and two lists of strings. 
-It will return true if the item is in _at least one_ of the lists.
+Write a function that takes in a list of numbers
+It will return a new list with the same numbers from lowest to highets
+-> this function does not have side effects
 
 """
