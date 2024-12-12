@@ -9,3 +9,49 @@ __pycache__
 *.cover
 *.excalidraw
 plann.txt
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+
+# Credentials and security keys
+*.key
+*.pub
+
+# Environment files and caches
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+
+# Build files
+build/
+dist/
+*.class
+*.o
+*.so
+
+# Android-specific files
+.android/
+*.keystore
+
+# Robo 3T configurations
+robo3t.key
+robo3t.json
+
+# IDE-specific files
+.idea/
+*.iml
+
+# Backup and archive files
+*.bak
+*.zip
+*.tar.gz
+
+# Miscellaneous
+*.db
