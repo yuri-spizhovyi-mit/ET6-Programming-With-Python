@@ -10,7 +10,7 @@ Created on 2024-12-12
 def exclusive_or(item, first, second):
     """Exclusive Or
 
-    Function that takes in a string and two lists of strings. 
+    Write a function that takes in a string and two lists of strings. 
     It will return true if the item is in _only one_ of the lists.
 
     Args:
@@ -26,7 +26,7 @@ def exclusive_or(item, first, second):
 
     Returns:
         bool: True if the 'item' is only in list 'first' or is only in list 'second'.
-            False if the 'item' is in both lists at the same time or does not exist in either list.
+              False if the 'item' is in both lists at the same time or does not exist in either list.
 
     Examples:
         >>> exclusive_or("hello", ["hello"], ["world"])
@@ -69,6 +69,45 @@ def exclusive_or(item, first, second):
         False
 
         >>> exclusive_or("hello", ["helloworld"], ["world"])
+        False
+
+        >>> exclusive_or("hello", [], ["hello"])
+        True
+
+        >>> exclusive_or("hello", ["hello"], [])
+        True
+
+        >>> exclusive_or("hello", [], [])
+        False
+
+        >>> exclusive_or("", [""], [""])
+        False
+
+        >>> exclusive_or("", [], [""])
+        True
+
+        >>> exclusive_or("", [""], [])
+        True
+
+        >>> exclusive_or("", [], [])
+        False
+
+        >>> exclusive_or("Hello", ["Hello"], ["hello"])
+        True
+
+        >>> exclusive_or("Hello", ["hello"], ["Hello"])
+        True
+
+        >>> exclusive_or("Hello, world!", ["Hello, world!"], ["Hello"])
+        True
+
+        >>> exclusive_or("Hello, world!", ["Hello"], ["Hello, world!"])
+        True
+
+        >>> exclusive_or("world", ["Hello, world!"], ["world"])
+        True
+
+        >>> exclusive_or("world", ["Hello, world!"], ["Hello, world!"])
         False
 
     """
