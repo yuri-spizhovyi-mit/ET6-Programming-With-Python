@@ -11,7 +11,12 @@ second: list[str]
 Returns: True if the 'item' is only in list 'first' or is only in list 'second'
         False if the 'item' in both lists at the same time or does not exists in lists at all
         
-        
+ 
+"""
+
+
+def exclusive_or():
+        """       
 >>> exclusive_or("hello", ["hello"], ["world"])
 True
 
@@ -54,8 +59,5 @@ False
 >>> exclusive_or("hello", ["helloworld"], ["world"])
 False
 
-"""
-
-
-def exclusive_or():
-    pass
+        """
+        pass

@@ -19,53 +19,75 @@ second: list[str]
 Returns: True if the 'item' is only in list 'first' or is only in list 'second'
         False if the 'item' in both lists at the same time or does not exists in lists at all
         
-        
->>> exclusive_or("hello", ["hello"], ["world"])
-True
-
->>> exclusive_or("hello", ["hello world"], ["world"])
-True
-
->>> exclusive_or("hello", ["world"], ["hello"])
-True
-
->>> exclusive_or("hello", ["world"], ["hello world"])
-True
-
->>> exclusive_or("hello", [""], ["hello world"])
-True
-
->>> exclusive_or("hello", ["hello world"], [""])
-True
-
->>> exclusive_or("", [""], ["hello world"])
-True
-
->>> exclusive_or("", ["hello world"], [""])
-True
-
->>> exclusive_or("hello world", ["hello world"], [""])
-True
-
->>> exclusive_or("Hello, world!", ["Hello, world!"], ["Hello"])
-True
-
->>> exclusive_or("hello", ["hello"], ["hello"])
-False
-        
->>> exclusive_or("hello", [""], [""])
-False
-
->>> exclusive_or("Hello, world!", ["Hello, world!"], ["Hello, world!"])
-False
-
->>> exclusive_or("hello", ["helloworld"], ["world"])
-False
 
 """
 
 
 def exclusive_or(item, first, second):
+    """Exclusive Or
+
+    Function that takes in a string and two lists of strings. 
+    It will return true if the item is in _only one_ of the lists.
+
+    Args:
+        item (str): The string to search for in the two lists.
+        first (list[str]): The first list of strings.
+        second (list[str]): The second list of strings.
+
+    Raises:
+        TypeError: If `item` is not a string.
+        TypeError: If `first` is not a list.
+        TypeError: If `second` is not a list.
+        TypeError: If elements of `first` or `second` are not strings.
+
+    Returns:
+        bool: True if the 'item' is only in list 'first' or is only in list 'second'.
+            False if the 'item' is in both lists at the same time or does not exist in either list.
+
+    Examples:
+        >>> exclusive_or("hello", ["hello"], ["world"])
+        True
+
+        >>> exclusive_or("hello", ["hello world"], ["world"])
+        True
+
+        >>> exclusive_or("hello", ["world"], ["hello"])
+        True
+
+        >>> exclusive_or("hello", ["world"], ["hello world"])
+        True
+
+        >>> exclusive_or("hello", [""], ["hello world"])
+        True
+
+        >>> exclusive_or("hello", ["hello world"], [""])
+        True
+
+        >>> exclusive_or("", [""], ["hello world"])
+        True
+
+        >>> exclusive_or("", ["hello world"], [""])
+        True
+
+        >>> exclusive_or("hello world", ["hello world"], [""])
+        True
+
+        >>> exclusive_or("Hello, world!", ["Hello, world!"], ["Hello"])
+        True
+
+        >>> exclusive_or("hello", ["hello"], ["hello"])
+        False
+
+        >>> exclusive_or("hello", [""], [""])
+        False
+
+        >>> exclusive_or("Hello, world!", ["Hello, world!"], ["Hello, world!"])
+        False
+
+        >>> exclusive_or("hello", ["helloworld"], ["world"])
+        False
+
+    """
     if not isinstance(item, str):
         raise TypeError("item must be a string")
     if not isinstance(first, list) or not isinstance(second, list):
