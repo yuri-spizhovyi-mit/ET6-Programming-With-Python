@@ -11,6 +11,7 @@ Created on 2024-12-13
 import unittest
 from ..repeat_character import repeat_character
 
+
 class TestRepeatCharacter(unittest.TestCase):
     # Basic functionality
     def test_single_occurrence(self):
@@ -71,6 +72,7 @@ class TestRepeatCharacter(unittest.TestCase):
         """It should raise a ValueError when the repetition count is negative"""
         with self.assertRaises(ValueError):
             repeat_character("hello", "e", -1)
+
 
 if __name__ == "__main__":
     unittest.main()

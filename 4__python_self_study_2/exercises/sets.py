@@ -16,6 +16,7 @@ You can create a set using:
 * The set() constructor.
 Example:
 """
+
 # Using curly braces
 my_set = {1, 2, 3, 4}
 print(my_set)
@@ -49,8 +50,8 @@ fruits.update(["grape", "mango"])
 print("Updated fruits", fruits)
 
 # Removing elements
-fruits.remove( "banana")  # Throws an error if the item does not exist
-print("Removed banana",fruits)
+fruits.remove("banana")  # Throws an error if the item does not exist
+print("Removed banana", fruits)
 
 fruits.discard("mango")  # Does NOT throw an error if the item is missing
 print("Removed mango", fruits)

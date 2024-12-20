@@ -11,6 +11,7 @@ Created on 2024-12-13
 import unittest
 from ..sum_evens_and_odds import sum_evens_and_odds
 
+
 class TestSumEvensAndOdds(unittest.TestCase):
     # Basic functionality
     def test_basic_case(self):
@@ -37,7 +38,9 @@ class TestSumEvensAndOdds(unittest.TestCase):
         self.assertEqual(sum_evens_and_odds([-2, -3, 4, 5]), {"evens": 2, "odds": 2})
 
     def test_all_negative_numbers(self):
-        self.assertEqual(sum_evens_and_odds([-2, -4, -5, -7]), {"evens": -6, "odds": -12})
+        self.assertEqual(
+            sum_evens_and_odds([-2, -4, -5, -7]), {"evens": -6, "odds": -12}
+        )
 
     # Mixed integers and zeros
     def test_including_zero(self):
@@ -49,7 +52,9 @@ class TestSumEvensAndOdds(unittest.TestCase):
     # Large input
     def test_large_input(self):
         large_list = [i for i in range(1, 10001)]  # Numbers from 1 to 10,000
-        self.assertEqual(sum_evens_and_odds(large_list), {"evens": 25005000, "odds": 25000000})
+        self.assertEqual(
+            sum_evens_and_odds(large_list), {"evens": 25005000, "odds": 25000000}
+        )
 
     # Defensive assertions
     def test_non_integer_values(self):
@@ -63,6 +68,7 @@ class TestSumEvensAndOdds(unittest.TestCase):
     def test_nested_lists(self):
         with self.assertRaises(TypeError):
             sum_evens_and_odds([1, [2, 3], 4])
+
 
 if __name__ == "__main__":
     unittest.main()

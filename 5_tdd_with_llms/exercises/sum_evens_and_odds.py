@@ -4,6 +4,7 @@
     @author: Yurii Spizhovyi
 """
 
+
 def sum_evens_and_odds(numbers: list[int]) -> dict[str, int]:
     """
     Sum the even and odd numbers in a list.
@@ -46,5 +47,6 @@ def sum_evens_and_odds(numbers: list[int]) -> dict[str, int]:
     odds = sum(num for num in numbers if num % 2 != 0)
 
     return {"evens": evens, "odds": odds}
+
 
 print(sum_evens_and_odds([1, 2, 3, 4]))

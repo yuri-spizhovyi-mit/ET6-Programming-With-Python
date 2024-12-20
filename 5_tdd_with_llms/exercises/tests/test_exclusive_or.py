@@ -9,6 +9,7 @@ Created on 2024-12-12
 import unittest
 from ..exclusive_or import exclusive_or
 
+
 class TestExclusiveOr(unittest.TestCase):
     def test_item_in_first_list_only(self):
         self.assertTrue(exclusive_or("hello", ["hello"], ["world"]))
@@ -86,6 +87,7 @@ class TestExclusiveOr(unittest.TestCase):
     def test_lists_with_nested_lists(self):
         with self.assertRaises(TypeError):
             exclusive_or("hello", [["hello"]], ["world"])
+
 
 if __name__ == "__main__":
     unittest.main()

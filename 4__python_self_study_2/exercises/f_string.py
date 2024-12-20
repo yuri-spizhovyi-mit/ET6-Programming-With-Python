@@ -1,4 +1,5 @@
 from datetime import datetime
+
 """Python Lesson: F-Strings (f"... {expression} ...")
 Introduction
 Python's f-strings (formatted string literals) provide a concise and readable way to include expressions and variables inside strings. Introduced in Python 3.6, f-strings start with an f or F before the string and use curly braces {} to evaluate expressions directly within the string.
@@ -23,9 +24,12 @@ Arithmetic Operations
 width = 10
 height = 5
 print(f"The area of the rectange is {width * height}")
+
+
 # Function Calls
 def greet(name):
-  return f"Hello {name}"
+    return f"Hello {name}"
+
 
 print(f"Message: {greet('Alex')}")
 
@@ -85,9 +89,9 @@ print(message)
 Problem 1: Basic F-Strings
 Write a program that takes a user's name and age as input, and prints a message using an f-string:
 """
-#name = input("Enter your name: ")
-#age = input("Enter you age: ")
-#print(f"My name is {name} and I am {age} years old")
+# name = input("Enter your name: ")
+# age = input("Enter you age: ")
+# print(f"My name is {name} and I am {age} years old")
 
 """Problem 2: Formatting Numbers
 Display a floating-point number (e.g., 1234.5678) with:
@@ -111,11 +115,11 @@ Use f-strings and the datetime module.
 current_date = datetime.now()
 current_hour = current_date.hour
 if current_hour < 12:
-  greeting = "Good Morning!"
+    greeting = "Good Morning!"
 elif 12 < current_hour < 6:
-  greeting = "Good Afternoon!"
-else: 
-  greeting = "Good Evening!"
+    greeting = "Good Afternoon!"
+else:
+    greeting = "Good Evening!"
 
 print(f"{greeting} The current time is {now:%I:%M:%p}")
 
@@ -128,18 +132,18 @@ Input: A list of tuples with student names and scores.
 """
 students = [("Alice", 90), ("Bob", 85), ("Charlie", 92)]
 print(f"{'Name':<10}{'Score':>10}")
-print("-"*20)
+print("-" * 20)
 for name, score in students:
-  print(f"{name:<10}{score:>10}")
-  
-  # Calculate column widths
+    print(f"{name:<10}{score:>10}")
+
+    # Calculate column widths
 name_width = max(len(name) for name, _ in students) + 2
 score_width = 6
-  
-  # Header
+
+# Header
 print(f"{'Name':<{name_width}}{'Score':>{score_width}}")
 print("-" * (name_width + score_width))
-  
-  # Table Rows
+
+# Table Rows
 for name, score in students:
-  print(f"{name: <{name_width}}{score:>{score_width}}")
+    print(f"{name: <{name_width}}{score:>{score_width}}")

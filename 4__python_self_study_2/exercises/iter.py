@@ -27,6 +27,7 @@ The enumerate() function adds a counter to an iterable, returning an enumerate o
 
 Syntax
 """
+
 # Syntax
 
 # iterator = iter(iterable)
@@ -38,14 +39,14 @@ print(next(iterator))  # Output: 2
 print(next(iterator))  # Output: 3
 
 
-fruits = ['apple', 'banana', 'cherry']
+fruits = ["apple", "banana", "cherry"]
 for index, fruit in enumerate(fruits):
     print(index, fruit)
 
-fruits = ['apple', 'banana', 'cherry']
+fruits = ["apple", "banana", "cherry"]
 for index, fruit in enumerate(fruits, start=1):
     print(index, fruit)
-    
+
 numbers = [5, 10, 15, 20]
 # Use iter() and next() to iterate through numbers
 iterator = iter(numbers)
@@ -55,7 +56,7 @@ print(next(iterator))
 print(next(iterator))
 
 
-names = ['Alice', 'Bob', 'Charlie']
+names = ["Alice", "Bob", "Charlie"]
 # Use enumerate() to solve this
 for index, name in enumerate(names, start=1):
-  print(index, name)
+    print(index, name)

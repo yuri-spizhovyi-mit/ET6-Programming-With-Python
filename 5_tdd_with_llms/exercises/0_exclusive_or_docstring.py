@@ -16,48 +16,48 @@ Returns: True if the 'item' is only in list 'first' or is only in list 'second'
 
 
 def exclusive_or():
-        """       
->>> exclusive_or("hello", ["hello"], ["world"])
-True
+    """
+    >>> exclusive_or("hello", ["hello"], ["world"])
+    True
 
->>> exclusive_or("hello", ["hello world"], ["world"])
-True
+    >>> exclusive_or("hello", ["hello world"], ["world"])
+    True
 
->>> exclusive_or("hello", ["world"], ["hello"])
-True
+    >>> exclusive_or("hello", ["world"], ["hello"])
+    True
 
->>> exclusive_or("hello", ["world"], ["hello world"])
-True
+    >>> exclusive_or("hello", ["world"], ["hello world"])
+    True
 
->>> exclusive_or("hello", [""], ["hello world"])
-True
+    >>> exclusive_or("hello", [""], ["hello world"])
+    True
 
->>> exclusive_or("hello", ["hello world"], [""])
-True
+    >>> exclusive_or("hello", ["hello world"], [""])
+    True
 
->>> exclusive_or("", [""], ["hello world"])
-True
+    >>> exclusive_or("", [""], ["hello world"])
+    True
 
->>> exclusive_or("", ["hello world"], [""])
-True
+    >>> exclusive_or("", ["hello world"], [""])
+    True
 
->>> exclusive_or("hello world", ["hello world"], [""])
-True
+    >>> exclusive_or("hello world", ["hello world"], [""])
+    True
 
->>> exclusive_or("Hello, world!", ["Hello, world!"], ["Hello"])
-True
+    >>> exclusive_or("Hello, world!", ["Hello, world!"], ["Hello"])
+    True
 
->>> exclusive_or("hello", ["hello"], ["hello"])
-False
-        
->>> exclusive_or("hello", [""], [""])
-False
+    >>> exclusive_or("hello", ["hello"], ["hello"])
+    False
 
->>> exclusive_or("Hello, world!", ["Hello, world!"], ["Hello, world!"])
-False
+    >>> exclusive_or("hello", [""], [""])
+    False
 
->>> exclusive_or("hello", ["helloworld"], ["world"])
-False
+    >>> exclusive_or("Hello, world!", ["Hello, world!"], ["Hello, world!"])
+    False
 
-        """
-        pass
+    >>> exclusive_or("hello", ["helloworld"], ["world"])
+    False
+
+    """
+    pass

@@ -13,12 +13,11 @@ def recursion_error(depth: int):
     if depth > 3:
         return "done recursing"
     else:
-        
+
         print(depth)
 
         recursion_error(depth + 1)
     # the return statement will never be reached
-        
 
 
 print(recursion_error(0))

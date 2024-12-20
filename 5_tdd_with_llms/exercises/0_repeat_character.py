@@ -7,7 +7,6 @@ The function returns a string with each occurrence of the character repeated n t
 
 
 def repeat_character(item: str, char, str, num: int) -> str:
-    
     """Args:
         item (str): The string of characters, words, etc.
         char (str): The character to search in a string.
@@ -24,33 +23,33 @@ def repeat_character(item: str, char, str, num: int) -> str:
     Examples:
         >>> repeat_character("hello", "e", 1)
         "hello"
-        
+
         >>> repeat_character("hello melon", "e", 1)
         "hello"
 
         >>> repeat_character("hello melon", "e", 2)
-        "hello melon"        
-        
+        "hello melon"
+
         >>> repeat_character("hello melon", "a", 1)
-        ""        
+        ""
         >>> repeat_character("hello melon", "e", 3)
-        ""   
+        ""
         >>> repeat_character("", "e", 1)
         ""
-        
+
         >>> repeat_character("", "e", 1)
         ""
-        
+
         >>> repeat_character(1, "e", 1)
         TypeError
-        
+
         >>> repeat_character("hello", 1, 1)
         TypeError
-        
+
         >>> repeat_character("hello", 1, "one")
         TypeError
-        
+
         >>> repeat_character("", "e", "")
         # I guess this should be error
-        
+
     """

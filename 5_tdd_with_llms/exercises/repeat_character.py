@@ -77,4 +77,4 @@ def repeat_character(item: str, char: str, num: int) -> str:
         else:
             result.append(c)
 
-    return ''.join(result)
+    return "".join(result)
