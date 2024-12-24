@@ -17,8 +17,11 @@ def function_name(param1, param2):
 function_name(arg1, arg2)
 
 """
+
+
 def greet(name, age):
     print(f"Hello, {name}! You are {age} years old.")
+
 
 greet("Alice", 25)  # Positional arguments: "Alice" -> name, 25 -> age
 
@@ -36,8 +39,11 @@ def function_name(param1, param2):
 function_name(param1=value1, param2=value2)
 
 """
+
+
 def greet(name, age):
     print(f"Hello, {name}! You are {age} years old.")
+
 
 greet(age=25, name="Alice")  # Keyword arguments
 """Key Points
@@ -48,8 +54,11 @@ Rules
 Positional arguments must appear before keyword arguments in a function call.
 You cannot provide the same parameter twice using both positional and keyword arguments.
 Example"""
+
+
 def greet(name, age):
     print(f"Hello, {name}! You are {age} years old.")
+
 
 # Mixing positional and keyword arguments
 greet("Alice", age=25)  # Valid
@@ -61,11 +70,14 @@ Definition
 Parameters can have default values, making them optional in function calls. These parameters can be omitted or provided as keyword arguments.
 
 Example"""
+
+
 def greet(name="Guest", age=18):
     print(f"Hello, {name}! You are {age} years old.")
 
-greet()                  # Both defaults are used
-greet("Alice")           # Only `age` uses default
+
+greet()  # Both defaults are used
+greet("Alice")  # Only `age` uses default
 greet(age=25, name="Bob")  # Override both defaults
 
 """5. Arbitrary Positional (*args) and Keyword Arguments (**kwargs)
@@ -74,9 +86,12 @@ For functions that accept an unknown number of arguments:
 Use *args to collect additional positional arguments.
 Use **kwargs to collect additional keyword arguments.
 Example"""
+
+
 def display_info(*args, **kwargs):
     print("Positional arguments:", args)
     print("Keyword arguments:", kwargs)
+
 
 display_info(1, 2, 3, name="Alice", age=25)
 
@@ -92,23 +107,30 @@ Write a function book_ticket that takes event (positional), seat (keyword with d
 Call the function with different combinations of arguments.
 
 """
+
+
 # Problem 1
 def calculate_area(length: int, width: int) -> int:
-  print(f"The area of the figure is {length * width}") 
+    print(f"The area of the figure is {length * width}")
 
-calculate_area( 10, 5)
+
+calculate_area(10, 5)
 
 # Problem 2
 
-def name_age(name: str, age: int) -> str: 
-  print(f"The name of the person is {name} and name is {age}")
-  
+
+def name_age(name: str, age: int) -> str:
+    print(f"The name of the person is {name} and name is {age}")
+
+
 name_age(name="John", age=30)
 
 # Problem 3
 
+
 def book_ticket(seat, price) -> str:
-  print(f"The seat type is {seat} and price is {price}")
+    print(f"The seat type is {seat} and price is {price}")
+
 
 book_ticket("General", price=100)
 
@@ -122,6 +144,11 @@ Additional items as *args.
 Optional special instructions as **kwargs.
 Example Call:"""
 
-def order_food(food, quantity,*args, drink="Water", **kwargs):
-  print(f"The order is {food}, the quantity is {quantity}. Drink is {drink} other stuff is {args} and {kwargs}")
+
+def order_food(food, quantity, *args, drink="Water", **kwargs):
+    print(
+        f"The order is {food}, the quantity is {quantity}. Drink is {drink} other stuff is {args} and {kwargs}"
+    )
+
+
 order_food("Pizza", 2, "Fries", "Salad", drink="Soda", tip=5, notes="Extra cheese")

@@ -37,6 +37,7 @@ value_if_true if condition else value_if_false
 Key Points
 Avoid overcomplicating expressions to maintain readability.
 Suitable for simple conditional assignments."""
+
 age = 18
 status = "Adult" if age >= 18 else "Minor"
 print(status)
@@ -56,12 +57,12 @@ for fruit in fruits:
 """Using range() with for
 range() generates a sequence of numbers."""
 for i in range(1, 5):
-  print(i)
-  
+    print(i)
+
 """List Comprehensions
 Python provides a compact syntax for creating lists with for loops."""
 
-numbers = [x**2 for x in range(5)] # Squares of numbers 0 to 4
+numbers = [x**2 for x in range(5)]  # Squares of numbers 0 to 4
 print(numbers)
 """3. break Statement
 Definition
@@ -69,10 +70,10 @@ The break statement exits the loop immediately, regardless of the iteration cond
 
 Example"""
 for i in range(10):
-  print(i, end=" ")
-  if i == 5:
-    break
-  
+    print(i, end=" ")
+    if i == 5:
+        break
+
 """4. continue Statement
 Definition
 The continue statement skips the current iteration and moves to the next iteration of the loop.
@@ -80,10 +81,10 @@ The continue statement skips the current iteration and moves to the next iterati
 Example"""
 print("---")
 for i in range(5):
-  print(i)
-  if i == 2:
-    continue
-  
+    print(i)
+    if i == 2:
+        continue
+
 
 """
 Practice Exercises
@@ -103,31 +104,31 @@ Write a program that iterates through numbers 1 to 10 but skips numbers divisibl
 """
 # Problem 1
 number = 2
-result = "Even" if number%2==0 else "Odd"
+result = "Even" if number % 2 == 0 else "Odd"
 print(result)
 
 # Problem 2
 
 for i in range(20):
-  print(i, end=" ")
-  if i == 15:
-    break
-  
+    print(i, end=" ")
+    if i == 15:
+        break
+
 
 # Problem 3
 
 names = ["Eve", "Bea", "Colin", "John", "Edward"]
 for name in names:
-  if name == "John":
-    break
-  print(name)
+    if name == "John":
+        break
+    print(name)
 
 # Problem 4
 
 for i in range(11):
-  if i%3 == 0:
-    continue
-  print(i)
+    if i % 3 == 0:
+        continue
+    print(i)
 
 """Challenge Task
 Custom Loop
@@ -140,14 +141,14 @@ Stops the loop entirely if the number 45 is reached using break.
 Expected Output:
 
 """
-for i in range(1,50):
-  if i == 45:
-    break
-  if i%7 == 0:
-    continue
-  if i%3 == 0 and i%5 == 0:
-    print(f"{i} is Fizz&Buzz")
-  elif i%3 == 0:
-    print(f"{i} is Fizz")
-  elif i%5 == 0:
-    print(f"{i} is Buzz")
+for i in range(1, 50):
+    if i == 45:
+        break
+    if i % 7 == 0:
+        continue
+    if i % 3 == 0 and i % 5 == 0:
+        print(f"{i} is Fizz&Buzz")
+    elif i % 3 == 0:
+        print(f"{i} is Fizz")
+    elif i % 5 == 0:
+        print(f"{i} is Buzz")
