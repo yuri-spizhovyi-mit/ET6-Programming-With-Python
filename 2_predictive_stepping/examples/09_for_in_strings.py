@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" For-in Strings
+"""For-in Strings
 
 For-in strings can be used to iterate through each character in a string.
 

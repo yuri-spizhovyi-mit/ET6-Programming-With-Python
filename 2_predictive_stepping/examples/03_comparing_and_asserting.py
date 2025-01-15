@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Comparing and Asserting
+"""Comparing and Asserting
 
 Comparing two values will tell you if they are the same or not.
 The `assert` statement will throw an error if it's argument is false.

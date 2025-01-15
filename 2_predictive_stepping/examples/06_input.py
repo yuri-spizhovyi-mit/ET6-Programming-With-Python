@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Input
+"""Input
 
 Python programs can take string input from CLI users.
 

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Visualizing reverse_list
+"""Visualizing reverse_list
 
-To visualize implementation, 
+To visualize implementation,
 - use your VSCode debugger
 - copy-paste the code into PythonTutor
 
@@ -28,9 +28,7 @@ from trace_recursion import trace_recursion
 
 @trace_recursion
 def reverse_list(to_reverse: list) -> list:
-    """
-    
-    """
+    """ """
     if len(to_reverse) == 0:
         return []
 
@@ -38,12 +36,12 @@ def reverse_list(to_reverse: list) -> list:
     recursion = reverse_list(break_down)
     build_up = recursion + [to_reverse[0]]
 
-    return  build_up
+    return build_up
 
 
 # --- call the traced function ---
 
-print(reverse_list([]), 'should be', [])
-print(reverse_list([1, 2, 3]), 'should be', [3, 2, 1])
-print(reverse_list([1, 2, 1]), 'should be', [1, 2, 1])
-print(reverse_list(["", False, None, 0]), 'should be', [0, None, False, ""])
+print(reverse_list([]), "should be", [])
+print(reverse_list([1, 2, 3]), "should be", [3, 2, 1])
+print(reverse_list([1, 2, 1]), "should be", [1, 2, 1])
+print(reverse_list(["", False, None, 0]), "should be", [0, None, False, ""])

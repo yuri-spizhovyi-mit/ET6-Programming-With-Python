@@ -30,9 +30,9 @@ def f(lst, key):
     assert isinstance(lst, list), "Input must be a list"
     assert all(isinstance(d, dict) for d in lst), "List elements must be dictionaries"
     # removed unnecessary assertion
-    assert all(
-        isinstance(d[key], str) for d in lst
-    ), f"Values for key '{key}' must be strings"
+    assert all(isinstance(d[key], str) for d in lst), (
+        f"Values for key '{key}' must be strings"
+    )
 
     # implementation of the function goes here
     pass

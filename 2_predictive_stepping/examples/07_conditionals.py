@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Conditionals
+"""Conditionals
 
 Conditional statements execute different lines depending on an expression's value
 

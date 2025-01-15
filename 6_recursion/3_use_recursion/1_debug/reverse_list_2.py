@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Fix the bug(s)! """
+"""Fix the bug(s)!"""
 
 import sys
 import os
@@ -13,14 +13,12 @@ from trace_recursion import trace_recursion
 
 @trace_recursion
 def reverse_list(to_reverse: list) -> list:
-    """
-    
-    """
+    """ """
     if len(to_reverse) == 0:
         return []
 
     length = len(to_reverse)
-    return reverse_list(to_reverse[:length-1]) + [to_reverse[length-1]]
+    return reverse_list(to_reverse[: length - 1]) + [to_reverse[length - 1]]
 
 
 # --- call the traced function ---

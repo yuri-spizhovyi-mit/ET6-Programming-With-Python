@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Visualizing fibonacci_memo
+"""Visualizing fibonacci_memo
 
-To visualize implementation, 
+To visualize implementation,
 - use your VSCode debugger
 - copy-paste the code into PythonTutor
 
@@ -28,9 +28,7 @@ from trace_recursion import trace_recursion
 
 @trace_recursion
 def fibonacci_memo(n: int, memo: dict = {}) -> int:
-    """
-    
-    """
+    """ """
     if n == 0:
         return 0
 
@@ -48,15 +46,15 @@ def fibonacci_memo(n: int, memo: dict = {}) -> int:
 
     build_up = left_recursion + right_recursion
     memo[n] = build_up
-    
+
     return memo[n]
 
 
 # --- call the traced function ---
 
-print(fibonacci_memo(0), 'should be', 0)
-print(fibonacci_memo(1), 'should be', 1)
-print(fibonacci_memo(2), 'should be', 1)
-print(fibonacci_memo(4), 'should be', 3)
-print(fibonacci_memo(6), 'should be', 8)
-print(fibonacci_memo(8), 'should be', 21)
+print(fibonacci_memo(0), "should be", 0)
+print(fibonacci_memo(1), "should be", 1)
+print(fibonacci_memo(2), "should be", 1)
+print(fibonacci_memo(4), "should be", 3)
+print(fibonacci_memo(6), "should be", 8)
+print(fibonacci_memo(8), "should be", 21)

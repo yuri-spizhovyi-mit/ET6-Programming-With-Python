@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Reverse Input
+"""Reverse Input
 
 This program reverses the user's input.
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" String Operations
+"""String Operations
 
 Python has features to help with lots of common string manipulations.
 None of these operations modify the string they use as input!

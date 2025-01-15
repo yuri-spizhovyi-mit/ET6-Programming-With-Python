@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Cat Detector: conditional
+"""Cat Detector: conditional
 
-This program asks the user for "cat", 
+This program asks the user for "cat",
 then responds differently if they did provide a cat or not.
 
 """

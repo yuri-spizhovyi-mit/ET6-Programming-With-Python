@@ -13,7 +13,7 @@ Positional arguments are passed to a function in the order in which the paramete
 Syntax
 def function_name(param1, param2):
     ...
-    
+
 function_name(arg1, arg2)
 
 """

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Callstack Countdown
+"""Callstack Countdown
 
 This recursive function calls itself a specific number of times, then returns 0.
 

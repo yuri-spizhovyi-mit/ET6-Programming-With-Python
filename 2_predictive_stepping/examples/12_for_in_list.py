@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" For-in Lists
+"""For-in Lists
 
 For-in loops can also be used to iterate through each item in a list.
 

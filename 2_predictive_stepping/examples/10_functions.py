@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-""" Functions
+"""Functions
 
 Functions allow you to package blocks of code to reuse with different arguments.
 Calling a function creates a new scope with your arguments and local variables.

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Reverse Program: List
+"""Reverse Program: List
 
 A program that uses the function to reverse a user's list.
 

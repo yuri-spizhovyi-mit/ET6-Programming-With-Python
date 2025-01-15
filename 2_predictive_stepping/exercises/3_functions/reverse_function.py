@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Testing Functions with Strings
+"""Testing Functions with Strings
 
 Assertion tests to understand the function's behavior.
 

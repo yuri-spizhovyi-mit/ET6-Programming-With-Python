@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Lists
+"""Lists
 
 Lists are stored by reference.
 This means that two variables will actually point to the same list in memory.
@@ -11,7 +11,6 @@ So when you update one variable, the other variable is also updated!
 Python Tutor visualizes this more clearly than the VSCode debugger *
 
 """
-
 
 letters = ["a", "b"]
 

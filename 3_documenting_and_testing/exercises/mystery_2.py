@@ -1,7 +1,7 @@
 """
-    Created on 2024-12-08
-    
-    @author: Yurii Spizhovyi
+Created on 2024-12-08
+
+@author: Yurii Spizhovyi
 """
 
 from typing import Optional

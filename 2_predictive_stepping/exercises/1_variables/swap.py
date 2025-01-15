@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Swapping Values
+"""Swapping Values
 
 Fill in the blanks to pass the assertions.
 

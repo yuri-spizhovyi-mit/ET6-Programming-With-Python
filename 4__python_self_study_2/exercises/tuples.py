@@ -1,5 +1,5 @@
 """Python Tuples: A Short Explanation
-A tuple in Python is an ordered, immutable collection of items. Unlike lists, you cannot change, add, or remove items in a tuple after it is created. 
+A tuple in Python is an ordered, immutable collection of items. Unlike lists, you cannot change, add, or remove items in a tuple after it is created.
 Tuples are useful for storing data that shouldn't be modified.
 
 Key Features:
@@ -8,7 +8,7 @@ Items in a tuple can be of any data type.
 Tuples allow duplicates.
 Immutable: You cannot change their elements.
 
-  """
+"""
 
 # Example 1: Simple tuple
 fruits = ("apple", "banana", "cherry")

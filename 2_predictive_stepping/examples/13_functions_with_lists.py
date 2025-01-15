@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Functions with Lists
+"""Functions with Lists
 
 Passing a list to a function passes a reference to the list, not a copy of it.
     This can cause side-effects if you are not careful.

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Cat Detector: while
+"""Cat Detector: while
 
 This program continually prompts until it gets a cat.
 

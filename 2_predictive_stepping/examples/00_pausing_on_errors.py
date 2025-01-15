@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Pausing on Errors
+"""Pausing on Errors
 
 By default, the debugger will stop on errors and show what went wrong.
-    
+
 You can change this setting in the breakpoints pane down left.
-        
+
 """
 
 a = 1

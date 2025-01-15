@@ -1,9 +1,10 @@
-""" Repeat Character
+"""Repeat Character
 
-Write a function that takes in a string, a single character, and a number. 
+Write a function that takes in a string, a single character, and a number.
 The function returns a string with each occurrence of the character repeated n times.
 
 """
+
 
 def repeat_character(text: str, char_to_repeat: str, repetitions: int) -> str:
     """The function returns a string with each occurrence of the character repeated n times.
@@ -35,16 +36,16 @@ def repeat_character(text: str, char_to_repeat: str, repetitions: int) -> str:
     'Raaafaaaaaa'
     """
 
-    assert isinstance(repetitions, int), 'third argument must be an integer'
-    assert repetitions >= 0, 'third argument cannot be less than 0'
+    assert isinstance(repetitions, int), "third argument must be an integer"
+    assert repetitions >= 0, "third argument cannot be less than 0"
 
-    repeated_text = ''
+    repeated_text = ""
 
     for char in text:
-      if char.lower() == char_to_repeat.lower():
-        # repeated_text += char_to_repeat * repetitions
-        repeated_text += char * repetitions
-      else:
-        repeated_text += char
+        if char.lower() == char_to_repeat.lower():
+            # repeated_text += char_to_repeat * repetitions
+            repeated_text += char * repetitions
+        else:
+            repeated_text += char
 
     return repeated_text

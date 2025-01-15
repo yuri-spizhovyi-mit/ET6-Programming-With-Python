@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Basic Operation
+"""Basic Operation
 
 Here are a few operations that will be useful for this workshop.
 
 """
-
 
 # --- Boolean Operators ---
 _01_and_tt = True and True

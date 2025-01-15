@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Linear Recursion
+"""Linear Recursion
 
 Linear recursion is when a recursive function calls itself only once in the body.
 

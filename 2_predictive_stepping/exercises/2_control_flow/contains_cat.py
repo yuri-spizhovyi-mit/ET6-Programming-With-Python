@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Contains Cat
+"""Contains Cat
 
 This program continually prompts until their input contains "cat".
 

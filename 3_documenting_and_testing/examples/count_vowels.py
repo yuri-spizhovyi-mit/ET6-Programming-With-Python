@@ -10,17 +10,18 @@ Created on XX XX XX
 @author: Evan Cole + Claude AI
 """
 
+
 def count_vowels(text: str) -> int:
     """Count the number of vowels (a,e,i,o,u) in a string.
-    
+
     Parameters:
         text: str, the input string to check
-        
+
     Returns -> int: number of vowels in the text
 
     Raises:
         AssertionError: if the argument is not a string
-    
+
     >>> count_vowels("hello")
     2
     >>> count_vowels("APPLE")
@@ -29,7 +30,7 @@ def count_vowels(text: str) -> int:
     0
     """
     assert isinstance(text, str), "input must be a string"
-    
+
     vowels = "aeiou"
     count = 0
     for char in text.lower():

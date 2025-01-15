@@ -1,6 +1,6 @@
-""" Exclusive Or
+"""Exclusive Or
 
-Write a function that takes in a string and two lists of strings. 
+Write a function that takes in a string and two lists of strings.
 It will return true if the item is in _only one_ of the lists.
 
 Parameters:
@@ -10,8 +10,8 @@ second: list[str]
 
 Returns: True if the 'item' is only in list 'first' or is only in list 'second'
         False if the 'item' in both lists at the same time or does not exists in lists at all
-        
- 
+
+
 """
 
 

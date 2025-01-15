@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Variables
+"""Variables
 
 All the examples so far have not written to or read from program memory.
     They have used values and comparisons directly without saving the results for later.

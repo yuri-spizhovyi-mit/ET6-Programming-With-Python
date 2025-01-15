@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Data Types
+"""Data Types
 
 "Types" are different ways to represent data in a program.
 Different types are useful for modeling different aspects of the world in your program.
@@ -36,7 +36,9 @@ pass_check_string = isinstance(a_string, str)
 pass_check_integer = isinstance(an_integer, int)
 pass_check_float = isinstance(a_float, float)
 pass_check_boolean_as_bool = isinstance(a_boolean, bool)
-pass_check_boolean_as_int = isinstance(a_boolean, int) # Booleans can be integers: True = 1, False = 0
+pass_check_boolean_as_int = isinstance(
+    a_boolean, int
+)  # Booleans can be integers: True = 1, False = 0
 
 # failing
 fail_check_string = isinstance(a_string, bool)

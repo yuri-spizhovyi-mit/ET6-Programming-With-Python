@@ -4,5 +4,6 @@ def validate_strings(strings):
         assert len(s) >= 3, f"String '{s}' is too short"
     return True
 
+
 print(validate_strings(["abc", "hello", "world"]))  # True
-#print(validate_strings(["ab", "world"]))           # Raises AssertionError
+# print(validate_strings(["ab", "world"]))           # Raises AssertionError

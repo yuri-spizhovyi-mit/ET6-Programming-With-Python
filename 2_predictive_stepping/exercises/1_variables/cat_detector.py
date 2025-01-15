@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Variables: Cat Detector
+"""Variables: Cat Detector
 
 Asks the use for the input "cat", throws an assertion error if the input is wrong
 
