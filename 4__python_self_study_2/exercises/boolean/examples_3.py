@@ -1,4 +1,4 @@
-def logic_gate_simulator(a: int, b: int, gate_type: str = "AND") -> bool:
+def logic_gate_simulator(a: int, b: int, gate_type: str = "AND") -> int:
     if gate_type == "AND":
         return a & b
     elif gate_type == "OR":
@@ -24,4 +24,4 @@ if __name__ == "__main__":
     a = int(a)
     b = int(b)
     result = logic_gate_simulator(a, b, gate_type)
-    print(f"Result of {gate_type} gate for inputs a={a}, b={b}: {result}")
+    print(f"Result of {gate_type} gate for inputs a={a}, b={b}: result = {result}")
