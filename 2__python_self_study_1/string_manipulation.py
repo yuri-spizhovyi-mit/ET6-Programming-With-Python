@@ -2,12 +2,13 @@
 Strings in Python are a sequence of characters. Python provides powerful tools to manipulate and work with strings. Here's a breakdown of the most commonly used string manipulation techniques:
 
 """
+
 """1. Indexed Access
 Strings are indexed, meaning each character in a string has a position (index), starting from 0.
 """
 my_string = "Python"
-print(my_string[0])  # Should print "P"
-print(my_string[1])  # Should print "y"
+print(my_string[0])  # Access the first character -> P
+print(my_string[-1])  # Access the last character -> n
 
 # Slicing
 
