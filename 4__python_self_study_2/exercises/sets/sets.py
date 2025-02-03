@@ -17,6 +17,15 @@ You can create a set using:
 Example:
 """
 
+Z = {1, 2}
+X = {1, 2, 3}
+print("Difference Z-X", Z - X)
+print("Z&X", Z & X)
+print("Difference Z-X", Z - X)
+Z.add(3)
+print(Z)
+
+
 # Using curly braces
 my_set = {1, 2, 3, 4}
 print(my_set)
