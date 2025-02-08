@@ -1,2 +1,2 @@
-s = 'number one'
+s = "number one"
 print(s.capitalize())
