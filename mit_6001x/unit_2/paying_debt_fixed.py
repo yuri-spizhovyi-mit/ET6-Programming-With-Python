@@ -19,7 +19,9 @@ def paying_debt(balance: float, annualInterestRate: float) -> str:
         temp_balance = balance
         for i in range(12):
             monthly_unpaid_balance = temp_balance - minimum_fixed_monthly_payment
-            temp_balance = monthly_unpaid_balance + monthly_interest_rate * monthly_unpaid_balance
+            temp_balance = (
+                monthly_unpaid_balance + monthly_interest_rate * monthly_unpaid_balance
+            )
         if temp_balance < 0:
             run = False
         else:
