@@ -1,7 +1,10 @@
 import math
+
+
 def apply_to_each(L, f):
-  for i in range(len(L)):
-    L[i] = f(L[i])
+    for i in range(len(L)):
+        L[i] = f(L[i])
+
 
 L = [1, -2, 3.14]
 
