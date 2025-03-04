@@ -16,15 +16,16 @@ Author: @Yurii Spizhovyi
 import unittest
 from ..ps4a import getWordScore
 
+
 class TestGetWordScore(unittest.TestCase):
-  """Test suite for the get_word_score function"""
-  
-  # Standard test case
-  def test_less_n_word(self):
-    """It should return the score for word where not all letter used"""
-    self.assertEqual(getWordScore('weed', 7), 32)
-    
-  # Using entire word letters test case
-  def test_full_n_word(self):
-    """It should return the score for word where not all letter used"""
-    self.assertEqual(getWordScore('weed', 4), 82)
+    """Test suite for the get_word_score function"""
+
+    # Standard test case
+    def test_less_n_word(self):
+        """It should return the score for word where not all letter used"""
+        self.assertEqual(getWordScore("weed", 7), 32)
+
+    # Using entire word letters test case
+    def test_full_n_word(self):
+        """It should return the score for word where not all letter used"""
+        self.assertEqual(getWordScore("weed", 4), 82)
