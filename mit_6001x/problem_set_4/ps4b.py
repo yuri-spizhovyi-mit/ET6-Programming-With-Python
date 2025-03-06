@@ -1,4 +1,4 @@
-from ps4a import *
+from problem_set_4.ps4a import isValidWord, getWordScore, calculateHandlen, displayHand, loadWords, updateHand, dealHand, playHand, HAND_SIZE
 import time
 
 
@@ -74,7 +74,7 @@ def compPlayHand(hand, wordList, n):
         # computer's word
         word = compChooseWord(hand, wordList, n)
         # If the input is a single period:
-        if word == None:
+        if word is None:
             # End the game (break out of the loop)
             break
 
@@ -134,9 +134,36 @@ def playGame(wordList):
     wordList: list (string)
     """
     # TO DO... <-- Remove this comment when you code this function
-    print(
-        "playGame not yet implemented."
-    )  # <-- Remove this when you code this function
+    #print("playGame not yet implemented.")  # <-- Remove this when you code this function
+    run = True
+    hand = None
+
+    while run:
+        response = input(
+            "Enter n to deal a new hand, r to replay the last hand, or e to end game: "
+        )
+        if response == "n":
+            response_2 = input("Enter u to have yourself play, c to have the computer play: ")
+            if response_2 == "u":
+                hand = dealHand(HAND_SIZE)
+                playHand(hand, wordList, HAND_SIZE)
+                print()
+            elif response_2 == 'c':
+                hand = dealHand(HAND_SIZE)
+                playHand(hand, wordList, HAND_SIZE)
+                print()
+            else:
+                print("Invalid command.")
+        elif response == "r":
+            if hand is None:
+                print("You have not played a hand yet. Please play a new hand first!")
+                print()
+            else:
+                playHand(hand, wordList, HAND_SIZE)
+        elif response == "e":
+            run = False
+        else:
+            print("Invalid command.")
 
 
 #
