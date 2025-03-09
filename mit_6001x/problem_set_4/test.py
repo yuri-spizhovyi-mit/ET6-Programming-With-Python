@@ -156,47 +156,61 @@ def playGame(wordList):
 
     # TO DO... <-- Remove this comment when you code this function
     # print("playGame not yet implemented.")  # <-- Remove this when you code this function
-
-    hand = None  # Store the last played hand
-    while True:
-        # Prompt for 'n', 'r', or 'e'
-        user_choice = input("Enter n to deal a new hand, r to replay the last hand, or e to end game: ").strip()
-        print()
-
-        if user_choice == "e":
-            break  # Exit game
-
-        elif user_choice == "n":
-            hand = dealHand(HAND_SIZE)  # Generate a new hand
-
-        elif user_choice == "r":
-            if hand is None:
-                print("You have not played a hand yet. Please play a new hand first!\n")
-                continue  # Ask for input again
-
+    run = True
+    run_2 = True
+    hand = None
+    while run:
+        response = input(
+            "Enter n to deal a new hand, r to replay the last hand, or e to end game: "
+        )
+        if response == "e":
+            run = False
+        elif response not in "nr":
+            print("Invalid command.")
+            print()
         else:
-            print("Invalid command.\n")
-            continue  # Ask for input again
-
-        # Ask for 'u' (user) or 'c' (computer)
-        while True:
-            player_choice = input("Enter u to have yourself play, c to have the computer play: ").strip()
-
-            if player_choice == "u":
-                playHand(hand.copy(), wordList, HAND_SIZE)  # User plays
-                print()
-                break  # Return to main menu
-
-            elif player_choice == "c":
-                compPlayHand(hand.copy(), wordList, HAND_SIZE)  # Computer plays
-                print()
-                break  # Return to main menu
-
-            else:
-                print("Invalid command.\n")  # Keep prompting
-
-
-                        
+            while run_2:
+                response_2 = input(
+                    "Enter u to have yourself play, c to have the computer play: "
+                )
+                if response_2 == "u":
+                    if response == "n":
+                        hand = dealHand(HAND_SIZE)
+                        playHand(hand, wordList, HAND_SIZE)
+                        print()
+                    elif response == "r":
+                        if hand is None:
+                            print(
+                                "You have not played a hand yet. Please play a new hand first!"
+                            )
+                            print()
+                        else:
+                            playHand(hand, wordList, HAND_SIZE)
+                    elif response == "e":
+                        run_2 = False
+                        run = False
+                    else:
+                        print("Invalid command.")
+                elif response_2 == "c":
+                    if response == "n":
+                        hand = dealHand(HAND_SIZE)
+                        compPlayHand(hand, wordList, HAND_SIZE)
+                        print()
+                    elif response == "r":
+                        if hand is None:
+                            print(
+                                "You have not played a hand yet. Please play a new hand first!"
+                            )
+                            print()
+                        else:
+                            playHand(hand, wordList, HAND_SIZE)
+                    elif response == "e":
+                        run_2 = False
+                        run = False
+                    else:
+                        print("Invalid command.")
+                else:
+                    print("Invalid command.")
 
 
 #

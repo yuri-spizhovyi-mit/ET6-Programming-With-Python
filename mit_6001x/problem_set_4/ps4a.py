@@ -5,7 +5,7 @@ import string
 
 VOWELS = "aeiou"
 CONSONANTS = "bcdfghjklmnpqrstvwxyz"
-HAND_SIZE = 7
+HAND_SIZE = 3
 
 SCRABBLE_LETTER_VALUES = {
     "a": 1,
