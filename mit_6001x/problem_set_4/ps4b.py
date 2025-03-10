@@ -160,7 +160,9 @@ def playGame(wordList):
     hand = None  # Store the last played hand
     while True:
         # Prompt for 'n', 'r', or 'e'
-        user_choice = input("Enter n to deal a new hand, r to replay the last hand, or e to end game: ").strip()
+        user_choice = input(
+            "Enter n to deal a new hand, r to replay the last hand, or e to end game: "
+        ).strip()
         print()
 
         if user_choice == "e":
@@ -180,7 +182,9 @@ def playGame(wordList):
 
         # Ask for 'u' (user) or 'c' (computer)
         while True:
-            player_choice = input("Enter u to have yourself play, c to have the computer play: ").strip()
+            player_choice = input(
+                "Enter u to have yourself play, c to have the computer play: "
+            ).strip()
 
             if player_choice == "u":
                 playHand(hand.copy(), wordList, HAND_SIZE)  # User plays
@@ -194,9 +198,6 @@ def playGame(wordList):
 
             else:
                 print("Invalid command.\n")  # Keep prompting
-
-
-                        
 
 
 #
