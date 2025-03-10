@@ -1,5 +1,5 @@
 class Coordinate(object):
-    def __init__(self,x,y):
+    def __init__(self, x, y):
         self.x = x
         self.y = y
 
@@ -13,17 +13,18 @@ class Coordinate(object):
         return self.y
 
     def __str__(self):
-        return '<' + str(self.getX()) + ',' + str(self.getY()) + '>'
-        
+        return "<" + str(self.getX()) + "," + str(self.getY()) + ">"
+
     def __eq__(self, other):
         if isinstance(self, other):
-            return self.x = other.x and self.y == other.y 
+            return self.x == other.x and self.y == other.y
         else:
             return False
-    
+
     def __repr__(self):
-        return "Coordinate(" +  str(self.getX()) + ',' + str(self.getY()) + ")"
-        
-c1 = Coordinate(2, 3)   
+        return "Coordinate(" + str(self.getX()) + "," + str(self.getY()) + ")"
+
+
+c1 = Coordinate(2, 3)
 print(eval(repr(c1)) == c1)  # True
 print(repr(c1))
