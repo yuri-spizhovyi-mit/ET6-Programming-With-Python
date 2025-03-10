@@ -22,7 +22,7 @@ class Animal(object):
 
 
 my_animal = Animal(3)
-my_animal.set_name('John')
+my_animal.set_name("John")
 print(my_animal)
 print(my_animal.get_age())
 print(my_animal.years)
