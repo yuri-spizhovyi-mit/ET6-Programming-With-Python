@@ -90,7 +90,13 @@ for e in MITPerson_list:
 print("*****************")
 print()
 print("UG Class\n")
-class UG(MITPerson):
+
+
+class Student(MITPerson):
+    pass
+
+
+class UG(Student):
     """Class UG"""
 
     def __init__(self, name, class_year):
@@ -104,7 +110,11 @@ class UG(MITPerson):
         return MITPerson.speak(self, " Dude, " + utterance)
 
 
-class Grad(MITPerson):
+class Grad(Student):
+    pass
+
+
+class TransferStudent(Student):
     pass
 
 
@@ -116,6 +126,9 @@ s1 = UG("Matt Damon", 2017)
 s2 = UG("Ben Affleck", 2017)
 s3 = UG("Lin Manuel Miranda", 2018)
 s4 = Grad("Leonardo di Caprio")
+s5 = TransferStudent("Robert deNiro")
+
+student_list = [s1, s2, s3, s4, s5]
 
 print(s1)
 print(s1.get_class())
