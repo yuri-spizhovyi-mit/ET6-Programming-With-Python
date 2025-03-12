@@ -68,7 +68,7 @@ class MITPerson(Person):
         return self.id_num < other.id_num
 
     def speak(self, utterance):
-        return self.get_last_name() + " says: " + utterance
+        return self.name + " says: " + utterance
 
 
 print()
@@ -107,7 +107,7 @@ class UG(Student):
         return self.year
 
     def speak(self, utterance):
-        return MITPerson.speak(self, " Dude, " + utterance)
+        return MITPerson.speak(self, " Yo Bro, " + utterance)
 
 
 class Grad(Student):
@@ -134,3 +134,22 @@ print(s1)
 print(s1.get_class())
 print(s1.speak("where is the quiz?"))
 print(s2.speak("I have no clue!"))
+
+
+class Professor(MITPerson):
+    def __init__(self, name, department):
+        MITPerson.__init__(self, name)
+        self.department = department
+
+    def speak(self, utterance):
+        new = 'In course ' + self.department + ' we say '
+        return MITPerson.speak(self, new + utterance)
+    
+    def lecture(self, topic):
+        return self.speak('it is obvious that ' + topic)
+
+faculty = Professor('Doctor Arrogant', 'six')
+print(m1.speak('hi there'))
+print(s1.speak('hi there'))
+print(faculty.speak('hi there'))
+print(faculty.lecture('hi there'))
