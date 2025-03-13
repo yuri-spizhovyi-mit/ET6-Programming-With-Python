@@ -128,6 +128,14 @@ s3 = UG("Lin Manuel Miranda", 2018)
 s4 = Grad("Leonardo di Caprio")
 s5 = TransferStudent("Robert deNiro")
 
+ug1 = UG('Mat Damon', 2019)
+ug2 = UG('Drew Houston', 2017)
+ug3 = UG('Ben Affleck', 2019)
+ug4 = UG('Mark Zuckerberg', 2017)
+
+g1 = Grad('Bill Gates')
+g2 = Grad('Steve Wozniak')
+
 student_list = [s1, s2, s3, s4, s5]
 
 print(s1)
@@ -154,3 +162,78 @@ print(m1.speak("hi there"))
 print(s1.speak("hi there"))
 print(faculty.speak("hi there"))
 print(faculty.lecture("hi there"))
+
+class Grades(object):
+    """A mapping from students to a list of grades"""
+    def __init__(self):
+        """Create empty grade book"""
+        self.students = [] # list of Student objects
+        self.grades = {} # maps id_num -> list of grades
+        self.is_sorted = True # true if self.students is sorted
+
+    def add_student(self, student):
+        """Assumes: student is of type Student
+        Add student to the grade book"""
+        if student in self.students:
+            raise ValueError("Duplicate student")
+        self.students.append(student)
+        self.grades[student.get_id_num()] = []
+        self.is_sorted = False
+
+    def add_grades(self, student, grade):
+        """Assumes: grade is a float
+        Add grade to the list of grades for student"""
+        try:
+            self.grades[student.get_id_num()].append(grade)
+        except KeyError:
+            raise ValueError('Student not in grade book')
+
+    def get_grades(self, student):
+        """Return a list of grades for student"""
+        try:
+            return self.grades[student.get_id_num()][:]
+        except KeyError:
+            raise ValueError("Student not in grade book")
+
+    def all_students(self):
+        """Return a list of the students in the grade book"""
+        if not self.is_sorted:
+            self.students.sort()
+            self.is_sorted = True
+        #return self.students[:] # return a copy of list of students
+        for s in self.students:
+            yield s
+        
+def grade_report(course):
+    """Assumes: course if of type grades"""
+    report = []
+    for s in course.all_students():
+        tot = 0.0
+        num_grades = 0
+        for g in course.get_grades(s):
+            tot += g
+            num_grades += 1
+        try:
+            average = tot/num_grades
+            report.append(str(s) + '\' s mean grade is ' + str(average))
+        except ZeroDivisionError:
+            report.append(str(s) + ' has no grades')
+    return '\n'.join(report)
+
+six00 = Grades()
+six00.add_student(g1)
+six00.add_student(ug2)
+six00.add_student(ug1)
+six00.add_student(g2)
+six00.add_student(ug4)
+six00.add_student(ug3)
+
+six00.add_grades(g1, 100)
+six00.add_grades(g2, 25)
+six00.add_grades(ug1, 95)
+six00.add_grades(ug2, 85)
+six00.add_grades(ug3, 75)
+print("All students", six00.all_students())
+print("All students", six00.all_students().__next__())
+print("All students", six00.all_students().__next__())
+print(grade_report(six00))
