@@ -11,6 +11,6 @@ def bisection_search(L: list, e: int) -> bool:
         return bisection_search(L[mid + 1 :], e)
 
 
-L = []
-e = 5
+L = [1, 2, 3, 5, 8]
+e = 8
 print(bisection_search(L, e))
