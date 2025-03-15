@@ -128,13 +128,13 @@ s3 = UG("Lin Manuel Miranda", 2018)
 s4 = Grad("Leonardo di Caprio")
 s5 = TransferStudent("Robert deNiro")
 
-ug1 = UG('Mat Damon', 2019)
-ug2 = UG('Drew Houston', 2017)
-ug3 = UG('Ben Affleck', 2019)
-ug4 = UG('Mark Zuckerberg', 2017)
+ug1 = UG("Mat Damon", 2019)
+ug2 = UG("Drew Houston", 2017)
+ug3 = UG("Ben Affleck", 2019)
+ug4 = UG("Mark Zuckerberg", 2017)
 
-g1 = Grad('Bill Gates')
-g2 = Grad('Steve Wozniak')
+g1 = Grad("Bill Gates")
+g2 = Grad("Steve Wozniak")
 
 student_list = [s1, s2, s3, s4, s5]
 
@@ -163,13 +163,15 @@ print(s1.speak("hi there"))
 print(faculty.speak("hi there"))
 print(faculty.lecture("hi there"))
 
+
 class Grades(object):
     """A mapping from students to a list of grades"""
+
     def __init__(self):
         """Create empty grade book"""
-        self.students = [] # list of Student objects
-        self.grades = {} # maps id_num -> list of grades
-        self.is_sorted = True # true if self.students is sorted
+        self.students = []  # list of Student objects
+        self.grades = {}  # maps id_num -> list of grades
+        self.is_sorted = True  # true if self.students is sorted
 
     def add_student(self, student):
         """Assumes: student is of type Student
@@ -186,7 +188,7 @@ class Grades(object):
         try:
             self.grades[student.get_id_num()].append(grade)
         except KeyError:
-            raise ValueError('Student not in grade book')
+            raise ValueError("Student not in grade book")
 
     def get_grades(self, student):
         """Return a list of grades for student"""
@@ -200,10 +202,11 @@ class Grades(object):
         if not self.is_sorted:
             self.students.sort()
             self.is_sorted = True
-        #return self.students[:] # return a copy of list of students
+        # return self.students[:] # return a copy of list of students
         for s in self.students:
             yield s
-        
+
+
 def grade_report(course):
     """Assumes: course if of type grades"""
     report = []
@@ -214,11 +217,12 @@ def grade_report(course):
             tot += g
             num_grades += 1
         try:
-            average = tot/num_grades
-            report.append(str(s) + '\' s mean grade is ' + str(average))
+            average = tot / num_grades
+            report.append(str(s) + "' s mean grade is " + str(average))
         except ZeroDivisionError:
-            report.append(str(s) + ' has no grades')
-    return '\n'.join(report)
+            report.append(str(s) + " has no grades")
+    return "\n".join(report)
+
 
 six00 = Grades()
 six00.add_student(g1)

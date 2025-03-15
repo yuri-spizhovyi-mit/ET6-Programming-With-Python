@@ -1,6 +1,5 @@
-
 word = "quail"
-hand = {'a': 1, 'u': 1, 'l': 1, 'q': 2, 'i': 1, 'k': 1}
+hand = {"a": 1, "u": 1, "l": 1, "q": 2, "i": 1, "k": 1}
 
 
 def update(word):

@@ -95,12 +95,14 @@ class Hand(object):
                     del updated_hand[letter]
             else:
                 return False
-        self.hand = updated_hand            
+        self.hand = updated_hand
         return True
+
+
 myHand = Hand(10)
-myHand.setDummyHand('leppprqobo')
-myHand.update("quail")# True
-print(myHand) #kq
+myHand.setDummyHand("leppprqobo")
+myHand.update("quail")  # True
+print(myHand)  # kq
 
 # myHand = Hand(7)
 # print(myHand)
