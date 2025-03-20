@@ -15,15 +15,15 @@ for i in range(0, 30):
 
 plt.figure("lin quad")
 plt.clf()
-plt.plot(my_samples, my_linear, 'b-', label="Linear", linewidth = 2.0)
-plt.plot(my_samples, my_quadratic, 'ro', label="Quadratic", linewidth = 3.0)
-plt.legend(loc = 'upper left')
+plt.plot(my_samples, my_linear, "b-", label="Linear", linewidth=2.0)
+plt.plot(my_samples, my_quadratic, "ro", label="Quadratic", linewidth=3.0)
+plt.legend(loc="upper left")
 plt.title("Linears vs. Quadratic")
 
 plt.figure("cube exp")
 plt.clf()
-plt.plot(my_samples, my_cubic, 'g^', label="Cubic", linewidth = 4.0)
-plt.plot(my_samples, my_exponential, 'r--', label="Exponential", linewidth = 5.0)
+plt.plot(my_samples, my_cubic, "g^", label="Cubic", linewidth=4.0)
+plt.plot(my_samples, my_exponential, "r--", label="Exponential", linewidth=5.0)
 plt.legend()
 plt.title("Cubic vs. Exponential")
 
