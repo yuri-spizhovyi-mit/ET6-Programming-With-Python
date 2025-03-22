@@ -3,6 +3,7 @@ import datetime
 
 class Person(object):
     def __init__(self, name):
+        super.__init__()  # Call the parent (object) initializer for future safety
         """create a person called name"""
         self.name = name
         self.birthday = None

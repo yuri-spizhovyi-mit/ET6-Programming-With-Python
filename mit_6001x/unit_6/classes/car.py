@@ -1,6 +1,6 @@
 class Car:
     """Class representing a car"""
-    
+
     def __init__(self, make, model, year, mileage):
         self.make = make
         self.model = model
@@ -30,7 +30,9 @@ class Car:
         return current_year - self.year
 
     def __str__(self):
-        return f"Car: {self.make} {self.model} ({self.year}), Mileage: {self.mileage} km"
+        return (
+            f"Car: {self.make} {self.model} ({self.year}), Mileage: {self.mileage} km"
+        )
 
 
 # first_car = Car("Toyota", "Corolla", 1999, 204000)
@@ -49,25 +51,29 @@ class ElectricCar(Car):
         self.charge_level = charge_level
 
     def get_battery_info(self):
-        return f"Battery: {self.battery_capacity} kWh, Charge Level: {self.charge_level}%"
-    
+        return (
+            f"Battery: {self.battery_capacity} kWh, Charge Level: {self.charge_level}%"
+        )
+
     def charge(self):
         self.charge_level = 100
 
     def drive_electric(self, km):
-        self.charge_level -= int(km/10)
+        self.charge_level -= int(km / 10)
         if self.charge_level < 0:
             self.charge_level = 0
         self.mileage += km
 
     def __str__(self):
-        return (f"Electric Car: {self.make} {self.model} ({self.year}), "
-                f"Mileage: {self.mileage} km, "
-                f"Battery: {self.battery_capacity} kWh, "
-                f"Charge Level: {self.charge_level}%")
+        return (
+            f"Electric Car: {self.make} {self.model} ({self.year}), "
+            f"Mileage: {self.mileage} km, "
+            f"Battery: {self.battery_capacity} kWh, "
+            f"Charge Level: {self.charge_level}%"
+        )
 
 
-my_electric = ElectricCar('Tesla', 'Model 3', 2021, 30000, 75)
+my_electric = ElectricCar("Tesla", "Model 3", 2021, 30000, 75)
 print(my_electric)
 
 my_electric.drive_electric(50)

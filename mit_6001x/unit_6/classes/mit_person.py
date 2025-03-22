@@ -4,6 +4,7 @@ import datetime
 class Person(object):
     def __init__(self, name):
         """create a person called name"""
+        super().__init__()
         self.name = name
         self.birthday = None
         self.last_name = name.split(" ")[-1]
@@ -19,6 +20,9 @@ class Person(object):
     def set_birthday(self, month, day, year):
         """sets self's birthday to birth date"""
         self.birthday = datetime.date(year, month, day)
+
+    def get_birthday(self):
+        return self.birthday
 
     def get_age(self):
         """returns self's current age in days"""
@@ -56,12 +60,12 @@ class MITPerson(Person):
     next_id_num = 0  # next ID number to assign
 
     def __init__(self, name):
-        Person.__init__(self, name)  # initialize Person attributes
+        super().__init__(name)  # initialize Person attributes
         self.id_num = MITPerson.next_id_num
         MITPerson.next_id_num += 1
 
     def get_id_num(self):
-        return self.id_num
+        return str(self.id_num).zfill(3)
 
     # Sorting MIT people uses their ID numbers, not names!
     def __lt__(self, other):
@@ -75,8 +79,11 @@ print()
 print("***********")
 print("MIT People")
 m1 = MITPerson("Drew Houston")
-Person.set_birthday(m1, 3, 4, 83)
+print(m1.get_id_num())
+Person.set_birthday(m1, 3, 4, 1983)
+print(m1.get_birthday())
 m2 = MITPerson("Mark Zuckerberg")
+print(m2.get_id_num())
 Person.set_birthday(m2, 5, 14, 84)
 m3 = MITPerson("Bill Gates")
 Person.set_birthday(m3, 10, 28, 55)
@@ -241,3 +248,6 @@ print("All students", six00.all_students())
 print("All students", six00.all_students().__next__())
 print("All students", six00.all_students().__next__())
 print(grade_report(six00))
+print(ug1.get_id_num())
+for s in six00.all_students():
+    print(s)
