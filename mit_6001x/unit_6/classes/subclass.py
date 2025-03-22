@@ -117,3 +117,4 @@ class Student(Person):
 fred = Student("Fred", 18, "Course VI")
 print(fred)
 fred.speak()
+fred.speak()
