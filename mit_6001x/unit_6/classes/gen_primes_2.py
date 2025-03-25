@@ -14,18 +14,19 @@ def genPrimes():
 
         candidate += 1
 
+
 gp = genPrimes()
 print(gp.__next__())
 print(gp.__next__())
 
 # def genPrimes():
-#     primes = [] 
-#     candidate = 2  
+#     primes = []
+#     candidate = 2
 #     while True:
 #         is_prime = all(candidate % p != 0 for p in primes)
-        
+
 #         if is_prime:
 #             primes.append(candidate)
 #             yield candidate
-        
-#         candidate += 1  
+
+#         candidate += 1

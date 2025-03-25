@@ -57,7 +57,9 @@ def get_story_string():
     return story
 
 
-WORDLIST_FILENAME = "words.txt"
+WORDLIST_FILENAME = (
+    "C:/Users/yspizhoviy/ET6-Programming-With-Python/mit_6001x/ps6/words.txt"
+)
 
 
 class Message(object):
@@ -107,11 +109,9 @@ class Message(object):
         Returns: a dictionary mapping a letter (string) to
                  another letter (string).
         """
-        pass  # delete this line and replace with your code here
         lc = string.ascii_lowercase
         uc = string.ascii_uppercase
         output = {}
-        shift = 5
         for letter in lc:
             if lc.index(letter) + shift <= 25:
                 output[letter] = lc[lc.index(letter) + shift]
@@ -165,7 +165,6 @@ class PlaintextMessage(Message):
         Hint: consider using the parent class constructor so less
         code is repeated
         """
-        pass
         Message.__init__(self, text)
         # delete this line and replace with your code here
         self.shift = shift
@@ -227,7 +226,9 @@ class CiphertextMessage(Message):
             self.message_text (string, determined by input text)
             self.valid_words (list, determined using helper function load_words)
         """
-        pass  # delete this line and replace with your code here
+        Message.__init__(self, text)
+        self.message_text = Message.get_message_text(self)
+        self.valid_words = Message.get_valid_words(self)
 
     def decrypt_message(self):
         """
@@ -245,15 +246,21 @@ class CiphertextMessage(Message):
         Returns: a tuple of the best shift value used to decrypt the message
         and the decrypted message text using that shift value
         """
-        pass  # delete this line and replace with your code here
+        # delete this line and replace with your code here
+        message_with_most_valid_words = ""
+        for shift in range(0, 26):
+            message_text_plain = self.apply_shift(shift)
+            if message_text_plain in self.valid_words:
+                print(message_text_plain)
 
 
 # Example test case (PlaintextMessage)
 plaintext = PlaintextMessage("hello", 2)
 print("Expected Output: jgnnq")
 print("Actual Output:", plaintext.get_message_text_encrypted())
-
+print()
 # Example test case (CiphertextMessage)
 ciphertext = CiphertextMessage("jgnnq")
 print("Expected Output:", (24, "hello"))
 print("Actual Output:", ciphertext.decrypt_message())
+ciphertext.decrypt_message()
