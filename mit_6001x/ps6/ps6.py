@@ -51,7 +51,9 @@ def get_story_string():
     """
     Returns: a joke in encrypted text.
     """
-    f = open('C:/Users/yspizhoviy/ET6-Programming-With-Python/mit_6001x/ps6/story.txt', 'r')
+    f = open(
+        "C:/Users/yspizhoviy/ET6-Programming-With-Python/mit_6001x/ps6/story.txt", "r"
+    )
     story = str(f.read())
     f.close()
     return story
@@ -246,7 +248,7 @@ class CiphertextMessage(Message):
         and the decrypted message text using that shift value
         """
         # delete this line and replace with your code here
- 
+
         max_valid_count = 0
         best_shift = 0
 
@@ -260,7 +262,6 @@ class CiphertextMessage(Message):
 
         return best_shift, self.apply_shift(best_shift)
 
-    
     def decrypt_story(self):
         self.message_text = get_story_string()
         return self.decrypt_message()
