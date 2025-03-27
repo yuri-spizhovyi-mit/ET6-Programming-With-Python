@@ -51,7 +51,7 @@ def get_story_string():
     """
     Returns: a joke in encrypted text.
     """
-    f = open("story.txt", "r")
+    f = open('C:/Users/yspizhoviy/ET6-Programming-With-Python/mit_6001x/ps6/story.txt', 'r')
     story = str(f.read())
     f.close()
     return story
@@ -112,16 +112,15 @@ class Message(object):
         lc = string.ascii_lowercase
         uc = string.ascii_uppercase
         output = {}
-        for letter in lc:
-            if lc.index(letter) + shift <= 25:
-                output[letter] = lc[lc.index(letter) + shift]
-            else:
-                output[letter] = lc[lc.index(letter) + shift - 26]
-        for letter in uc:
-            if uc.index(letter) + shift <= 25:
-                output[letter] = uc[uc.index(letter) + shift]
-            else:
-                output[letter] = uc[uc.index(letter) + shift - 26]
+
+        for idx, letter in enumerate(lc):
+            shifted_idx = (idx + shift) % 26
+            output[letter] = lc[shifted_idx]
+
+        for idx, letter in enumerate(uc):
+            shifted_idx = (idx + shift) % 26
+            output[letter] = uc[shifted_idx]
+
         return output
 
     def apply_shift(self, shift):
@@ -247,20 +246,34 @@ class CiphertextMessage(Message):
         and the decrypted message text using that shift value
         """
         # delete this line and replace with your code here
-        message_with_most_valid_words = ""
-        for shift in range(0, 26):
-            message_text_plain = self.apply_shift(shift)
-            if message_text_plain in self.valid_words:
-                print(message_text_plain)
+ 
+        max_valid_count = 0
+        best_shift = 0
+
+        for shift in range(26):
+            decrypted_text = self.apply_shift(shift)
+            words = decrypted_text.split()
+            valid_count = sum([is_word(self.valid_words, word) for word in words])
+            if valid_count > max_valid_count:
+                max_valid_count = valid_count
+                best_shift = shift
+
+        return best_shift, self.apply_shift(best_shift)
+
+    
+    def decrypt_story(self):
+        self.message_text = get_story_string()
+        return self.decrypt_message()
 
 
 # Example test case (PlaintextMessage)
-plaintext = PlaintextMessage("hello", 2)
+plaintext = PlaintextMessage("everlasting", 1)
 print("Expected Output: jgnnq")
 print("Actual Output:", plaintext.get_message_text_encrypted())
 print()
 # Example test case (CiphertextMessage)
-ciphertext = CiphertextMessage("jgnnq")
-print("Expected Output:", (24, "hello"))
+ciphertext = CiphertextMessage("fwfsmbtujoh")
+print("Expected Output:", (25, "Hello, world!"))
 print("Actual Output:", ciphertext.decrypt_message())
 ciphertext.decrypt_message()
+print(ciphertext.decrypt_story())
