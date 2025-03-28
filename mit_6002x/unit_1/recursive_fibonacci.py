@@ -1,6 +1,11 @@
 def fib(n):
-    if n == 0 or n == 1:
-        return n
-    return fib(n - 1) + fib(n - 2)
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    result = fib(n - 1) + fib(n - 2)
+    return result
 
-print(fib(40))
+
+for i in range(10):
+    print(fib(i), end=" ")
