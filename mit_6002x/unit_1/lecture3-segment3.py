@@ -151,8 +151,8 @@ def testSP(source, destination):
         print("There is no path from", source, "to", destination)
 
 
-testSP('Chicago', 'Boston')
-#testSP("Boston", "Phoenix")
+# testSP('Chicago', 'Boston')
+testSP("Boston", "Phoenix")
 
 
 def BFS(graph, start, end, toPrint=False):
