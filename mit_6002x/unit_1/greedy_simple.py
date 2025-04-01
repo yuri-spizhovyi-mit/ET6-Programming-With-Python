@@ -8,7 +8,7 @@ for name, value, weight in items:
     items_with_density.append((name, value, weight, ratio))
 
 # 3. Sort items by value-to-weight ratio in descending order
-items_sorted = sorted(items_with_density, key=lambda x: x[3], reverse=True)
+items_sorted = sorted(items_with_density, key=lambda x: x[2], reverse=True)
 
 # 4. Greedy selection
 max_weight = 50
