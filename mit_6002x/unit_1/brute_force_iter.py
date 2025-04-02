@@ -1,11 +1,7 @@
 from itertools import combinations
 
 # Define items: (name, value, weight)
-items = [
-    ("A", 60, 10),
-    ("B", 100, 20),
-    ("C", 120, 30)
-]
+items = [("A", 60, 10), ("B", 100, 20), ("C", 120, 30)]
 
 max_weight = 50
 best_value = 0
