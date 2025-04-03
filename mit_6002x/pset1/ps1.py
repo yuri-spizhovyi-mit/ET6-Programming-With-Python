@@ -56,7 +56,7 @@ def greedy_cow_transport(cows, limit=10):
     trips
     """
     # TODO: Your code here
-
+    print(cows)
     cow_list = []
 
     for name, weight in cows.items():
@@ -104,15 +104,37 @@ def brute_force_cow_transport(cows, limit=10):
     trips
     """
     # TODO: Your code here
+
+    def check_limit(part):
+        min_trip_qty = 0
+        optimal_trip_list = []
+        for i in range(len(part)):
+            update_list = True
+            trip_weight = 0
+            for j in range(len(part[i])):
+                trip_weight += cows[part[i][j]]
+            if trip_weight > limit:
+                update_list = False
+                break
+        if update_list:
+            min_trip_qty = len(part)
+            optimal_trip_list = part
+
+        return min_trip_qty, optimal_trip_list
+
     list_of_cows = []
-    count = 0
+
     for key in cows:
         list_of_cows.append(key)
-    print(list_of_cows)    
-    # for part in get_partitions(list_of_cows):
-    #     count += 1
-    #     print(count, part)
-    
+
+    min_qti = 10
+    min_list_of_trips = []
+    for part in get_partitions(list_of_cows):
+        qty, checked_list = check_limit(part)
+        if qty != 0 and qty < min_qti:
+            min_qti = qty
+            min_list_of_trips = checked_list
+    print(min_qti, min_list_of_trips)
 
 
 # Problem 3
@@ -145,6 +167,6 @@ cows = load_cows(
 limit = 10
 # print(cows)
 
-#print(greedy_cow_transport(cows, limit))
-#print(brute_force_cow_transport(cows, limit))
+# print(greedy_cow_transport(cows, limit))
+# print(brute_force_cow_transport(cows, limit))
 brute_force_cow_transport(cows, limit)
