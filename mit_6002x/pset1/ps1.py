@@ -104,7 +104,15 @@ def brute_force_cow_transport(cows, limit=10):
     trips
     """
     # TODO: Your code here
-    pass
+    list_of_cows = []
+    count = 0
+    for key in cows:
+        list_of_cows.append(key)
+    print(list_of_cows)    
+    # for part in get_partitions(list_of_cows):
+    #     count += 1
+    #     print(count, part)
+    
 
 
 # Problem 3
@@ -137,5 +145,6 @@ cows = load_cows(
 limit = 10
 # print(cows)
 
-print(greedy_cow_transport(cows, limit))
-# print(brute_force_cow_transport(cows, limit))
+#print(greedy_cow_transport(cows, limit))
+#print(brute_force_cow_transport(cows, limit))
+brute_force_cow_transport(cows, limit)

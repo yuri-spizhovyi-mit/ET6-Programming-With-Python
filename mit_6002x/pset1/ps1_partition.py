@@ -24,3 +24,9 @@ def get_partitions(set_):
 
 # for item in (get_partitions(['a','b','c','d'])):
 #     print(item)
+# for item in (get_partitions(['a','b', 'c'])):
+#     print(item)
+# count = 0
+# for item in (get_partitions([1, 2, 3, 4, 5])):
+#     count += 1
+#     print(count, item)
