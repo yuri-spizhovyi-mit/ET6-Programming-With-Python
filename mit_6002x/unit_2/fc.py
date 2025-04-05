@@ -25,7 +25,7 @@ def flipPlot(minExp, maxExp):
     pylab.title('Difference Between Heads and Tails')
     pylab.xlabel('Number of Flips')
     pylab.ylabel('Abs(#Heads - #Tails)')
-    pylab.plot(xAxis, diffs, 'k')
+    pylab.plot(xAxis, diffs, 'ko')
 
     pylab.figure()
     pylab.title('Heads/Tails Ratios')
