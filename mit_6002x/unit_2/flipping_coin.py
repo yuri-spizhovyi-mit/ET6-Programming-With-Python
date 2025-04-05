@@ -20,4 +20,4 @@ def flipSim(numFlipsPerTrial, numTrials):
 
 
 for i in range(10):
-    print(flipSim(10, 100))
+    print(flipSim(10, 5))
