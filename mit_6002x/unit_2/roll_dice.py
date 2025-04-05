@@ -12,12 +12,8 @@ def rollN(n):
         result = result + str(rollDie())
     return result
 
+
 count = 0
 amount = []
-for i in range(500):
-    result = rollN(2)
-    print(result)
-    if int(result) == 11:
-      count += 1
-      amount.append(result)
-print(count, amount)  
+
+print(rollN(10))
