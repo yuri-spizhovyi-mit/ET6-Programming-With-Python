@@ -1,0 +1,9 @@
+list_of_data = [1, 3, 4, 6, 7]
+total = len(list_of_data)
+mean = sum(list_of_data) / total
+square_differences = [(x - mean) ** 2 for x in list_of_data]
+variance = sum(square_differences) / total
+standard_deviation = variance**0.5
+print("Mean =", mean)
+print("Variance =", variance)
+print("Standard_deviation =", standard_deviation)

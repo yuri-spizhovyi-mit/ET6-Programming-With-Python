@@ -1,13 +1,5 @@
 import random
-import pylab
-import math
-
-
-def stdDev(X):
-    """Return standard deviation of a list of numbers."""
-    mean = sum(X) / len(X)
-    total = sum((x - mean) ** 2 for x in X)
-    return math.sqrt(total / len(X))
+import pylab  # part of matplotlib
 
 
 def makePlot(xVals, yVals, title, xLabel, yLabel, style, logX=False, logY=False):
@@ -24,64 +16,75 @@ def makePlot(xVals, yVals, title, xLabel, yLabel, style, logX=False, logY=False)
 
 def runTrial(numFlips):
     numHeads = 0
-    for n in range(numFlips):
+    for _ in range(numFlips):
         if random.choice(("H", "T")) == "H":
             numHeads += 1
     numTails = numFlips - numHeads
-    return (numHeads, numTails)
+    return numHeads, numTails
+
+
+def variance(X):
+    mean = sum(X) / len(X)
+    return sum((x - mean) ** 2 for x in X) / len(X)
+
+
+def stdDev(X):
+    return variance(X) ** 0.5
 
 
 def flipPlot1(minExp, maxExp, numTrials):
-    """Assumes minExp, maxExp, numTrials ints >0; minExp < maxExp.
-    Plots summaries of results of numTrials trials of
-    2**minExp to 2**maxExp coin flips."""
+    """Assumes minExp, maxExp, numTrials are ints > 0; minExp < maxExp.
+    Plots summaries of results of numTrials trials of 2**minExp to 2**maxExp coin flips."""
     ratiosMeans, diffsMeans, ratiosSDs, diffsSDs = [], [], [], []
-    xAxis = []
-
-    for exp in range(minExp, maxExp + 1):
-        xAxis.append(2**exp)
+    xAxis = [2**exp for exp in range(minExp, maxExp + 1)]
 
     for numFlips in xAxis:
         ratios, diffs = [], []
-        for t in range(numTrials):
+        for _ in range(numTrials):
             numHeads, numTails = runTrial(numFlips)
-            if numTails == 0:
-                continue  # Avoid divide-by-zero
-            ratios.append(numHeads / numTails)
+            if numTails == 0:  # avoid division by zero
+                ratio = float("inf")
+            else:
+                ratio = numHeads / numTails
+            ratios.append(ratio)
             diffs.append(abs(numHeads - numTails))
 
-        ratiosMeans.append(sum(ratios) / len(ratios))
-        diffsMeans.append(sum(diffs) / len(diffs))
+        ratiosMeans.append(sum(ratios) / numTrials)
+        diffsMeans.append(sum(diffs) / numTrials)
         ratiosSDs.append(stdDev(ratios))
         diffsSDs.append(stdDev(diffs))
 
     numTrialsString = f" ({numTrials} Trials)"
 
-    title = "Mean Heads/Tails Ratios" + numTrialsString
     makePlot(
         xAxis,
         ratiosMeans,
-        title,
+        "Mean Heads/Tails Ratios" + numTrialsString,
         "Number of Flips",
         "Mean Heads/Tails",
         "ko",
         logX=True,
     )
-
-    title = "SD Heads/Tails Ratios" + numTrialsString
     makePlot(
         xAxis,
         ratiosSDs,
-        title,
+        "SD Heads/Tails Ratios" + numTrialsString,
         "Number of Flips",
         "Standard Deviation",
         "ko",
         logX=True,
         logY=True,
     )
+    pylab.show()
 
 
-# Example call
-random.seed(0)
-flipPlot1(4, 10, 100)
-pylab.show()
+# 👇 Add this to allow the script to run only when it's executed directly
+def main():
+    minExp = 4
+    maxExp = 20
+    numTrials = 20
+    flipPlot1(minExp, maxExp, numTrials)
+
+
+if __name__ == "__main__":
+    main()

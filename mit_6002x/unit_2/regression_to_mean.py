@@ -20,6 +20,7 @@ def flipSim(numFlipsPerTrial, numTrials):
         mean = sum(fracHeads) / len(fracHeads)
     return mean
 
+
 def regressToMean(numFlips, numTrials):
     # Get fraction of heads for each trial of numFlips
     fracHeads = []

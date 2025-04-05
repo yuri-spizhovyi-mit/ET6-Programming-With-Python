@@ -19,9 +19,8 @@ def flipSim(numFlipsPerTrial, numTrials):
     return mean
 
 
-
-#print('Mean = ', flipSim(100, 20000))
+# print('Mean = ', flipSim(100, 20000))
 mean = flipSim(100, 100000)
 print(f"Mean = {mean:.4f}")
 print(f"Mean = {mean:.10g}")
-#print(flip(10))
+# print(flip(10))
