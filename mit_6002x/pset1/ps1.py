@@ -152,7 +152,17 @@ def compare_cow_transport_algorithms():
     Does not return anything.
     """
     # TODO: Your code here
-    pass
+    start = time.time()
+    ## code to be timed
+    greedy_cow_transport(cows, limit)
+    end = time.time()
+    print(end - start)
+
+    start = time.time()
+    ## code to be timed
+    brute_force_cow_transport(cows, limit)
+    end = time.time()
+    print(end - start)
 
 
 """
@@ -169,4 +179,5 @@ limit = 10
 
 # print(greedy_cow_transport(cows, limit))
 # print(brute_force_cow_transport(cows, limit))
-brute_force_cow_transport(cows, limit)
+# brute_force_cow_transport(cows, limit)
+compare_cow_transport_algorithms()
