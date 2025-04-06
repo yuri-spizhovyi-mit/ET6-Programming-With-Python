@@ -28,7 +28,7 @@ def collect_file_sizes(folder):
 # Change this path to a folder you want to scan
 
 # folder_path = "."  # current folder
-folder_path = "C:/Program Files (x86)"
+folder_path = "C:/Windows"
 first_digits = collect_file_sizes(folder_path)
 
 # Count how often each digit 1–9 appears as first digit
