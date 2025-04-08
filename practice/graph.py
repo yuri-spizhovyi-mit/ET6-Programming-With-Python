@@ -6,9 +6,30 @@ class Node(object):
         return self.name
 
     def __str__(self):
-        return self.name
+        return self.name + "A"
+
+
+# a = Node("A")
+# print(a)  # Output: A
+# print(a.getName())  # Output: A
+
+
+class Edge(object):
+    def __init__(self, src, dest):
+        self.src = src
+        self.dest = dest
+
+    def getSource(self):
+        return self.src
+
+    def getDestination(self):
+        return self.dest
+
+    def __str__(self):
+        return self.src.getName() + "->" + self.dest.getName()
 
 
 a = Node("A")
-print(a)  # Output: A
-print(a.getName())  # Output: A
+b = Node("B")
+e = Edge(a, b)
+print(e)
