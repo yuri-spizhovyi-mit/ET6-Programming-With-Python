@@ -92,3 +92,23 @@ g.addNode(b)
 e = Edge(a, b)
 g.addEdge(e)
 print(g)  # Output: A->B
+
+
+class Graph(Digraph):
+    def addEdge(self, edge):
+        Digraph.addEdge(self, edge)
+        rev = Edge(edge.getDestination(), edge.getSource())
+        Digraph.addEdge(self, rev)
+
+
+g = Graph()
+a = Node("A")
+b = Node("B")
+g.addNode(a)
+g.addNode(b)
+e = Edge(a, b)
+g.addEdge(e)
+print(g)
+# Output:
+# A->B
+# B->A
