@@ -1,4 +1,4 @@
-class Node:
+class Node(object):
     def __init__(self, name):
         self.name = name
 
@@ -6,10 +6,15 @@ class Node:
         return self.name
 
     def __str__(self):
-        return self.name
+        return self.name + "A"
 
 
-class Edge:
+# a = Node("A")
+# print(a)  # Output: A
+# print(a.getName())  # Output: A
+
+
+class Edge(object):
     def __init__(self, src, dest):
         self.src = src
         self.dest = dest
@@ -24,6 +29,12 @@ class Edge:
         return self.src.getName() + "->" + self.dest.getName()
 
 
+a = Node("A")
+b = Node("B")
+e = Edge(a, b)
+print(e)
+
+
 class WeightedEdge(Edge):
     def __init__(self, src, dest, weight=1.0):
         self.src = src
@@ -34,10 +45,14 @@ class WeightedEdge(Edge):
         return self.weight
 
     def __str__(self):
-        return f"{self.src.getName()}->({self.weight}){self.dest.getName()}"
+        return self.src.getName() + "->(" + str(self.weight) + ")" + self.dest.getName()
 
 
-class Digraph:
+e = WeightedEdge(a, b, 5)
+print(e)  # Output: A->(5)B
+
+
+class Digraph(object):
     def __init__(self):
         self.nodes = []
         self.edges = {}
@@ -66,7 +81,17 @@ class Digraph:
         for src in self.nodes:
             for dest in self.edges[src]:
                 result += src.getName() + "->" + dest.getName() + "\n"
-        return result[:-1]
+        return result[:-1]  # Remove the last newline
+
+
+g = Digraph()
+a = Node("A")
+b = Node("B")
+g.addNode(a)
+g.addNode(b)
+e = Edge(a, b)
+g.addEdge(e)
+print(g)  # Output: A->B
 
 
 class Graph(Digraph):
@@ -74,3 +99,16 @@ class Graph(Digraph):
         Digraph.addEdge(self, edge)
         rev = Edge(edge.getDestination(), edge.getSource())
         Digraph.addEdge(self, rev)
+
+
+g = Graph()
+a = Node("A")
+b = Node("B")
+g.addNode(a)
+g.addNode(b)
+e = Edge(a, b)
+g.addEdge(e)
+print(g)
+# Output:
+# A->B
+# B->A
