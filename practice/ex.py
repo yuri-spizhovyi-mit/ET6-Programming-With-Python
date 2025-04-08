@@ -49,7 +49,7 @@ class WeightedEdge(Edge):
 
     def __str__(self):
         return (
-                self.src.get_name() + "->(" + str(self.weight) + ")" + self.dest.get_name()
+            self.src.get_name() + "->(" + str(self.weight) + ")" + self.dest.get_name()
         )
 
 

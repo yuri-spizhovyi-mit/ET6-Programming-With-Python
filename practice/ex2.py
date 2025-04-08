@@ -52,7 +52,7 @@ class WeightedEdge(Edge):
 
     def __str__(self):
         return (
-                self.src.get_name() + "->(" + str(self.weight) + ")" + self.dest.get_name()
+            self.src.get_name() + "->(" + str(self.weight) + ")" + self.dest.get_name()
         )
 
 
@@ -85,10 +85,10 @@ class Digraph:
         return node in self.nodes
 
     def __str__(self):
-        result = ("")
+        result = ""
         for src in self.nodes:
             for dest in self.edges[src]:
-                result += src.get_name() + '->' + dest.get_name() + "\n"
+                result += src.get_name() + "->" + dest.get_name() + "\n"
         return result[:-1]
 
 
@@ -100,3 +100,21 @@ dg.add_node(b)
 e = Edge(a, b)
 dg.add_edge(e)
 print(dg)  # Output: A->B
+
+
+class Graph(Digraph):
+    def add_edge(self, edge):
+        Digraph.add_edge(self, edge)
+        rev = Edge(edge.get_destination(), edge.get_source())
+        Digraph.add_edge(self, rev)
+
+
+g = Graph()
+a = Node("A")
+b = Node("B")
+g.add_node(a)
+g.add_node(b)
+ge = Edge(a, b)
+g.add_edge(ge)
+print("Undirected Graph")
+print(g)
