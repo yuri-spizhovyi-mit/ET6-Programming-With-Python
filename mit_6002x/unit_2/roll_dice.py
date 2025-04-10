@@ -16,4 +16,4 @@ def rollN(n):
 count = 0
 amount = []
 
-print(rollN(10))
+print(rollN(5))
