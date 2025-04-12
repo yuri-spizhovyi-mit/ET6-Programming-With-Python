@@ -86,7 +86,9 @@ class RectangularRoom(object):
         width: an integer > 0
         height: an integer > 0
         """
-        raise NotImplementedError
+        self.width = width
+        self.height = height
+        self.cleaned = []
 
     def cleanTileAtPosition(self, pos):
         """
@@ -96,7 +98,12 @@ class RectangularRoom(object):
 
         pos: a Position
         """
-        raise NotImplementedError
+
+        x = int(pos.getX())
+        y = int(pos.getY())
+        pos = (x, y)
+        if pos not in self.cleaned:
+            self.cleaned.append(pos)
 
     def isTileCleaned(self, m, n):
         """
@@ -108,7 +115,7 @@ class RectangularRoom(object):
         n: an integer
         returns: True if (m, n) is cleaned, False otherwise
         """
-        raise NotImplementedError
+        return (m, n) in self.cleaned
 
     def getNumTiles(self):
         """
@@ -116,7 +123,7 @@ class RectangularRoom(object):
 
         returns: an integer
         """
-        raise NotImplementedError
+        return self.height * self.width
 
     def getNumCleanedTiles(self):
         """
@@ -124,7 +131,7 @@ class RectangularRoom(object):
 
         returns: an integer
         """
-        raise NotImplementedError
+        return len(self.cleaned)
 
     def getRandomPosition(self):
         """
@@ -132,7 +139,10 @@ class RectangularRoom(object):
 
         returns: a Position object.
         """
-        raise NotImplementedError
+        x = random.choice([round(x * 0.1, 1) for x in range(1, self.width * 10)])
+        y = random.choice([round(x * 0.1, 1) for x in range(1, self.height * 10)])
+        pos = Position(x, y)
+        return pos
 
     def isPositionInRoom(self, pos):
         """
@@ -141,7 +151,12 @@ class RectangularRoom(object):
         pos: a Position object.
         returns: True if pos is in the room, False otherwise.
         """
-        raise NotImplementedError
+        x = pos.getX()
+        y = pos.getY()
+        if 0 <= x < self.width and 0 <= y < self.height:
+            return True
+        else:
+            return False
 
 
 # === Problem 2
@@ -258,7 +273,7 @@ def runSimulation(
 
 
 # Uncomment this line to see how much your simulation takes on average
-print(runSimulation(1, 1.0, 10, 10, 0.75, 30, StandardRobot))
+# print(runSimulation(1, 1.0, 10, 10, 0.75, 30, StandardRobot))
 
 
 # === Problem 5
