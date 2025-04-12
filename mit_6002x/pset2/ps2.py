@@ -1,9 +1,12 @@
 # 6.00.2x Problem Set 2: Simulating robots
+import sys
+import os
 
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import math
 import random
 
-import ps2_visualize
+import mit_6002x.pset2.ps2_visualize
 import pylab
 
 ##################
@@ -18,7 +21,7 @@ import pylab
 # from ps2_verify_movement36 import testRobotMovement
 # If you get a "Bad magic number" ImportError, you are not using Python 3.6
 
-from ps2_verify_movement312 import testRobotMovement
+# from mit_6002x.pset2.ps2_verify_movement312 import testRobotMovement
 
 
 # === Provided class Position
