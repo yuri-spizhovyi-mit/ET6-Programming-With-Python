@@ -1,11 +1,5 @@
-import random
-
 from mit_6002x.pset2.ps2 import Position, RectangularRoom
 import unittest
-import sys
-import os
-
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 
 class TestIsPositionInRoom(unittest.TestCase):
@@ -59,8 +53,26 @@ class TestGetNumCleanedTiles(unittest.TestCase):
     def setUp(self):
         self.room = RectangularRoom(5, 5)
 
-    def test_get_nums(self):
+    def test_initial_cleaned_tiles(self):
         self.assertEqual(self.room.getNumCleanedTiles(), 0)
+
+    def test_one_cleaned_title(self):
+        self.room.cleanTileAtPosition(Position(2.4, 3.6))
+        self.assertEqual(self.room.getNumCleanedTiles(), 1)
+
+    def test_same_title_cleaned(self):
+        self.room.cleanTileAtPosition(Position(1.5, 1.5))
+        self.room.cleanTileAtPosition(Position(1.3, 1.7))
+        self.assertEqual(
+            self.room.getNumCleanedTiles(),
+            1,
+            "Same tile cleaned twice should not increase count.",
+        )
+
+    def test_two_tiles_cleaned(self):
+        self.room.cleanTileAtPosition(Position(0.1, 0.1))
+        self.room.cleanTileAtPosition(Position(1.9, 1.9))
+        self.assertEqual(self.room.getNumCleanedTiles(), 2)
 
 
 class TestGetRandomPosition(unittest.TestCase):
@@ -90,9 +102,6 @@ class TestGetRandomPosition(unittest.TestCase):
             len(positions), 1, "Random positions do not vary — check RNG"
         )
 
-
-if __name__ == "__main__":
-    unittest.main()
 
 if __name__ == "__main__":
     unittest.main()
