@@ -1,4 +1,4 @@
-from ps2 import Position, RectangularRoom
+from ps2 import Position, RectangularRoom, Robot, StandardRobot
 import random
 
 pos0 = Position(0, 0)
@@ -35,3 +35,5 @@ x, y = pos_2
 print(x)
 print(y)
 print(room.isPositionInRoom(Position(0.7, 0.7)))
+st_robot = StandardRobot(room, 1)
+print(st_robot.updatePositionAndClean())
