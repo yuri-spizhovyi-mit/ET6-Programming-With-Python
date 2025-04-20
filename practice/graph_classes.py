@@ -6,7 +6,7 @@ class Node(object):
         return self.name
 
     def __str__(self):
-        return self.name + "A"
+        return self.name
 
 
 # a = Node("A")
@@ -76,6 +76,12 @@ class Digraph(object):
     def hasNode(self, node):
         return node in self.nodes
 
+    def getNode(self, name):
+        for n in self.edges:
+            if n.getName() == name:
+                return n
+        raise NameError(name)
+
     def __str__(self):
         result = ""
         for src in self.nodes:
@@ -84,14 +90,14 @@ class Digraph(object):
         return result[:-1]  # Remove the last newline
 
 
-g = Digraph()
+g1 = Digraph()
 a = Node("A")
 b = Node("B")
-g.addNode(a)
-g.addNode(b)
+g1.addNode(a)
+g1.addNode(b)
 e = Edge(a, b)
-g.addEdge(e)
-print(g)  # Output: A->B
+g1.addEdge(e)
+print(g1)  # Output: A->B
 
 
 class Graph(Digraph):
@@ -101,14 +107,14 @@ class Graph(Digraph):
         Digraph.addEdge(self, rev)
 
 
-g = Graph()
+g2 = Graph()
 a = Node("A")
 b = Node("B")
-g.addNode(a)
-g.addNode(b)
+g2.addNode(a)
+g2.addNode(b)
 e = Edge(a, b)
-g.addEdge(e)
-print(g)
+g2.addEdge(e)
+print(g2)
 # Output:
 # A->B
 # B->A

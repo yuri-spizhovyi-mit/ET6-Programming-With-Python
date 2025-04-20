@@ -2,12 +2,23 @@
 import sys
 import os
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+# sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import math
 import random
-
-import mit_6002x.pset2.ps2_visualize
 import pylab
+import importlib.util
+import ps2_visualize
+
+from sympy.physics.units import speed
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+verify_path = os.path.join(os.path.dirname(__file__), "ps2_verify_movement312.pyc")
+spec = importlib.util.spec_from_file_location("ps2_verify_movement312", verify_path)
+ps2_verify = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(ps2_verify)
+
+testRobotMovement = ps2_verify.testRobotMovement
+
 
 ##################
 ## Comment/uncomment the relevant lines, depending on which version of Python you have
@@ -21,7 +32,7 @@ import pylab
 # from ps2_verify_movement36 import testRobotMovement
 # If you get a "Bad magic number" ImportError, you are not using Python 3.6
 
-# from mit_6002x.pset2.ps2_verify_movement312 import testRobotMovement
+# from ps2_verify_movement312 import testRobotMovement
 
 
 # === Provided class Position
@@ -267,7 +278,7 @@ class StandardRobot(Robot):
 
 # === Problem 4
 def runSimulation(
-    num_robots, speed, width, height, min_coverage, num_trials, robot_type
+    num_robots, robot_speed, width, height, min_coverage, num_trials, robot_type
 ):
     """
     Runs NUM_TRIALS trials of the simulation and returns the mean number of
@@ -285,11 +296,39 @@ def runSimulation(
     robot_type: class of robot to be instantiated (e.g. StandardRobot or
                 RandomWalkRobot)
     """
-    raise NotImplementedError
+
+    results = []
+
+    while num_trials > 0:
+        # anim = ps2_visualize.RobotVisualization(num_robots, width, height)
+        room = RectangularRoom(width, height)
+        robots = []
+        for rob in range(num_robots):
+            robots.append("robot_" + str(rob))
+
+        for i in range(len(robots)):
+            robots[i] = robot_type(room, robot_speed)
+        tiles = room.getNumTiles()
+        need_to_clean = int(min_coverage * tiles)
+        num_steps = 0
+        while True:
+            for robot in robots:
+                # anim.update(room, robots)
+                robot.updatePositionAndClean()
+            num_steps += 1
+            cleaned_tiles = room.getNumCleanedTiles()
+            if cleaned_tiles >= need_to_clean:
+                # anim.update(room, robots)
+                break
+        results.append(num_steps)
+        num_trials -= 1
+        # anim.done()
+    avg = sum(results) / len(results)
+    return avg
 
 
 # Uncomment this line to see how much your simulation takes on average
-# print(runSimulation(1, 1.0, 10, 10, 0.75, 30, StandardRobot))
+# print(runSimulation(1, 3.0, 5, 5, 1, 1, StandardRobot))
 
 
 # === Problem 5
@@ -306,7 +345,20 @@ class RandomWalkRobot(Robot):
         Move the robot to a new position and mark the tile it is on as having
         been cleaned.
         """
-        raise NotImplementedError
+        while True:
+            current_pos = self.getRobotPosition()
+            self.setRobotDirection(random.randint(0, 359))
+            new_pos = current_pos.getNewPosition(self.getRobotDirection(), self.speed)
+
+            if self.room.isPositionInRoom(new_pos):
+                self.setRobotPosition(new_pos)
+                self.room.cleanTileAtPosition(new_pos)
+                break
+            else:
+                self.setRobotDirection(random.randint(0, 359))
+
+
+# print(runSimulation(1, 1.0, 5, 5, 1, 1, RandomWalkRobot))
 
 
 def showPlot1(title, x_label, y_label):
@@ -363,10 +415,15 @@ def showPlot2(title, x_label, y_label):
 #
 #       (... your call here ...)
 #
-
+###showPlot1("Time It Takes 1 - 10 Robots To Clean 80% Of A Room", "Number of Robots", "Time-steps")
 #
 # 2) Write a function call to showPlot2 that generates an appropriately-labeled
 #     plot.
 #
 #       (... your call here ...)
 #
+showPlot2(
+    "Time It Takes 2 Robots To Clean 80% Of A Room depends on AR",
+    "Aspect ration",
+    "Time-steps",
+)
