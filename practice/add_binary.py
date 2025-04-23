@@ -5,5 +5,6 @@ class Solution:
         total = a_int + b_int
         return bin(total)[2:]
 
+
 s = Solution()
 print(s.addBinary("11", "10"))
