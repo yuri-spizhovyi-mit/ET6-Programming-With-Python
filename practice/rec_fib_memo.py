@@ -8,4 +8,5 @@ def rec_fib_memo(n, memo={}):
     memo[n] = rec_fib_memo(n - 1, memo) + rec_fib_memo(n - 2, memo)
     return memo[n]
 
+
 print(rec_fib_memo(7))
