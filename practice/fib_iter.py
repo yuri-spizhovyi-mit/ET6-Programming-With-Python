@@ -7,7 +7,7 @@ def fib_iter(n):
     prev, cur = 0, 1
     for _ in range(2, n + 1):
         prev, cur = cur, prev + cur
-
+        print(cur)
     return cur
 
 
