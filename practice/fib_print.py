@@ -3,6 +3,8 @@ def fib_seq(n):
     for _ in range(n):
         print(a, end=" ")
         a, b = b, a + b
+    return a
 
 
-fib_seq(10)
+fib_sequence = fib_seq(10)
+print(fib_sequence)
