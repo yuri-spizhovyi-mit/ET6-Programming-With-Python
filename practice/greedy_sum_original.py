@@ -18,12 +18,12 @@ def greedySum(L, s):
     if remain == 0:
         return sum(multipliers)
     else:
-        return 'no solution'
+        return "no solution"
 
 
-#print(greedySum([10, 5, 1], 14))  # 14 = 10*1 + 5*0 + 1*4 Output: 5
-#print(greedySum([10, 5, 1], 23))  # 23 = 10*2 + 5*0 + 1*3 Output: 5
-#print(greedySum([9, 6], 8))  # No solution
+# print(greedySum([10, 5, 1], 14))  # 14 = 10*1 + 5*0 + 1*4 Output: 5
+# print(greedySum([10, 5, 1], 23))  # 23 = 10*2 + 5*0 + 1*3 Output: 5
+# print(greedySum([9, 6], 8))  # No solution
 
 L = [6, 4, 3]
 s = 8
