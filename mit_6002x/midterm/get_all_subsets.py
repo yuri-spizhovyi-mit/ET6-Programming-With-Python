@@ -32,4 +32,4 @@ def look_for_all_the_things(myList):
 
 elements = [1, 2, 3]
 print(get_all_subsets(elements))
-print(look_for_all_the_things(elements))
+# print(look_for_all_the_things(elements))
