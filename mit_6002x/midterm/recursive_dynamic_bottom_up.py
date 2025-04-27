@@ -1,11 +1,11 @@
-def recursive_dynamic(n, memo={}):
-    if n in memo:
-        return memo[n]
+def fib_bottom_up(n):
     if n <= 1:
-        memo[n] = n
-    else:
-        memo[n] = recursive_dynamic(n - 1, memo) + recursive_dynamic(n - 2, memo)
-    return memo[n]
+        return n
+    dp = [0] * (n + 1)
+    dp[1] = 1
+    for i in range(2, n + 1):
+        dp[i] = dp[i - 1] + dp[i - 2]
+    return dp[n]
 
 
-recursive_dynamic(7)
+print(fib_bottom_up(7))
