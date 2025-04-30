@@ -12,6 +12,14 @@ root.right = ExprNode("*")
 root.right.left = ExprNode(4)
 root.right.right = ExprNode(5)
 
+"""
+     +
+    / \
+   3   *
+      / \
+     4   5
+"""
+
 
 def evaluate(node):
     if node is None:
