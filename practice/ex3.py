@@ -1,28 +1,14 @@
-from typing import List
+graph = {"A": ["B", "C"], "B": ["A", "D"], "C": ["A"], "D": ["B"]}
 
 
-class Solution:
-    def plusOne(self, digits: List[int]) -> List[int]:
-        pass
+def dfs(graph, node, visited=None):
+    if visited is None:
+        visited = set()
+    if node not in visited:
+        print(node)
+        visited.add(node)
+        for neighbor in graph[node]:
+            dfs(graph, neighbor, visited)
 
 
-digits = [1, 2, 3]
-dg = ""
-for num in digits:
-    dg += str(num)
-dg = int(dg) + 1
-dg = str(dg)
-result = []
-for i in dg:
-    result.append(i)
-
-s = Solution()
-print(result)
-
-"""
-1. Fetch last digit
-2. Increase by 1
-3. Replace last digit
-4. In case the number will be 10 replase with [1, 0]
-
-"""
+dfs(graph, "A")
