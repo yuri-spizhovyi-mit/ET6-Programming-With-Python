@@ -1,3 +1,6 @@
+from idlelib.tree import TreeNode
+
+
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         if not root:
