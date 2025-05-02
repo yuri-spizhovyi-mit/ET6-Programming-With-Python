@@ -159,7 +159,6 @@ def findPocketReturn(game, numTrials, trialSize, toPrint=False):
     return pocketReturns
 
 
-
 random.seed(0)
 numTrials = 50000
 numSpins = 200
@@ -167,11 +166,10 @@ game = FairRoulette()
 
 means = []
 for i in range(numTrials):
-   means.append(findPocketReturn(game, 1, numSpins)[0]/numSpins)
+    means.append(findPocketReturn(game, 1, numSpins)[0] / numSpins)
 
-pylab.hist(means, bins = 19,
-          weights = pylab.array(len(means)*[1])/len(means))
-pylab.xlabel('Mean Return')
-pylab.ylabel('Probability')
-pylab.title('Expected Return Betting a Pocket')
+pylab.hist(means, bins=19, weights=pylab.array(len(means) * [1]) / len(means))
+pylab.xlabel("Mean Return")
+pylab.ylabel("Probability")
+pylab.title("Expected Return Betting a Pocket")
 pylab.show()
