@@ -34,6 +34,7 @@ def getMeanAndStd(X):
 # print(factor)
 # pylab.figure()
 # pylab.hist(L, weights = factor)
+# pylab.show()
 
 
 def plotMeans(numDice, numRolls, numBins, legend, color, style):
@@ -54,14 +55,15 @@ def plotMeans(numDice, numRolls, numBins, legend, color, style):
     return getMeanAndStd(means)
 
 
-mean, std = plotMeans(1, 1000000, 19, "1 die", "b", "*")
-print("Mean of rolling 1 die =", str(mean) + ",", "Std =", std)
-mean, std = plotMeans(50, 1000000, 19, "Mean of 50 dice", "r", "//")
-print("Mean of rolling 50 dice =", str(mean) + ",", "Std =", std)
-pylab.title("Rolling Continuous Dice")
-pylab.xlabel("Value")
-pylab.ylabel("Probability")
-pylab.legend()
+# mean, std = plotMeans(1, 1000000, 19, "1 die", "b", "*")
+# print("Mean of rolling 1 die =", str(mean) + ",", "Std =", std)
+# mean, std = plotMeans(50, 1000000, 19, "Mean of 50 dice", "r", "//")
+# print("Mean of rolling 50 dice =", str(mean) + ",", "Std =", std)
+# pylab.title("Rolling Continuous Dice")
+# pylab.xlabel("Value")
+# pylab.ylabel("Probability")
+# pylab.legend()
+# pylab.show()
 
 
 class FairRoulette:
