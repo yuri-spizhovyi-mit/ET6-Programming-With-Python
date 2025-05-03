@@ -1,4 +1,4 @@
-from mit_6002x.pset2.ps2 import Position, RectangularRoom
+from mit_6002x import Position, RectangularRoom
 import unittest
 
 
