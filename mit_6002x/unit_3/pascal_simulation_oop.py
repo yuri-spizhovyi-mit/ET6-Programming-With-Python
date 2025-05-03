@@ -13,6 +13,7 @@ class PascalGame:
         self.num_trials = num_trials
         self.die1 = Die()
         self.die2 = Die()
+        self.probability = None
 
     def run_simulation(self):
         num_wins = 0
@@ -23,9 +24,15 @@ class PascalGame:
                 if d1 == 6 and d2 == 6:
                     num_wins += 1
                     break
-        probability = num_wins / self.num_trials
-        print("Probability of winning = ", probability)
+        self.probability = num_wins / self.num_trials
+        print("Probability of winning = ", self.probability)
+
+    def __str__(self):
+        return (
+            f"PascalGame(trials={self.num_trials}, last_probability={self.probability})"
+        )
 
 
 game = PascalGame(1000)
 game.run_simulation()
+print(game)
