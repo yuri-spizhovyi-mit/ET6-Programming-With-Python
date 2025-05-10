@@ -75,7 +75,7 @@ nx.draw_networkx_edge_labels(
 # Highlight the shortest path
 if len(path) > 1:
     path_edges = list(zip(path[:-1], path[1:]))
-    nx.draw_networkx_edges(G, pos, edgelist=path_edges, edge_color="red", width=3)
+    nx.draw_networkx_edges(G, pos, edgelist=path_edges, edge_color="red", width=1)
 
 plt.title(f"Shortest Path from {start} to {end} ({total_distance} km)")
 plt.tight_layout()
