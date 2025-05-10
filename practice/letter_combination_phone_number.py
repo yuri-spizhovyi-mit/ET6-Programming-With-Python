@@ -23,3 +23,6 @@ def letterCombinations(digits):
         result = temp
 
     return result
+
+
+print(letterCombinations("23"))
