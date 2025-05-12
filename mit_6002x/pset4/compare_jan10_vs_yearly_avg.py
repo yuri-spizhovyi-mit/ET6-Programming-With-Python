@@ -4,7 +4,7 @@ import re
 import pandas as pd
 
 # Load the data file
-df = pd.read_csv("/mnt/data/data.csv")
+df = pd.read_csv("data.csv")
 
 # Extract necessary columns
 df["DATE"] = df["DATE"].astype(str)
@@ -55,7 +55,7 @@ def r_squared(y, est):
 
 
 r2_jan10 = r_squared(jan10_clean, jan10_pred)
-r2_yearly = r_squared(np.array(years), yearly_pred)
+r2_yearly = r_squared(np.array(yearly_avg_temps), yearly_pred)
 
 # Plot both
 plt.figure(figsize=(14, 6))
