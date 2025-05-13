@@ -5,20 +5,19 @@ graph = {"A": ["B", "C"], "B": ["A", "D"], "C": ["A"], "D": ["B"]}
 
 def bfs(graph, start):
     visited = set()
-    visited_printed = ''
     queue = deque([start])
-
+    path = ""
     while queue:
         node = queue.popleft()
         if node not in visited:
             visited.add(node)
-            visited_printed += node + "->"
+            path += node + "->"
             for neighbor in graph[node]:
                 queue.append(neighbor)
-    return visited_printed[:-2]
+    return path[:-2]
 
 
-# print(bfs(graph, "C"))
+print(bfs(graph, "C"))
 
 
 def dfs(graph, node, visited=None, path=None):
