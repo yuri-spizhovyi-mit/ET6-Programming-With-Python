@@ -58,18 +58,31 @@ if __name__ == "__main__":
     y_vals = create_data(f, x_vals)
 
     # Plot actual values
-    pylab.plot(x_vals, y_vals, "ko", label="Actual values")
+    pylab.plot(x_vals, y_vals, "ko", label="Actual values")  # 'k' = black, 'o' = circle
 
     # Fit exponential model
     fit, base = fit_exp_data(x_vals, y_vals)
 
     # Predict values using the fit
     predicted_y_vals = predict_y(fit, base, x_vals)
-    pylab.plot(x_vals, predicted_y_vals, label="Predicted values")
+    pylab.plot(
+        x_vals, predicted_y_vals, "r-", label="Predicted values"
+    )  # 'r-' = red solid line
 
     # Show title and legend
     pylab.title("Fitting an Exponential Function")
     pylab.legend(loc="upper left")
+    pylab.grid(True)
+    pylab.show()
+
+    residuals = [
+        actual - predicted for actual, predicted in zip(y_vals, predicted_y_vals)
+    ]
+    pylab.figure()
+    pylab.plot(x_vals, residuals, "go-", label="Residuals")
+    pylab.title("Prediction Error (Residuals)")
+    pylab.axhline(0, color="gray", linestyle="--")
+    pylab.legend()
     pylab.grid(True)
     pylab.show()
 
