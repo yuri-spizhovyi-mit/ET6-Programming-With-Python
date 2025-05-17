@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import poisson
 import pandas as pd
-import ace_tools as tools
 
 # Simulation parameters
 lambda_val = 4  # Average number of events per interval
@@ -26,7 +25,7 @@ plt.grid(axis="y")
 plt.tight_layout()
 plt.show()
 
-# Prepare data for display
+# Create and display frequency table
 df = pd.DataFrame(
     {
         "Events": values,
@@ -34,4 +33,10 @@ df = pd.DataFrame(
         "Relative Frequency": counts / num_intervals,
     }
 )
-tools.display_dataframe_to_user(name="Simulated Poisson Data", dataframe=df)
+
+# Print first few rows of the table
+print("\nFirst 10 rows of simulated data:\n")
+print(df.head(10))
+
+# Optional: save to CSV
+# df.to_csv("poisson_simulation_results.csv", index=False)
