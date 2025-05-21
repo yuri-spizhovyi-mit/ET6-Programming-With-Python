@@ -84,7 +84,7 @@ def knn_classify(training_set, test_set, target_label, k):
 
 
 # Test with updated variable names
-file_path = "boston_marathon_mock.csv"
+file_path = "boston_marathon_100.csv"
 examples = build_marathon_examples(file_path)
 training_set, test_set = split_80_20(examples)
 results = knn_classify(training_set, test_set, "female", 3)
