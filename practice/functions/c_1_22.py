@@ -13,3 +13,10 @@ def dot_product_map(l1: list, l2: list):
 
 
 print(dot_product_map([4, 5, 6], [6, 5, 4]))
+
+
+def dot_product_zip(l1, l2):
+    return [a * b for a, b in zip(l1, l2)]
+
+
+print(dot_product_zip([1, 1, 1], [2, 2, 2]))
