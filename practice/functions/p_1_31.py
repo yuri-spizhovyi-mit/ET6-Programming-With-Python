@@ -25,7 +25,7 @@ def make_change(given, charged):
     return result
 
 
-print(make_change(201.10, 100))
+# print(make_change(201.10, 100))
 
 
 def make_change_pro(given, charged):
@@ -45,10 +45,10 @@ def make_change_pro(given, charged):
         500: "$5",
         200: "Toonie ($2)",
         100: "Loonie ($1)",
-        25: "Quarter",
-        10: "Dime",
-        5: "Nickel",
-        1: "Penny",
+        25: "Quarter (0.25)",
+        10: "Dime (0.10)",
+        5: "Nickel (0.05)",
+        1: "Penny (0.01)",
     }
 
     result = {}
