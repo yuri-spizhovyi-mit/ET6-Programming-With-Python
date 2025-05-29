@@ -26,3 +26,40 @@ def make_change(given, charged):
 
 
 print(make_change(201.10, 100))
+
+
+def make_change_pro(given, charged):
+    """Return optimal change as few coins and bills as possible (CAD)."""
+    # Convert to cents to avoid floating point issues
+    change_cents = round((given - charged) * 100)
+
+    if change_cents < 0:
+        raise ValueError("Given amount is less than the charged amount.")
+
+    # Denominations in cents
+    denominations = {
+        10000: "$100",
+        5000: "$50",
+        2000: "$20",
+        1000: "$10",
+        500: "$5",
+        200: "Toonie ($2)",
+        100: "Loonie ($1)",
+        25: "Quarter",
+        10: "Dime",
+        5: "Nickel",
+        1: "Penny",
+    }
+
+    result = {}
+    for value, name in denominations.items():
+        count = change_cents // value
+        if count > 0:
+            result[name] = count
+            change_cents -= count * value
+
+    return result
+
+
+# Example:
+print(make_change_pro(201.10, 100))
