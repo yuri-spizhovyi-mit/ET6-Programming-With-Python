@@ -12,3 +12,8 @@ def sorted_squares(nums: list[int]) -> list[int]:
             result[pos] = nums[right] ** 2
             right -= 1
         pos -= 1
+    return result
+
+
+nums = [-4, -1, 0, 3, 10]
+print(sorted_squares(nums))
