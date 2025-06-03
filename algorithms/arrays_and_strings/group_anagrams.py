@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def group_anagrams(strs: list[str]) -> list[list[str]]:
     anagram_map = defaultdict(list)
 
@@ -8,3 +9,6 @@ def group_anagrams(strs: list[str]) -> list[list[str]]:
         anagram_map[key].append(word)
 
     return list(anagram_map.values())
+
+
+print(group_anagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
