@@ -22,8 +22,8 @@ def plot_birthday_probabilities(max_n=100, num_trials=1000):
     y_vals = [birthday_paradox(n, num_trials) for n in x_vals]
 
     plt.figure(figsize=(10, 6))
-    plt.plot(x_vals, y_vals, marker='o')
-    plt.axhline(y=0.5, color='red', linestyle='--', label='50% Probability')
+    plt.plot(x_vals, y_vals, marker="o")
+    plt.axhline(y=0.5, color="red", linestyle="--", label="50% Probability")
     plt.title("Birthday Paradox: Probability of Shared Birthday")
     plt.xlabel("Number of People in Room (n)")
     plt.ylabel("Probability")

@@ -5,7 +5,6 @@ def two_sum(nums: list[int], target: int) -> list[int]:
                 return [i, j]
 
 
-
-nums = [2, 7, 11, 15],
+nums = ([2, 7, 11, 15],)
 
 target = 9
