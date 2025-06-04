@@ -1,16 +1,21 @@
 def longest_common_prefix(strs: list[str]) -> str:
+    # Handle edge case: empty input list
     if not strs:
         return ""
 
+    # Start with the first word as the initial prefix
     prefix = strs[0]
 
+    # Compare prefix with each remaining word
     for word in strs[1:]:
+        # Shrink prefix until it matches the start of the current word
         while not word.startswith(prefix):
-            prefix = prefix[:-1]
+            prefix = prefix[:-1]  # Remove last character from prefix
             if not prefix:
-                return ""
+                return ""  # No common prefix exists
 
-    return prefix
+    return prefix  # Final common prefix after all comparisons
+
 
 
 def test_longest_common_prefix():
