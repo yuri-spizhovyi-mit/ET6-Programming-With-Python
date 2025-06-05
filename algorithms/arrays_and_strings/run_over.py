@@ -1,13 +1,7 @@
 import requests
 
 # Target contributors
-target_contributors = {
-    "Safa-Saber",
-    "Safi222",
-    "Mr-Glucose",
-    "ayhm01",
-    "tamarasaqer"
-}
+target_contributors = {"Safa-Saber", "Safi222", "Mr-Glucose", "ayhm01", "tamarasaqer"}
 
 # Result mapping
 contributor_groups = {name: [] for name in target_contributors}

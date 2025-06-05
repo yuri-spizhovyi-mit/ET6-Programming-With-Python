@@ -17,7 +17,6 @@ def longest_common_prefix(strs: list[str]) -> str:
     return prefix  # Final common prefix after all comparisons
 
 
-
 def test_longest_common_prefix():
     test_cases = [
         ([""], ""),
@@ -28,12 +27,14 @@ def test_longest_common_prefix():
         (["abc", "abcd", "abcde"], "abc"),
         (["prefix", "", "pre"], ""),
         ([], ""),
-        (["longestprefix"], "longestprefix")
+        (["longestprefix"], "longestprefix"),
     ]
 
     for i, (input_data, expected) in enumerate(test_cases):
         result = longest_common_prefix(input_data)
-        assert result == expected, f"Test {i + 1} failed: got '{result}', expected '{expected}'"
+        assert result == expected, (
+            f"Test {i + 1} failed: got '{result}', expected '{expected}'"
+        )
     print("✅ All edge cases passed.")
 
 
