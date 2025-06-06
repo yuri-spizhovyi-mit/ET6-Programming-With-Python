@@ -6,6 +6,7 @@ def most_frequent_char(s: str) -> str:
         return None
 
     count = Counter(s)
+    print(count)
     return max(count, key=count.get)
 
 
