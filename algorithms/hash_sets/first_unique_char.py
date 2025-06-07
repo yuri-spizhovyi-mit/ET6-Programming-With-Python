@@ -1,6 +1,7 @@
 from collections import Counter
 
-def first_unique_char(s: str)-> int:
+
+def first_unique_char(s: str) -> int:
     count = Counter(s)
 
     for i, ch in enumerate(s):
@@ -9,7 +10,8 @@ def first_unique_char(s: str)-> int:
 
     return -1
 
-print(first_unique_char("leetcode"))        # 0
-print(first_unique_char("loveleetcode"))    # 2
-print(first_unique_char("aabbcc"))          # -1
-print(first_unique_char("aabccbd"))         # 6 ('d')
+
+print(first_unique_char("leetcode"))  # 0
+print(first_unique_char("loveleetcode"))  # 2
+print(first_unique_char("aabbcc"))  # -1
+print(first_unique_char("aabccbd"))  # 6 ('d')
