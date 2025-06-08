@@ -4,7 +4,7 @@ def first_unique(s: str):
     for char in s:
         char_count[char] = char_count.get(char, 0) + 1
 
-        # Second pass: find the first character with cout 1
+        # Second pass: find the first character with count 1
 
     for char in s:
         if char_count[char] == 1:
