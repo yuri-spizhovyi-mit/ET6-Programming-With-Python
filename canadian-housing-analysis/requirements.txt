@@ -1,0 +1,13 @@
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+requests
+beautifulsoup4
+newspaper3k
+selenium
+statsmodels
+prophet
+scikit-learn
+jupyter

@@ -1,22 +1,23 @@
 class CreditCard:
     """A consumer credit card"""
 
-    def __init__(self, customer, bank, account, limit):
+    def __init__(self, customer, bank, account, limit, balance=0):
         """Create a new credit card instance
 
         The initial balance is zero.
 
-        customer:   the name of the customer (e.g. 'John Bowman')
-        bank:       the name of the bank (e.g. 'California Savings')
-        account:       the account identifier (e.g. '5391 0375 9387 5309')
-        limit:      credit limit (measured in dollars)
+        customer (str):   the name of the customer (e.g. 'John Bowman')
+        bank (str):       the name of the bank (e.g. 'California Savings')
+        account (str):       the account identifier (e.g. '5391 0375 9387 5309')
+        limit (float):      credit limit (measured in dollars)
+        balance (float, optional): initial balance. Defaults to 0.
         """
 
         self._customer = customer
         self._bank = bank
         self._account = account
         self._limit = limit
-        self._balance = 0
+        self._balance = balance
 
     @property
     def customer(self):
@@ -81,10 +82,13 @@ if __name__ == "__main__":
         CreditCard("John Bowman", "California Finance", "5391 0375 9387 5309", 5000)
     )
 
-    for val in range(1, 17):
+    for val in range(1, 59):
         wallet[0].charge(val)
         wallet[1].charge(2 * val)
-        wallet[2].charge(3 * val)
+        if not wallet[2].charge(3 * val):
+            print(
+                f"❌ Charge denied for wallet[2] at val = {val}. Tried to charge {3 * val}, balance is {wallet[2].balance}"
+            )
 
     for c in range(3):
         print("Customer =", wallet[c].customer)
