@@ -22,7 +22,6 @@ def min_subarray_len(target, nums):
     return left if left <= len(nums) else 0
 
 
-
 nums = [1, 3, 5, 7, 9, 11]
-print(min_subarray_len(7, nums)) # Output: 3
+print(min_subarray_len(7, nums))  # Output: 3
 print(min_subarray_len(4, nums))  # Output: 2

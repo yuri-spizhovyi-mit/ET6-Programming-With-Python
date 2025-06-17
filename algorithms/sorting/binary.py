@@ -13,6 +13,7 @@ def binary_search(nums: list[int], target: int) -> int:
 
     return -1  # not found
 
+
 nums = [1, 3, 5, 7, 9, 11]
 print(binary_search(nums, 7))  # Output: 3
 print(binary_search(nums, 4))  # Output: -1

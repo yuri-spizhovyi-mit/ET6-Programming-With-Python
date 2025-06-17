@@ -14,6 +14,8 @@ def last_occurrence(nums: list[int], target: int) -> int:
             right = mid - 1
 
     return result
+
+
 nums = [1, 3, 5, 7, 9, 11]
 print(last_occurrence(nums, 7))  # Output: 3
 print(last_occurrence(nums, 4))  # Output: -1
