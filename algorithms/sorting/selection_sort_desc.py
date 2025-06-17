@@ -12,4 +12,3 @@ def selection_sort(arr):
 
 # Example
 print(selection_sort([29, 10, 14, 37, 13]))  # Output: [37, 29, 14, 13, 10]
-
