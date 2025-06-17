@@ -11,5 +11,5 @@ def selection_sort(arr):
 
 
 # Example
-print(selection_sort([29, 10, 14, 37, 13]))  # Output: [9, 6, 5, 5, 2, 1]
+print(selection_sort([29, 10, 14, 37, 13]))  # Output: [37, 29, 14, 13, 10]
 
