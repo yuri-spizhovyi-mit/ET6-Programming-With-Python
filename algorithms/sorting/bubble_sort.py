@@ -2,7 +2,7 @@ def bubble_sort(arr):
     n = len(arr)
     for i in range(n):
         swapped = False  # track if any swap occurred
-        for j in range(0, n - 1 - i):  # skip sorted tail
+        for j in range(n - 1 - i):  # skip sorted tail
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]  # swap
                 swapped = True
