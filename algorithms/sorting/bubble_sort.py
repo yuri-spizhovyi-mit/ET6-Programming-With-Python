@@ -12,4 +12,4 @@ def bubble_sort(arr):
 
 
 # Test
-print(bubble_sort([5, 1, 4, 2, 8]))  # ➜ [1, 2, 4, 5, 8]
+print(bubble_sort([5, 1, 4, 2, 3]))  # ➜ [1, 2, 4, 5, 8]
