@@ -9,3 +9,6 @@ def sort_element_freq_pairs(nums):
 nums = [4, 5, 6, 5, 4, 3]
 print(sort_element_freq_pairs(nums))
 # ➜ [(4, 2), (5, 2), (3, 1), (6, 1)]
+
+for num, count in sort_element_freq_pairs(nums):
+    print(f"{num} appears {count} time(s)")
