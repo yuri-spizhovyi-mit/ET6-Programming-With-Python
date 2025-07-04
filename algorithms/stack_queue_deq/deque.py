@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def is_palindrome(word):
     dq = deque(word)
     while len(dq) > 1:
@@ -7,5 +8,6 @@ def is_palindrome(word):
             return False
     return True
 
+
 print(is_palindrome("racecar"))  # True
-print(is_palindrome("hello"))    # False
+print(is_palindrome("hello"))  # False

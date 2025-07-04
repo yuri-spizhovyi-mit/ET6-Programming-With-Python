@@ -3,4 +3,5 @@ def string_revers(s):
         return s
     return string_revers(s[1:]) + s[0]
 
-print(string_revers('pots'))
+
+print(string_revers("pots"))

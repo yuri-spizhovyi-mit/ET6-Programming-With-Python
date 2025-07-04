@@ -8,5 +8,6 @@ def quick_sort(arr):
 
     return quick_sort(less) + [pivot] + quick_sort(greater)
 
+
 print(quick_sort([9, 3, 7, 1, 6]))
 # ➜ [1, 3, 6, 7, 9]

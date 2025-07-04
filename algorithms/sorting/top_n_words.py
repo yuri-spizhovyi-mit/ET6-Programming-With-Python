@@ -10,5 +10,17 @@ def top_n_words(words, n):
     # Step 3: extract only words, limit to top n
     return [word for word, count in sorted_items[:n]]
 
-words = ["apple", "banana", "apple", "cherry", "banana", "banana", "apple", "date", "date", "date"]
+
+words = [
+    "apple",
+    "banana",
+    "apple",
+    "cherry",
+    "banana",
+    "banana",
+    "apple",
+    "date",
+    "date",
+    "date",
+]
 print(top_n_words(words, 3))
