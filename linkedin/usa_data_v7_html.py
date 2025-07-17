@@ -5,11 +5,14 @@ from playwright.async_api import async_playwright
 SEARCH_URL = "https://www.linkedin.com/search/results/people/?geoUrn=%5B%22103644278%22%5D&keywords=data%20scientist&origin=FACETED_SEARCH"
 NUM_PAGES = 2  # Adjust for more profiles
 
+
 # 🔍 Utility: Extract all commented text blocks like <!---->Senior Data Scientist<!---->
 async def extract_all_commented_text(page):
     html = await page.content()
     import re
+
     return " | ".join(re.findall(r"<!-->(.*?)<!-->", html))
+
 
 async def run():
     async with async_playwright() as p:
@@ -40,11 +43,13 @@ async def run():
             await page.wait_for_timeout(3000)
 
             profile_elements = await page.locator("a[href*='/in/']").all()
-            profile_urls = list({
-                await el.get_attribute("href")
-                for el in profile_elements
-                if await el.get_attribute("href")
-            })
+            profile_urls = list(
+                {
+                    await el.get_attribute("href")
+                    for el in profile_elements
+                    if await el.get_attribute("href")
+                }
+            )
 
             print(f"🔗 Found {len(profile_urls)} profile links")
 
@@ -62,14 +67,18 @@ async def run():
                         name = "N/A"
 
                     try:
-                        position_block = profile.locator("div.text-body-medium.break-words")
+                        position_block = profile.locator(
+                            "div.text-body-medium.break-words"
+                        )
                         position = await position_block.nth(0).text_content()
                         position = position.strip() if position else "N/A"
                     except:
                         position = "N/A"
 
                     try:
-                        location_block = profile.locator("span.text-body-small.inline.t-black--light.break-words")
+                        location_block = profile.locator(
+                            "span.text-body-small.inline.t-black--light.break-words"
+                        )
                         location = await location_block.nth(0).text_content()
                         location = location.strip() if location else "N/A"
                     except:
@@ -78,13 +87,15 @@ async def run():
                     # 🧠 Comment-based fallback data
                     comment_text = await extract_all_commented_text(profile)
 
-                    all_profiles.append({
-                        "Link": url,
-                        "Name": name,
-                        "Position": position,
-                        "Country": location,
-                        "Commented_Content": comment_text
-                    })
+                    all_profiles.append(
+                        {
+                            "Link": url,
+                            "Name": name,
+                            "Position": position,
+                            "Country": location,
+                            "Commented_Content": comment_text,
+                        }
+                    )
 
                 except Exception as e:
                     print(f"❌ Failed to scrape {url}: {e}")
@@ -93,7 +104,9 @@ async def run():
 
             # Pagination
             try:
-                next_button = page.locator("button.artdeco-pagination__button--next[aria-label='Next']")
+                next_button = page.locator(
+                    "button.artdeco-pagination__button--next[aria-label='Next']"
+                )
                 if await next_button.is_visible() and await next_button.is_enabled():
                     await next_button.click()
                     await page.wait_for_load_state("networkidle")
@@ -111,9 +124,12 @@ async def run():
         if all_profiles:
             df = pd.DataFrame(all_profiles)
             df.to_csv("linkedin_data_scientists_fallback_comments.csv", index=False)
-            print("\n✅ Scraping completed and saved to linkedin_data_scientists_fallback_comments.csv")
+            print(
+                "\n✅ Scraping completed and saved to linkedin_data_scientists_fallback_comments.csv"
+            )
         else:
             print("\n⚠️ No profiles were scraped.")
+
 
 if __name__ == "__main__":
     asyncio.run(run())

@@ -8,6 +8,7 @@ NUM_PAGES = 1  # or more
 SCREENSHOT_DIR = "screenshots"
 os.makedirs(SCREENSHOT_DIR, exist_ok=True)
 
+
 async def run():
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=False)
@@ -34,11 +35,13 @@ async def run():
             await page.wait_for_timeout(3000)
 
             profile_elements = await page.locator("a[href*='/in/']").all()
-            profile_urls = list({
-                await el.get_attribute("href")
-                for el in profile_elements
-                if await el.get_attribute("href")
-            })
+            profile_urls = list(
+                {
+                    await el.get_attribute("href")
+                    for el in profile_elements
+                    if await el.get_attribute("href")
+                }
+            )
 
             print(f"🔗 Found {len(profile_urls)} profile links")
 
@@ -58,8 +61,16 @@ async def run():
                     # Use name or fallback ID in filename
                     try:
                         name = await profile.locator("h1").first.text_content()
-                        safe_name = "".join(c for c in name if c.isalnum() or c in " _-").strip().replace(" ", "_")
-                        filename = f"{safe_name}.png" if safe_name else f"profile_{hash(url)}.png"
+                        safe_name = (
+                            "".join(c for c in name if c.isalnum() or c in " _-")
+                            .strip()
+                            .replace(" ", "_")
+                        )
+                        filename = (
+                            f"{safe_name}.png"
+                            if safe_name
+                            else f"profile_{hash(url)}.png"
+                        )
                     except:
                         filename = f"profile_{hash(url)}.png"
 
@@ -74,7 +85,9 @@ async def run():
 
             # Go to next page
             try:
-                next_button = page.locator("button.artdeco-pagination__button--next[aria-label='Next']")
+                next_button = page.locator(
+                    "button.artdeco-pagination__button--next[aria-label='Next']"
+                )
                 if await next_button.is_visible() and await next_button.is_enabled():
                     await next_button.click()
                     await page.wait_for_load_state("domcontentloaded")
@@ -88,6 +101,7 @@ async def run():
 
         await browser.close()
         print("\n🎯 Done capturing profile screenshots.")
+
 
 if __name__ == "__main__":
     asyncio.run(run())

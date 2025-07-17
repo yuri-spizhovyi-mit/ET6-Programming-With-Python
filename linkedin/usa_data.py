@@ -39,7 +39,9 @@ async def run():
 
             # Get all profile links
             profile_elements = await page.locator("a[href*='/in/']").all()
-            profile_urls = list({await el.get_attribute("href") for el in profile_elements if el})
+            profile_urls = list(
+                {await el.get_attribute("href") for el in profile_elements if el}
+            )
 
             print(f"🔗 Found {len(profile_urls)} profile links")
 
@@ -57,51 +59,70 @@ async def run():
                         name = "N/A"
 
                     try:
-                        position_block = profile.locator("div.text-body-medium.break-words")
+                        position_block = profile.locator(
+                            "div.text-body-medium.break-words"
+                        )
                         position = await position_block.nth(0).text_content() or "N/A"
                     except:
                         position = "N/A"
 
                     try:
-                        location_block = profile.locator("span.text-body-small.inline.t-black--light.break-words")
+                        location_block = profile.locator(
+                            "span.text-body-small.inline.t-black--light.break-words"
+                        )
                         location = await location_block.nth(0).text_content() or "N/A"
                     except:
                         location = "N/A"
 
                     # Wait and extract experience
                     try:
-                        await profile.wait_for_selector("section[id*='experience']", timeout=6000)
-                        exp_items = await profile.locator("section[id*='experience'] li").all()
-                        experience = " | ".join([
-                            (await item.text_content()).strip().replace("\n", " ") for item in exp_items[:3]
-                        ])
+                        await profile.wait_for_selector(
+                            "section[id*='experience']", timeout=6000
+                        )
+                        exp_items = await profile.locator(
+                            "section[id*='experience'] li"
+                        ).all()
+                        experience = " | ".join(
+                            [
+                                (await item.text_content()).strip().replace("\n", " ")
+                                for item in exp_items[:3]
+                            ]
+                        )
                     except:
                         experience = "N/A"
 
                     # Wait and extract education
                     try:
-                        await profile.wait_for_selector("section[id*='education']", timeout=6000)
-                        edu_items = await profile.locator("section[id*='education'] li").all()
-                        education = " | ".join([
-                            (await item.text_content()).strip().replace("\n", " ") for item in edu_items[:2]
-                        ])
+                        await profile.wait_for_selector(
+                            "section[id*='education']", timeout=6000
+                        )
+                        edu_items = await profile.locator(
+                            "section[id*='education'] li"
+                        ).all()
+                        education = " | ".join(
+                            [
+                                (await item.text_content()).strip().replace("\n", " ")
+                                for item in edu_items[:2]
+                            ]
+                        )
                     except:
                         education = "N/A"
 
-                    all_profiles.append({
-                        "Link": url,
-                        "Name": name.strip(),
-                        "Position": position.strip(),
-                        "Country": location.strip(),
-                        "Experience": experience,
-                        "Education": education
-                    })
+                    all_profiles.append(
+                        {
+                            "Link": url,
+                            "Name": name.strip(),
+                            "Position": position.strip(),
+                            "Country": location.strip(),
+                            "Experience": experience,
+                            "Education": education,
+                        }
+                    )
 
                 except Exception as e:
                     print(f"❌ Failed to scrape {url}: {e}")
 
                 await profile.close()
-
 
             # Click the next button to go to the next page
             try:
@@ -122,7 +143,9 @@ async def run():
         if all_profiles:
             df = pd.DataFrame(all_profiles)
             df.to_csv("linkedin_data_scientists_playwright.csv", index=False)
-            print("\n✅ Scraping completed and saved to linkedin_data_scientists_playwright.csv")
+            print(
+                "\n✅ Scraping completed and saved to linkedin_data_scientists_playwright.csv"
+            )
         else:
             print("\n⚠️ No profiles were scraped.")
 

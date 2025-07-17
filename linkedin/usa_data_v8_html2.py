@@ -9,9 +9,11 @@ NUM_PAGES = 2  # Adjust to fetch more pages
 SAVE_DIR = "linkedin_html_profiles"
 os.makedirs(SAVE_DIR, exist_ok=True)
 
+
 # Sanitize file name
 def clean_filename(name):
     return re.sub(r'[\\/*?:"<>|]', "", name.replace(" ", "_"))
+
 
 async def run():
     async with async_playwright() as p:
@@ -42,11 +44,13 @@ async def run():
             await page.wait_for_timeout(3000)
 
             profile_elements = await page.locator("a[href*='/in/']").all()
-            profile_urls = list({
-                await el.get_attribute("href")
-                for el in profile_elements
-                if await el.get_attribute("href")
-            })
+            profile_urls = list(
+                {
+                    await el.get_attribute("href")
+                    for el in profile_elements
+                    if await el.get_attribute("href")
+                }
+            )
 
             print(f"🔗 Found {len(profile_urls)} profile links")
 
@@ -64,14 +68,18 @@ async def run():
                         name = "N/A"
 
                     try:
-                        position_block = profile.locator("div.text-body-medium.break-words")
+                        position_block = profile.locator(
+                            "div.text-body-medium.break-words"
+                        )
                         position = await position_block.nth(0).text_content()
                         position = position.strip() if position else "N/A"
                     except:
                         position = "N/A"
 
                     try:
-                        location_block = profile.locator("span.text-body-small.inline.t-black--light.break-words")
+                        location_block = profile.locator(
+                            "span.text-body-small.inline.t-black--light.break-words"
+                        )
                         location = await location_block.nth(0).text_content()
                         location = location.strip() if location else "N/A"
                     except:
@@ -85,13 +93,15 @@ async def run():
                         f.write(html_content)
                     print(f"📝 Saved HTML to {file_path}")
 
-                    all_profiles.append({
-                        "Link": url,
-                        "Name": name,
-                        "Position": position,
-                        "Country": location,
-                        "Saved_HTML": file_path
-                    })
+                    all_profiles.append(
+                        {
+                            "Link": url,
+                            "Name": name,
+                            "Position": position,
+                            "Country": location,
+                            "Saved_HTML": file_path,
+                        }
+                    )
 
                 except Exception as e:
                     print(f"❌ Failed to scrape {url}: {e}")
@@ -100,7 +110,9 @@ async def run():
 
             # 🔄 Next page
             try:
-                next_button = page.locator("button.artdeco-pagination__button--next[aria-label='Next']")
+                next_button = page.locator(
+                    "button.artdeco-pagination__button--next[aria-label='Next']"
+                )
                 if await next_button.is_visible() and await next_button.is_enabled():
                     await next_button.click()
                     await page.wait_for_load_state("networkidle")
@@ -118,9 +130,12 @@ async def run():
         if all_profiles:
             df = pd.DataFrame(all_profiles)
             df.to_csv("linkedin_index_with_html.csv", index=False)
-            print("\n✅ All profiles saved. Index written to linkedin_index_with_html.csv")
+            print(
+                "\n✅ All profiles saved. Index written to linkedin_index_with_html.csv"
+            )
         else:
             print("\n⚠️ No profiles were scraped.")
+
 
 if __name__ == "__main__":
     asyncio.run(run())

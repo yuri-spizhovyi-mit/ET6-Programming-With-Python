@@ -5,6 +5,7 @@ from playwright.async_api import async_playwright
 SEARCH_URL = "https://www.linkedin.com/search/results/people/?geoUrn=%5B%22103644278%22%5D&keywords=data%20scientist&origin=FACETED_SEARCH"
 NUM_PAGES = 2  # number of result pages to scrape
 
+
 async def run():
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=False)
@@ -38,11 +39,13 @@ async def run():
 
             # Get all profile links (unique)
             profile_elements = await page.locator("a[href*='/in/']").all()
-            profile_urls = list({
-                await el.get_attribute("href")
-                for el in profile_elements
-                if await el.get_attribute("href")
-            })
+            profile_urls = list(
+                {
+                    await el.get_attribute("href")
+                    for el in profile_elements
+                    if await el.get_attribute("href")
+                }
+            )
 
             print(f"🔗 Found {len(profile_urls)} profile links")
 
@@ -61,47 +64,67 @@ async def run():
                         name = "N/A"
 
                     try:
-                        position_block = profile.locator("div.text-body-medium.break-words")
+                        position_block = profile.locator(
+                            "div.text-body-medium.break-words"
+                        )
                         position = await position_block.nth(0).text_content() or "N/A"
                     except:
                         position = "N/A"
 
                     try:
-                        location_block = profile.locator("span.text-body-small.inline.t-black--light.break-words")
+                        location_block = profile.locator(
+                            "span.text-body-small.inline.t-black--light.break-words"
+                        )
                         location = await location_block.nth(0).text_content() or "N/A"
                     except:
                         location = "N/A"
 
                     # ✅ Experience section (updated)
                     try:
-                        await profile.wait_for_selector("section#experience li.pvs-list__paged-list-item", timeout=8000)
-                        exp_items = await profile.locator("section#experience li.pvs-list__paged-list-item").all()
-                        experience = " | ".join([
-                            (await item.text_content()).strip().replace("\n", " ")
-                            for item in exp_items[:3]
-                        ])
+                        await profile.wait_for_selector(
+                            "section#experience li.pvs-list__paged-list-item",
+                            timeout=8000,
+                        )
+                        exp_items = await profile.locator(
+                            "section#experience li.pvs-list__paged-list-item"
+                        ).all()
+                        experience = " | ".join(
+                            [
+                                (await item.text_content()).strip().replace("\n", " ")
+                                for item in exp_items[:3]
+                            ]
+                        )
                     except:
                         experience = "N/A"
 
                     # ✅ Education section (updated)
                     try:
-                        await profile.wait_for_selector("section#education li.pvs-list__paged-list-item", timeout=8000)
-                        edu_items = await profile.locator("section#education li.pvs-list__paged-list-item").all()
-                        education = " | ".join([
-                            (await item.text_content()).strip().replace("\n", " ")
-                            for item in edu_items[:2]
-                        ])
+                        await profile.wait_for_selector(
+                            "section#education li.pvs-list__paged-list-item",
+                            timeout=8000,
+                        )
+                        edu_items = await profile.locator(
+                            "section#education li.pvs-list__paged-list-item"
+                        ).all()
+                        education = " | ".join(
+                            [
+                                (await item.text_content()).strip().replace("\n", " ")
+                                for item in edu_items[:2]
+                            ]
+                        )
                     except:
                         education = "N/A"
 
-                    all_profiles.append({
-                        "Link": url,
-                        "Name": name.strip(),
-                        "Position": position.strip(),
-                        "Country": location.strip(),
-                        "Experience": experience,
-                        "Education": education
-                    })
+                    all_profiles.append(
+                        {
+                            "Link": url,
+                            "Name": name.strip(),
+                            "Position": position.strip(),
+                            "Country": location.strip(),
+                            "Experience": experience,
+                            "Education": education,
+                        }
+                    )
 
                 except Exception as e:
                     print(f"❌ Failed to scrape {url}: {e}")
@@ -110,7 +133,9 @@ async def run():
 
             # ✅ Next button (updated)
             try:
-                next_button = page.locator("button.artdeco-pagination__button--next[aria-label='Next']")
+                next_button = page.locator(
+                    "button.artdeco-pagination__button--next[aria-label='Next']"
+                )
                 if await next_button.is_visible() and await next_button.is_enabled():
                     await next_button.click()
                     await page.wait_for_load_state("networkidle")
@@ -128,9 +153,12 @@ async def run():
         if all_profiles:
             df = pd.DataFrame(all_profiles)
             df.to_csv("linkedin_data_scientists_playwright.csv", index=False)
-            print("\n✅ Scraping completed and saved to linkedin_data_scientists_playwright.csv")
+            print(
+                "\n✅ Scraping completed and saved to linkedin_data_scientists_playwright.csv"
+            )
         else:
             print("\n⚠️ No profiles were scraped.")
+
 
 if __name__ == "__main__":
     asyncio.run(run())

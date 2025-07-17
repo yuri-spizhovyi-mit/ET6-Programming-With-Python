@@ -1,0 +1,37 @@
+From d96947144e1953f1d24bdafdd666f9cab8f07a65 Mon Sep 17 00:00:00 2001
+From: Yuri Spizhovyi <spizhov22y@gmail.com>
+Date: Sat, 14 Jun 2025 01:09:57 -0700
+Subject: [PATCH] add most frequent word not banned
+
+---
+ .../hash_sets/most_frequent_word_not_banned.py | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+ create mode 100644 algorithms/hash_sets/most_frequent_word_not_banned.py
+
+diff --git a/algorithms/hash_sets/most_frequent_word_not_banned.py b/algorithms/hash_sets/most_frequent_word_not_banned.py
+new file mode 100644
+index 0000000..c10a7d1
+--- /dev/null
++++ b/algorithms/hash_sets/most_frequent_word_not_banned.py
+@@ -0,0 +1,18 @@
++import re
++
++
++def most_frequent_word_not_banned(sentence: str, banned: list[str]) -> str:
++    words = re.findall(r"\b[a-z]+\b", sentence.lower())  # Extract words only
++    freq = {}
++
++    for word in words:
++        if word not in banned:
++            freq[word] = freq.get(word, 0) + 1
++
++    return max(freq, key=freq.get) if freq else None
++
++
++sentence = "Bob hit a ball, the hit BALL flew far after it was hit."
++banned = ["hit"]
++print(most_frequent_word_not_banned(sentence, banned))
++# Output: "ball"
+-- 
+2.45.2.windows.1
+

@@ -6,6 +6,7 @@ from playwright.async_api import async_playwright
 SEARCH_URL = "https://www.linkedin.com/search/results/people/?geoUrn=%5B%22103644278%22%5D&keywords=data%20scientist&origin=FACETED_SEARCH"
 NUM_PAGES = 2  # Number of search result pages to scrape
 
+
 # 🧠 Utility: Extract all <!----> content from aria-hidden spans
 async def extract_hidden_text(profile):
     try:
@@ -13,7 +14,7 @@ async def extract_hidden_text(profile):
         extracted = []
         for span in spans:
             html = await span.inner_html()
-            matches = re.findall(r'<!---->(.*?)<!---->', html)
+            matches = re.findall(r"<!---->(.*?)<!---->", html)
             for match in matches:
                 cleaned = match.strip()
                 if cleaned:
@@ -22,6 +23,7 @@ async def extract_hidden_text(profile):
     except Exception as e:
         print(f"⚠️ Error extracting hidden text: {e}")
         return "N/A"
+
 
 async def run():
     async with async_playwright() as p:
@@ -43,7 +45,9 @@ async def run():
         # Step 2: Retry loading search results
         for attempt in range(3):
             try:
-                await page.goto(SEARCH_URL, wait_until="domcontentloaded", timeout=60000)
+                await page.goto(
+                    SEARCH_URL, wait_until="domcontentloaded", timeout=60000
+                )
                 await page.wait_for_selector("a[href*='/in/']", timeout=10000)
                 break
             except Exception as e:
@@ -62,11 +66,13 @@ async def run():
 
             # Collect profile URLs
             profile_elements = await page.locator("a[href*='/in/']").all()
-            profile_urls = list({
-                await el.get_attribute("href")
-                for el in profile_elements
-                if await el.get_attribute("href")
-            })
+            profile_urls = list(
+                {
+                    await el.get_attribute("href")
+                    for el in profile_elements
+                    if await el.get_attribute("href")
+                }
+            )
 
             print(f"🔗 Found {len(profile_urls)} profile links")
 
@@ -92,11 +98,9 @@ async def run():
                     # Extract hidden content
                     raw_content = await extract_hidden_text(profile)
 
-                    all_profiles.append({
-                        "Link": url,
-                        "Name": name.strip(),
-                        "Raw_Content": raw_content
-                    })
+                    all_profiles.append(
+                        {"Link": url, "Name": name.strip(), "Raw_Content": raw_content}
+                    )
 
                 except Exception as e:
                     print(f"❌ Failed to scrape {url}: {e}")
@@ -104,7 +108,9 @@ async def run():
 
             # Go to next search result page
             try:
-                next_button = page.locator("button.artdeco-pagination__button--next[aria-label='Next']")
+                next_button = page.locator(
+                    "button.artdeco-pagination__button--next[aria-label='Next']"
+                )
                 if await next_button.is_visible() and await next_button.is_enabled():
                     await next_button.click()
                     await page.wait_for_load_state("domcontentloaded")
@@ -122,9 +128,12 @@ async def run():
         if all_profiles:
             df = pd.DataFrame(all_profiles)
             df.to_csv("linkedin_raw_hidden_content.csv", index=False)
-            print("\n✅ Scraping completed and saved to linkedin_raw_hidden_content.csv")
+            print(
+                "\n✅ Scraping completed and saved to linkedin_raw_hidden_content.csv"
+            )
         else:
             print("\n⚠️ No profiles were scraped.")
+
 
 if __name__ == "__main__":
     asyncio.run(run())
