@@ -21,3 +21,18 @@ def diameterOfBinaryTree(root: TreeNode) -> int:
 
     dfs(root)
     return diameter
+
+
+# Build the test tree:
+#         1
+#        / \
+#       2   3
+#      / \
+#     4   5
+
+root = TreeNode(1)
+root.left = TreeNode(2, TreeNode(4), TreeNode(5))
+root.right = TreeNode(3)
+
+# Run the function
+print("Diameter of the binary tree:", diameterOfBinaryTree(root))
