@@ -23,7 +23,7 @@ We never settle for less than impact. #WeMove
 
 This repository documents our journey through the **Collaborative Data Science Project (CDSP)**. From identifying the core problem to delivering our final presentation, we used data science to investigate:
 
-> **![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=1000&color=00F71E&vCenter=true&width=1000&height=40&lines=IT+Career+Pathways+for+Displaced+Youth+in+the+US+(2025))**
+> ![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=27&pause=1000&color=00F71E&vCenter=true&width=1000&height=45&lines=IT+Career+Pathways+for+Displaced+Youth+in+the+US+(2025))
 
 We explored formal and non-traditional pathways, comparing outcomes, accessibility, and employer relevance.
 
