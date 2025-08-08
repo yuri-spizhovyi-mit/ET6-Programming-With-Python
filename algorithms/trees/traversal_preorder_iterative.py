@@ -47,4 +47,4 @@ tree.left.left = TreeNode("D")
 tree.left.right = TreeNode("E")
 tree.right.left = TreeNode("F")
 tree.right.right = TreeNode("G")
-preorder_iteretive(tree)  # Expected output: A B D E C
+preorder_iterative(tree)  # Expected output: A B D E C
