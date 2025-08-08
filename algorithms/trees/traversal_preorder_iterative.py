@@ -24,7 +24,7 @@ class TreeNode:
         self.right = right
 
 
-def preorder_iteretive(root):
+def preorder_iterative(root):
     if not root:
         return
     stack = [root]
