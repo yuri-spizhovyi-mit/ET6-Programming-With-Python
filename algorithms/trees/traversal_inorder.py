@@ -1,4 +1,6 @@
 """
+ Inorder (Left → Root → Right)
+
 🔹 1. Depth-First Traversal (DFS)
 Explore as far down a branch as possible before backtracking.
 

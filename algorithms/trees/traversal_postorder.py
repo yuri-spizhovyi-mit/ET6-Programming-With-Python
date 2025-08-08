@@ -1,5 +1,5 @@
 """
-Preorder (Root → Left → Right)
+Postorder (Left → Right → Root)
 
 🔹 1. Depth-First Traversal (DFS)
 Explore as far down a branch as possible before backtracking.
@@ -24,13 +24,13 @@ class TreeNode:
         self.right = right
 
 
-def preorder(node):
+def postorder(node):
     if not node:
         return
 
+    postorder(node.left)
+    postorder(node.right)
     print(node.val, end=" ")
-    preorder(node.left)
-    preorder(node.right)
 
 
 tree = TreeNode("A")
@@ -40,4 +40,4 @@ tree.left.left = TreeNode("D")
 tree.left.right = TreeNode("E")
 tree.right.left = TreeNode("F")
 tree.right.right = TreeNode("G")
-preorder(tree)  # Expected output: A B D E C
+postorder(tree)  # Expected output: D E B C A
