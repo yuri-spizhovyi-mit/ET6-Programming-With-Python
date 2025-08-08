@@ -1,3 +1,12 @@
+"""
+🔹 1. Depth-First Traversal (DFS)
+Explore as far down a branch as possible before backtracking.
+
+Type	Order	Example Use
+Inorder	Left → Root → Right	Binary Search Tree (returns sorted values)
+Preorder	Root → Left → Right	Serialize tree, copy tree structure
+Postorder	Left → Right → Root	Delete tree, evaluate expression tree
+"""
 # Inorder tree traversal
 #        A
 #       / \
