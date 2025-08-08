@@ -22,19 +22,20 @@ class TreeNode:
         self.right = right
 
 
-def inorder(node):
+def preorder(node):
     if not node:
         return
-    inorder(node.left)
-    print(node.val, end="->")
-    inorder(node.right)
+
+    print(node.val, end=" ")
+    preorder(node.left)
+    preorder(node.right)
 
 
-node = TreeNode("A")
-node.left = TreeNode("B")
-node.right = TreeNode("C")
-node.left.left = TreeNode("D")
-node.left.right = TreeNode("E")
-node.right.left = TreeNode("G")
-node.right.right = TreeNode("F")
-inorder(node)  # Expected output: D B E A C
+tree = TreeNode("A")
+tree.left = TreeNode("B")
+tree.right = TreeNode("C")
+tree.left.left = TreeNode("D")
+tree.left.right = TreeNode("E")
+tree.right.left = TreeNode("F")
+tree.right.right = TreeNode("G")
+preorder(tree)  # Expected output: A B D E C
