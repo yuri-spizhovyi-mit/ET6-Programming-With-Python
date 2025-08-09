@@ -1,10 +1,12 @@
 from collections import deque
 
+
 class TreeNode:
     def __init__(self, val):
         self.val = val
         self.left = None
         self.right = None
+
 
 def build_tree_from_list(values):
     if not values:
@@ -31,7 +33,6 @@ def build_tree_from_list(values):
         i += 1
 
     return root
-
 
 
 values = [1, 2, 3, 4, 5, None, 7]
