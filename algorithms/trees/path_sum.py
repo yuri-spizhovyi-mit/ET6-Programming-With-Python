@@ -16,10 +16,10 @@ root.left = TreeNode(4)
 root.right = TreeNode(8)
 root.left.left = TreeNode(11)
 root.left.left.left = TreeNode(7)
-root.left.left.right = TreeNode(2)
+root.left.left.right = TreeNode(3)
 root.right.left = TreeNode(13)
 root.right.right = TreeNode(4)
-root.right.right.right = TreeNode(1)
+root.right.right.right = TreeNode(5)
 
 
 def has_path_sum(root, target_sum):
