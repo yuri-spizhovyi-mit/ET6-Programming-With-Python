@@ -61,3 +61,20 @@ class Traversals(EulerTour):
 
     def post_visit(self, node, depth, path):
         self.postorder.append(node.value)
+
+
+# Build tree
+root = Node("A")
+root.left = Node("B")
+root.right = Node("C")
+root.left.left = Node("D")
+root.left.right = Node("E")
+root.right.right = Node("F")
+
+# Perform Euler Tour
+t = Traversals(root)
+t.tour(root)
+
+print("Preorder:", t.preorder)
+print("Inorder:", t.inorder)
+print("Postorder:", t.postorder)
