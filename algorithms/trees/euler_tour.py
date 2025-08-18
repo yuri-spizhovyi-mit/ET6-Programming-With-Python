@@ -4,6 +4,7 @@ class Node:
         self.left = None
         self.right = None
 
+
 class EulerTour:
     def __init__(self, root):
         self.root = root
@@ -18,16 +19,16 @@ class EulerTour:
 
         # Go left
         if node.left:
-            path.append(0) # going left
+            path.append(0)  # going left
             self.tour(node.left, depth + 1, path)
             path.pop()
 
         # 2. In-visit (between left and right)
-        self.in_visit(node,depth, path)
+        self.in_visit(node, depth, path)
 
         # Go right
         if node.right:
-            path.append(1) # going right
+            path.append(1)  # going right
             self.tour(node.right, depth + 1, path)
             path.pop()
 
@@ -43,3 +44,20 @@ class EulerTour:
 
     def post_visit(self, node, depth, path):
         pass
+
+
+class Traversals(EulerTour):
+    def __init__(self, root):
+        super().__init__(root)
+        self.preorder = []
+        self.inorder = []
+        self.postorder = []
+
+    def pre_visit(self, node, depth, path):
+        self.preorder.append(node.value)
+
+    def in_visit(self, node, depth, path):
+        self.inorder.append(node.value)
+
+    def post_visit(self, node, depth, path):
+        self.postorder.append(node.value)
