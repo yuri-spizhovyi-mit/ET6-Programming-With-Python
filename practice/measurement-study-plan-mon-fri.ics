@@ -1,0 +1,174 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Yuri Study Plans//Measurement Mon-Fri//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:f093b916-2fc5-46d1-9e68-d6d6b6ed6382@yuri-study-plan
+DTSTAMP:20250809T141343Z
+DTSTART;TZID=America/Vancouver:20250811T180000
+DTEND;TZID=America/Vancouver:20250811T190000
+SUMMARY:Measurement Study — Chapter 1.1 Lesson 1
+DESCRIPTION:Read p.4–6 (1.1 Imperial Measures of Length).\\nComplete Examples 1–4.\\nDo Section A: Ex. 3–7.
+END:VEVENT
+BEGIN:VEVENT
+UID:e84d0b97-c262-410a-a5f4-1fb6527d0d98@yuri-study-plan
+DTSTAMP:20250809T141343Z
+DTSTART;TZID=America/Vancouver:20250812T180000
+DTEND;TZID=America/Vancouver:20250812T190000
+SUMMARY:Measurement Study — Chapter 1.1 Lesson 2
+DESCRIPTION:Review p.4–6.\\nDo Section B: Ex. 8–18 (choose any 5).
+END:VEVENT
+BEGIN:VEVENT
+UID:ae81134b-e61e-4f95-9a02-e2ce2663222f@yuri-study-plan
+DTSTAMP:20250809T141343Z
+DTSTART;TZID=America/Vancouver:20250813T180000
+DTEND;TZID=America/Vancouver:20250813T190000
+SUMMARY:Measurement Study — Chapter 1.1 Lesson 3
+DESCRIPTION:Review p.4–6.\\nDo Section C: Ex. 19–22 (all).
+END:VEVENT
+BEGIN:VEVENT
+UID:b95c90be-e499-4589-b02f-4164dc200883@yuri-study-plan
+DTSTAMP:20250809T141343Z
+DTSTART;TZID=America/Vancouver:20250814T180000
+DTEND;TZID=America/Vancouver:20250814T190000
+SUMMARY:Measurement Study — Chapter 1.2 Lesson 1
+DESCRIPTION:Read p.13–15 (Math Lab).\\nDo activities A–C.\\nStart Assess Your Understanding Q1–3.
+END:VEVENT
+BEGIN:VEVENT
+UID:cb86b09f-0f7a-4da2-b91a-d6ee43a7c06f@yuri-study-plan
+DTSTAMP:20250809T141343Z
+DTSTART;TZID=America/Vancouver:20250815T180000
+DTEND;TZID=America/Vancouver:20250815T190000
+SUMMARY:Measurement Study — Chapter 1.2 Lesson 2
+DESCRIPTION:Review p.13–15.\\nComplete Assess Your Understanding Q4–6.
+END:VEVENT
+BEGIN:VEVENT
+UID:50914e61-5df7-4f96-bd0a-d5a318f16eba@yuri-study-plan
+DTSTAMP:20250809T141343Z
+DTSTART;TZID=America/Vancouver:20250818T180000
+DTEND;TZID=America/Vancouver:20250818T190000
+SUMMARY:Measurement Study — Chapter 1.2 Lesson 3
+DESCRIPTION:Review the full chapter.\\nFinish any pending measurements/notes from Math Lab.
+END:VEVENT
+BEGIN:VEVENT
+UID:ed9fe14a-69db-4141-8e1d-cdf916eee360@yuri-study-plan
+DTSTAMP:20250809T141343Z
+DTSTART;TZID=America/Vancouver:20250819T180000
+DTEND;TZID=America/Vancouver:20250819T190000
+SUMMARY:Measurement Study — Chapter 1.3 Lesson 1
+DESCRIPTION:Read p.16–18 (Relating SI and Imperial Units).\\nExamples 1–2 and Check Your Understanding Q1–2.\\nStart Section A: Ex. 4–5.
+END:VEVENT
+BEGIN:VEVENT
+UID:cf46cd0d-43cc-48c3-8971-a83a3bc1fb44@yuri-study-plan
+DTSTAMP:20250809T141343Z
+DTSTART;TZID=America/Vancouver:20250820T180000
+DTEND;TZID=America/Vancouver:20250820T190000
+SUMMARY:Measurement Study — Chapter 1.3 Lesson 2
+DESCRIPTION:Review p.16–18.\\nExamples 3–4 and Check Your Understanding Q3–4.\\nSection B: Ex. 6–8.
+END:VEVENT
+BEGIN:VEVENT
+UID:e0ca62ed-97ca-4c43-a08d-cf7a20a27c59@yuri-study-plan
+DTSTAMP:20250809T141343Z
+DTSTART;TZID=America/Vancouver:20250821T180000
+DTEND;TZID=America/Vancouver:20250821T190000
+SUMMARY:Measurement Study — Chapter 1.3 Lesson 3
+DESCRIPTION:Review key conversions.\\nSection B: Ex. 9–13 (all).
+END:VEVENT
+BEGIN:VEVENT
+UID:8c177075-053d-49d6-9f76-41f04e229130@yuri-study-plan
+DTSTAMP:20250809T141343Z
+DTSTART;TZID=America/Vancouver:20250822T180000
+DTEND;TZID=America/Vancouver:20250822T190000
+SUMMARY:Measurement Study — Chapter 1.4 Lesson 1
+DESCRIPTION:Read p.26–30 (SA of Right Pyramids & Cones).\\nExamples 1–2 and Check Your Understanding Q1–2.\\nSection A: Ex. 4–5.
+END:VEVENT
+BEGIN:VEVENT
+UID:26d0789c-1403-4296-bfb6-0ad4da4a76ff@yuri-study-plan
+DTSTAMP:20250809T141343Z
+DTSTART;TZID=America/Vancouver:20250825T180000
+DTEND;TZID=America/Vancouver:20250825T190000
+SUMMARY:Measurement Study — Chapter 1.4 Lesson 2
+DESCRIPTION:Review p.26–33.\\nExamples 3–4 and Check Your Understanding Q3–4.\\nSection A: Ex. 6–8.
+END:VEVENT
+BEGIN:VEVENT
+UID:ca73e460-231c-4f7b-b682-a8eef7646fd5@yuri-study-plan
+DTSTAMP:20250809T141343Z
+DTSTART;TZID=America/Vancouver:20250826T180000
+DTEND;TZID=America/Vancouver:20250826T190000
+SUMMARY:Measurement Study — Chapter 1.4 Lesson 3
+DESCRIPTION:Review formulas (lateral area & SA).\\nSection B–C: Ex. 9–21 (all).
+END:VEVENT
+BEGIN:VEVENT
+UID:0b87e08b-e01d-4122-9eb8-c2358aa0ecf2@yuri-study-plan
+DTSTAMP:20250809T141343Z
+DTSTART;TZID=America/Vancouver:20250827T180000
+DTEND;TZID=America/Vancouver:20250827T190000
+SUMMARY:Measurement Study — Chapter 1.5 Lesson 1
+DESCRIPTION:Read p.36–39 (Volumes of Right Pyramids & Cones).\\nExamples 1–2 and Check Your Understanding Q1–2.\\nSection A: Ex. 4–5.
+END:VEVENT
+BEGIN:VEVENT
+UID:ae2e313a-46f1-45e4-900a-b2f1c638101d@yuri-study-plan
+DTSTAMP:20250809T141343Z
+DTSTART;TZID=America/Vancouver:20250828T180000
+DTEND;TZID=America/Vancouver:20250828T190000
+SUMMARY:Measurement Study — Chapter 1.5 Lesson 2
+DESCRIPTION:Review p.36–41.\\nExamples 3–4 and Check Your Understanding Q3–4.\\nSection A: Ex. 6–7.
+END:VEVENT
+BEGIN:VEVENT
+UID:027cee59-188b-44c1-8384-bb0888a8beaa@yuri-study-plan
+DTSTAMP:20250809T141343Z
+DTSTART;TZID=America/Vancouver:20250829T180000
+DTEND;TZID=America/Vancouver:20250829T190000
+SUMMARY:Measurement Study — Chapter 1.5 Lesson 3
+DESCRIPTION:Review volume relationships (1/3 of prism/cylinder).\\nSection B–C: Ex. 8–22 (all).
+END:VEVENT
+BEGIN:VEVENT
+UID:1c9ce024-0e2e-49da-9921-05f14a39526b@yuri-study-plan
+DTSTAMP:20250809T141343Z
+DTSTART;TZID=America/Vancouver:20250901T180000
+DTEND;TZID=America/Vancouver:20250901T190000
+SUMMARY:Measurement Study — Chapter 1.6 Lesson 1
+DESCRIPTION:Read p.45–47 (Sphere — Surface Area).\\nExamples 1–2 and Check Your Understanding Q1–2.\\nSection A: Ex. 3–4.
+END:VEVENT
+BEGIN:VEVENT
+UID:4a2b9ff4-885e-4458-abd7-e7974e46a08b@yuri-study-plan
+DTSTAMP:20250809T141343Z
+DTSTART;TZID=America/Vancouver:20250902T180000
+DTEND;TZID=America/Vancouver:20250902T190000
+SUMMARY:Measurement Study — Chapter 1.6 Lesson 2
+DESCRIPTION:Read p.48–50 (Sphere — Volume\; Hemispheres).\\nExamples 3–4 and Check Your Understanding Q3–4.\\nSection A: Ex. 5–7.
+END:VEVENT
+BEGIN:VEVENT
+UID:fe8172a7-8794-46f1-ae23-8bf2e633354d@yuri-study-plan
+DTSTAMP:20250809T141343Z
+DTSTART;TZID=America/Vancouver:20250903T180000
+DTEND;TZID=America/Vancouver:20250903T190000
+SUMMARY:Measurement Study — Chapter 1.6 Lesson 3
+DESCRIPTION:Full review of sphere formulas.\\nSection B–C: Ex. 8–24 (all).
+END:VEVENT
+BEGIN:VEVENT
+UID:4b8c01ed-f89a-4b74-9829-a8d8a6f30487@yuri-study-plan
+DTSTAMP:20250809T141343Z
+DTSTART;TZID=America/Vancouver:20250904T180000
+DTEND;TZID=America/Vancouver:20250904T190000
+SUMMARY:Measurement Study — Chapter 1.7 Lesson 1
+DESCRIPTION:Read p.55–57 (Composite Objects).\\nExamples 1–2 and Check Your Understanding Q1–2.\\nSection A: Ex. 3–4.
+END:VEVENT
+BEGIN:VEVENT
+UID:9855acb8-9fa7-4dfe-918f-8757a91a2e52@yuri-study-plan
+DTSTAMP:20250809T141343Z
+DTSTART;TZID=America/Vancouver:20250905T180000
+DTEND;TZID=America/Vancouver:20250905T190000
+SUMMARY:Measurement Study — Chapter 1.7 Lesson 2
+DESCRIPTION:Read p.58 (Example 3).\\nSection A: Ex. 5–6.
+END:VEVENT
+BEGIN:VEVENT
+UID:644236aa-a1b1-4258-af78-f7fe1894fd61@yuri-study-plan
+DTSTAMP:20250809T141343Z
+DTSTART;TZID=America/Vancouver:20250908T180000
+DTEND;TZID=America/Vancouver:20250908T190000
+SUMMARY:Measurement Study — Chapter 1.7 Lesson 3
+DESCRIPTION:Review the full chapter.\\nSection B–C: Ex. 7–13 (all).
+END:VEVENT
+END:VCALENDAR

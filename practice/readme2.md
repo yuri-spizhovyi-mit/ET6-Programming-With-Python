@@ -1,4 +1,6 @@
 <img src="./assets/skygen_intro.gif" alt="SKYGEN" width="100%">
+<img src="./assets/output1.gif" alt="SKYGEN" width="100%">
+<img src="./assets/output2.gif" alt="SKYGEN" width="100%">
 
 # SKYGEN 🌌 – Sky Generation in Data Science
 
@@ -8,7 +10,7 @@
 📈 **Y** – Yuri & Yevheniia  
 🌐 **G** – Generation (our shared mission)  
 🚀 **E** – Empowerment & Exploration through Data  
-🧠 **N** – Nelson 
+🧠 **N** – Nelson
 
 Together, we form a constellation of talent exploring the universe of data.  
 Our name **SKYGEN** symbolizes both our initials and our shared vision:  
@@ -90,54 +92,54 @@ The CDSP structure guided our progress:
 <details>
   <summary>➕ Shayma</summary>
 
-  - 📄 [Entry-Level IT Opportunities Analysis](4_data_analysis/SQ2_EntryLevel_IT_Opportunities_Analysis.ipynb)  
-  - 🗒️ Communication planning notes  
-  - 👥 [Milestone 0 Retrospective](collaboration/retrospectives/0_cross_cultural_collaboration.md)
+- 📄 [Entry-Level IT Opportunities Analysis](4_data_analysis/SQ2_EntryLevel_IT_Opportunities_Analysis.ipynb)  
+- 🗒️ Communication planning notes  
+- 👥 [Milestone 0 Retrospective](collaboration/retrospectives/0_cross_cultural_collaboration.md)
 
 </details>
 
 <details>
   <summary>➕ Simi</summary>
 
-  - 🧠 [Employer Perceptions and Success Factors Analysis](4_data_analysis/SQ5_Employer_Perceptions_and_Success_Factors_Factor.ipynb)  
-  - 📄 Peer review contributions  
-  - 🎯 Communication & learning goals
+- 🧠 [Employer Perceptions and Success Factors Analysis](4_data_analysis/SQ5_Employer_Perceptions_and_Success_Factors_Factor.ipynb)  
+- 📄 Peer review contributions  
+- 🎯 Communication & learning goals
 
 </details>
 
 <details>
   <summary>➕ Khadija</summary>
 
-  - 📊 [Barriers and Demographics Analysis](4_data_analysis/SQ1_Barriers_and_Demographics_Analysis.ipynb)  
-  - 📘 Constraints definition  
-  - 📝 [Learning Goals](collaboration/learning_goals.md)
+- 📊 [Barriers and Demographics Analysis](4_data_analysis/SQ1_Barriers_and_Demographics_Analysis.ipynb)  
+- 📘 Constraints definition  
+- 📝 [Learning Goals](collaboration/learning_goals.md)
 
 </details>
 
 <details>
   <summary>➕ Yuri</summary>
 
-  - 🎓 [Education Models and Accessibility Analysis](4_data_analysis/SQ3_Education_Models_and_Accessibility_analysis.ipynb)  
-  - 🧪 Git setup, requirements  
-  - 🗃️ Dataset documentation
+- 🎓 [Education Models and Accessibility Analysis](4_data_analysis/SQ3_Education_Models_and_Accessibility_analysis.ipynb)  
+- 🧪 Git setup, requirements  
+- 🗃️ Dataset documentation
 
 </details>
 
 <details>
   <summary>➕ Yevheniia</summary>
 
-  - 📈 [Employment Outcomes by Pathway Analysis](4_data_analysis/SQ4_Employment_Outcomes_By_Education_Pathway_Analysis.ipynb)  
-  - 📊 Final visualizations  
-  - 🎬 Presentation slides prep
+- 📈 [Employment Outcomes by Pathway Analysis](4_data_analysis/SQ4_Employment_Outcomes_By_Education_Pathway_Analysis.ipynb)  
+- 📊 Final visualizations  
+- 🎬 Presentation slides prep
 
 </details>
 
 <details>
   <summary>➕ Nelson</summary>
 
-  - 🧠 [Employer Perceptions and Success Factors Analysis](4_data_analysis/SQ5_Employer_Perceptions_and_Success_Factors_Factor.ipynb)  
-  - 🛠️ Collaboration tooling  
-  - 🗂️ Domain study input
+- 🧠 [Employer Perceptions and Success Factors Analysis](4_data_analysis/SQ5_Employer_Perceptions_and_Success_Factors_Factor.ipynb)  
+- 🛠️ Collaboration tooling  
+- 🗂️ Domain study input
 
 </details>
 
