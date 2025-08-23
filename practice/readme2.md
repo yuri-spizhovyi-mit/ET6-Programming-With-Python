@@ -1,6 +1,7 @@
 <img src="./assets/skygen_intro.gif" alt="SKYGEN" width="100%">
 <img src="./assets/output1.gif" alt="SKYGEN" width="100%">
 <img src="./assets/output2.gif" alt="SKYGEN" width="100%">
+<img src="./assets/output5.gif" alt="SKYGEN" width="100%">
 
 # SKYGEN 🌌 – Sky Generation in Data Science
 
