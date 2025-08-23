@@ -46,3 +46,20 @@ class ArrayBinaryTree:
             self.postorder(2 * i)
             self.postorder(2 * i + 1)
             print(self.tree[i], end=" ")
+
+
+T = ArrayBinaryTree()
+T.insert(1, 'A')  # root
+T.insert(2, 'B')  # left child of A
+T.insert(3, 'C')  # right child of A
+T.insert(4, 'D')  # left child of B
+T.insert(5, 'E')  # right child of B
+
+print("Preorder: ", end="")
+T.preorder()  # A B D E C
+
+print("\nInorder: ", end="")
+T.inorder()  # D B E A C
+
+print("\nPostorder: ", end="")
+T.postorder()  # D E B C A
