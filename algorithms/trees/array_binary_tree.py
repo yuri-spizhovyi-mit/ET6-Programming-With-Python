@@ -49,11 +49,11 @@ class ArrayBinaryTree:
 
 
 T = ArrayBinaryTree()
-T.insert(1, 'A')  # root
-T.insert(2, 'B')  # left child of A
-T.insert(3, 'C')  # right child of A
-T.insert(4, 'D')  # left child of B
-T.insert(5, 'E')  # right child of B
+T.insert(1, "A")  # root
+T.insert(2, "B")  # left child of A
+T.insert(3, "C")  # right child of A
+T.insert(4, "D")  # left child of B
+T.insert(5, "E")  # right child of B
 
 print("Preorder: ", end="")
 T.preorder()  # A B D E C
