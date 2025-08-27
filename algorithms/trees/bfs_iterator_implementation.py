@@ -138,3 +138,24 @@ class LinkedBinaryTree:
                 self._index += 1
                 return node
             raise StopIteration
+
+
+# Build sample tree:
+#        A
+#       / \
+#      B   C
+#     / \
+#    D   E
+
+root = LinkedBinaryTree.Node("A")
+root.left = LinkedBinaryTree.Node("B")
+root.right = LinkedBinaryTree.Node("C")
+root.left.left = LinkedBinaryTree.Node("D")
+root.left.right = LinkedBinaryTree.Node("E")
+
+tree = LinkedBinaryTree(root)
+
+print("Preorder:", [n.element for n in tree.preorder()])
+print("Inorder:", [n.element for n in tree.inorder()])
+print("Postorder:", [n.element for n in tree.postorder()])
+print("Breadth-First:", [n.element for n in tree.breadthfirst()])
