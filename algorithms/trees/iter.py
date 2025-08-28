@@ -79,6 +79,21 @@ class LinkedBinaryTree:
     def inorder(self):
         return self.InorderIterator(self)
 
+    def pretty_print(self, node=None, prefix="", is_left=True):
+        """Print tree structure in a pretty format like `tree` command."""
+        if node is None:
+            node = self._root
+
+        if node.right:
+            new_prefix = prefix + ("│   " if is_left else "    ")
+            self.pretty_print(node.right, new_prefix, False)
+
+        print(prefix + ("└── " if is_left else "┌── ") + str(node.element))
+
+        if node.left:
+            new_prefix = prefix + ("    " if is_left else "│   ")
+            self.pretty_print(node.left, new_prefix, True)
+
     class InorderIterator:
         def __init__(self, tree):
             self._snapshot = []
@@ -179,6 +194,9 @@ root.left.left = LinkedBinaryTree.Node("D")
 root.left.right = LinkedBinaryTree.Node("E")
 
 tree = LinkedBinaryTree(root)
+
+print("Tree structure:")
+tree.pretty_print()
 
 print("Preorder:", [n.element for n in tree.preorder()])
 print("Inorder:", [n.element for n in tree.inorder()])
