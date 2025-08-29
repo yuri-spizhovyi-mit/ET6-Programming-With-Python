@@ -84,3 +84,25 @@ tree.pretty_print()
 
 print("\nPretty Print (BFS Folder-like):")
 tree.pretty_print_bfs()
+
+# Build larger tree
+root = LinkedBinaryTree.Node("M")
+root.left = LinkedBinaryTree.Node("F")
+root.right = LinkedBinaryTree.Node("T")
+
+root.left.left = LinkedBinaryTree.Node("B")
+root.left.right = LinkedBinaryTree.Node("H")
+root.right.left = LinkedBinaryTree.Node("P")
+root.right.right = LinkedBinaryTree.Node("W")
+
+root.left.left.left = LinkedBinaryTree.Node("A")
+root.left.left.right = LinkedBinaryTree.Node("D")
+root.right.left.right = LinkedBinaryTree.Node("R")
+
+tree = LinkedBinaryTree(root)
+
+print("Pretty Print (Euler-style):")
+tree.pretty_print()
+
+print("\nPretty Print (BFS Folder-like):")
+tree.pretty_print_bfs()
